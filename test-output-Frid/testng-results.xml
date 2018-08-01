@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="example suite 1" duration-ms="153196" started-at="2018-07-31T14:04:50Z" finished-at="2018-07-31T14:07:23Z">
+    <groups>
+    </groups>
+    <test name="Alert" duration-ms="153196" started-at="2018-07-31T14:04:50Z" finished-at="2018-07-31T14:07:23Z">
+      <class name="testcases_functionality.TC_InventoryTransformation">
+        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testcases_functionality.TC_InventoryTransformation@78e67e0a]" name="startReport" is-config="true" duration-ms="1013" started-at="2018-07-31T19:34:50Z" finished-at="2018-07-31T19:34:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa-1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qa1.test.hybrent.com/b/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases_functionality.TC_InventoryTransformation@78e67e0a]" name="setBrowser" is-config="true" duration-ms="4016" started-at="2018-07-31T19:34:51Z" finished-at="2018-07-31T19:34:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[qa-1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method status="PASS" signature="Tc_InventoryItemTransaction_001()[pri:0, instance:testcases_functionality.TC_InventoryTransformation@78e67e0a]" name="Tc_InventoryItemTransaction_001" duration-ms="103283" started-at="2018-07-31T19:34:55Z" finished-at="2018-07-31T19:36:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_InventoryItemTransaction_001 -->
+        <test-method status="PASS" signature="Tc_InventoryItemTransaction_002()[pri:0, instance:testcases_functionality.TC_InventoryTransformation@78e67e0a]" name="Tc_InventoryItemTransaction_002" duration-ms="34789" started-at="2018-07-31T19:36:38Z" finished-at="2018-07-31T19:37:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_InventoryItemTransaction_002 -->
+        <test-method status="PASS" signature="Tc_InventoryItemTransaction_003()[pri:0, instance:testcases_functionality.TC_InventoryTransformation@78e67e0a]" name="Tc_InventoryItemTransaction_003" duration-ms="9235" started-at="2018-07-31T19:37:13Z" finished-at="2018-07-31T19:37:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_InventoryItemTransaction_003 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testcases_functionality.TC_InventoryTransformation@78e67e0a]" name="endReport" is-config="true" duration-ms="824" started-at="2018-07-31T19:37:22Z" finished-at="2018-07-31T19:37:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- testcases_functionality.TC_InventoryTransformation -->
+    </test> <!-- Alert -->
+  </suite> <!-- example suite 1 -->
+</testng-results>
