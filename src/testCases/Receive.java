@@ -440,9 +440,7 @@ public class Receive extends ApplicationKeyword
 		if(getText(OR.Receive_searchedfirstNote).equals(testNote))
 		{
 			clickOn(OR.Receive_DeleteIcon);
-			waitForElement(OR.Receive_confirmButton);
 			clickOn(OR.Receive_confirmButton);
-			waitForElement(OR.Receive_searchBox);
 		}		
 		typeIn(OR.Receive_searchBox, testNote);
 		verifyElementText(OR.Receive_NoNOteavailable, "No note available.");

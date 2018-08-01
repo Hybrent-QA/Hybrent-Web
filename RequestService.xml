@@ -5,18 +5,14 @@
  <parameter name="siteUrl" value="https://qa1.test.hybrent.com/b/" />
  <parameter name="nodeUrl" value="http://localhost:4444/wd/hub" />
  <parameter name="siteName" value="qa-1" />
- <test name="RequestService" preserve-order="true">
-   <classes>
-   <class name="testCases.RequestService">
+ <test name="Dashboard" preserve-order="true">
+  <classes>
+   <class name="testcases_functionality.TC_RequestService">
    <methods>
-     <include name="Tc_SPO_01" />
-     <include name="Tc_SPO_02" />
-     <include name="Tc_SPO_03" />
-     <include name="Tc_SPO_04" />
-	 <include name="Tc_SPO_05" />
-	</methods>
+        <include name="TC_RequestService_002" />
+     </methods>
 	</class>
   </classes>
    </test>
-</suite>
+   </suite>
 

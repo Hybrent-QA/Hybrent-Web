@@ -85,9 +85,8 @@ public class PrefCard extends ApplicationKeyword
 		System.out.println("Tc_prefCard_03_04");
 		NavigateUrl(DashBoardURL);	
 		PrefcardPageObject.prefCardPagePageLinkandwait();
-		waitForElement(OR.prefCard_AddPrefCard, 10);
+		waitForElementToDisplayWithoutFail(OR.prefCard_AddPrefCard, 10);
 		clickOn(OR.prefCard_AddPrefCard);
-		waitForElement(OR.prefCard_addStage);
 		clickOn(OR.prefCard_addStage);
 		verifyElementText(OR.prefCard_addStageText, "Add Stage");
 		if(getAttributeValue(OR.prefCard_addStageName, "required")!=null)
@@ -174,7 +173,6 @@ public class PrefCard extends ApplicationKeyword
 		PrefcardPageObject.prefCardPagePageLinkandwait();
 		waitForElementToDisplayWithoutFail(OR.prefCard_AddPrefCard, 10);
 		clickOn(OR.prefCard_AddPrefCard);
-		waitForElement(OR.prefCard_addStage);
 		clickOn(OR.prefCard_addStage);
 		setProperty("Prefcard_StageName", "abcdef");
 		String sName=getProperty("Prefcard_StageName");
@@ -192,12 +190,12 @@ public class PrefCard extends ApplicationKeyword
 		NavigateUrl(DashBoardURL);
 		//cartPage.addNewItem();
 		clickOn(OR.DashBoard_AdminDropdown);
-		waitForElement(OR.prefCard_addStage);
 		clickOn(OR.Admin_ItemCatalog);
 		waitForElementToDisplayWithoutFail(OR.ItemCatalog_AddItem, 20);
 		String itemDesc=getProperty("ItemDesc");
 		typeIn(OR.ItemCatalog_searchTextBox, itemDesc);
 		clickOn(OR.ItemCatalog_searchButtoncommon);	
+		waitTime(4);
 		waitForElementToDisplayWithoutFail(OR.ItemCatalog_firstitemName, 30);
 		String firstCategory=null;
 		if(getText(OR.ItemCatalog_firstitemName).equals(itemDesc))
@@ -206,6 +204,7 @@ public class PrefCard extends ApplicationKeyword
 			firstCategory = getDropDownText(OR.ItemCatalog_itemCategory,1);
 			setProperty("firstCategory", firstCategory);
 			clickOn(OR.ItemCatalog_SaveButton);
+			waitTime(3);
 		}
 		else
 		{
@@ -267,7 +266,6 @@ public class PrefCard extends ApplicationKeyword
 		NavigateUrl(DashBoardURL);
 		PrefcardPageObject.addStageAndItem();
 		clickOn(OR.prefCard_deleteQty);
-		waitForElement(OR.prefCard_confirmButton);
 		clickOn(OR.prefCard_confirmButton);
 		waitForElementToDisplayWithoutFail(OR.prefCard_NoItemText, 10);
 		verifyElementText(OR.prefCard_NoItemText ," No item in this stage.");
@@ -282,14 +280,13 @@ public class PrefCard extends ApplicationKeyword
 		PrefcardPageObject.prefCardPagePageLinkandwait();
 		waitForElementToDisplayWithoutFail(OR.prefCard_AddPrefCard, 10);
 		clickOn(OR.prefCard_AddPrefCard);
-		waitForElement(OR.prefCard_addStage);
 		clickOn(OR.prefCard_addStage);
 		String sName=getProperty("Prefcard_StageName");
 		typeIn(OR.prefCard_addStageName, sName);
 		clickOn(OR.prefCard_addStageButton);
 		waitForElement(OR.prefCard_removeStage);
 		clickOn(OR.prefCard_removeStage);
-		waitForElement(OR.prefCard_removeStage);
+		waitForElement(OR.prefCard_confirmButton);
 		clickOn(OR.prefCard_confirmButton);
 		if(!isElementDisplayed(OR.prefCard_removeStage, 10))
 		{
@@ -311,10 +308,10 @@ public class PrefCard extends ApplicationKeyword
 		PrefcardPageObject.prefCardPagePageLinkandwait();
 		waitForElementToDisplayWithoutFail(OR.prefCard_AddPrefCard, 10);
 		clickOn(OR.prefCard_AddPrefCard);
-		waitForElement(OR.prefCard_addStage);
 		clickOn(OR.prefCard_copyStages);
 		waitForElementToDisplayWithoutFail(OR.prefCard_copyStagesPopUpText,50);
 		selectFromDropdown(OR.prefCard_copyPredCardDrpDown, 1);
+		waitTime(2);
 		String stageName=getDropDownText(OR.prefCard_copyPredCardStageDroppDown, 1);
 		System.out.println(stageName);
 		clickOn(OR.prefCard_addButtton);
@@ -338,6 +335,7 @@ public class PrefCard extends ApplicationKeyword
 		testStarts("Tc_prefCard_14" , "Verify that corresponding preference card gets deleted when user clicks Delete button if corresponding card has no stages in it.");
 		System.out.println("Tc_prefCard_14");
 		NavigateUrl(DashBoardURL);
+		//Loginpage.OpenBrowserAndLogin();
 		PrefcardPageObject.prefCardPagePageLinkandwait();
 		waitForElementToDisplayWithoutFail(OR.prefCard_AddPrefCard, 10);
 		clickOn(OR.prefCard_AddPrefCard);
@@ -345,17 +343,18 @@ public class PrefCard extends ApplicationKeyword
 		typeIn(OR.prefCard_CardName, cardName);
 		selectFromDropdown(OR.prefCard_PhysicianName, 1);
 		waitForElementToDisplayWithoutFail(OR.prefCard_saveButton, 10);
+		waitTime(2);
 		clickOn(OR.prefCard_saveButton);
 		waitForElementToDisplayWithoutFail(OR.prefCard_searchTextBox, 10);
 		typeIn(OR.prefCard_searchTextBox, cardName);
-		waitforPaageload();
-		waitForElement(OR.prefCard_firstprefcard);
+		waitTime(8);
+		waitForElementToDisplayWithoutFail(OR.prefCard_firstprefcard, 10);
 		if(getText(OR.prefCard_firstprefcard).contains(cardName))
 		{
 			clickOn(OR.prefCard_removePrefCard);
-			waitForElementToDisplayWithoutFail(OR.prefCard_confirmButton, 20);
 			clickOn(OR.prefCard_confirmButton);
 			typeIn(OR.prefCard_searchTextBox, cardName);
+			waitTime(5);
 			verifyElementText(OR.prefCard_NoPrefCardText, "No Preference cards Found.");			
 		}
 		else

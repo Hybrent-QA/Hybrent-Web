@@ -62,19 +62,21 @@ public class Patients extends ApplicationKeyword
 		clickOn(OR.Patient_ShopfaclitySelect);
 		waitForElementToDisplayWithoutFail(OR.Patient_Shopfaclity, 60);
 		verifyElementText(OR.Patient_Shopfaclity, "Select Facility");
-		typeIn(OR.Invoice_SearchInInvoiceTextBox, facility_Name);	
-		int one = driver.findElements(By.xpath("(//*[@class='table table-responsive table-striped table-bordered']//tbody//td[1])")).size();
+		//waitForElementToDisplay(OR.Shop_countoffacilities, 60);
+		int one = driver.findElements(By.xpath("//*[@style='border-right: none;vertical-align: middle;']")).size();
+		System.out.println(one);
 		boolean facFound=false;
+		String xpath;
 		String selectedFacility;
 		WebElement btn;
 		for(int i=1; i<=one; i++)
 		{
-			selectedFacility=driver.findElement(By.xpath("(//*[@class='table table-responsive table-striped table-bordered']//tbody//td[1])["+i+"]")).getText();
-			//System.out.println(selectedFacility);
+			xpath="(//table[@class='table table-responsive table-striped table-bordered']/tbody/tr["+i+"]";
+			selectedFacility=driver.findElement(By.xpath(xpath+"/td)")).getText();
 			if(selectedFacility.equals(facility_Name))
 			{  
 				facFound=true;
-				btn= driver.findElement(By.xpath("(//*[starts-with(@class, 'table table-responsive')]//tbody//td[1])/following-sibling::td//button"));
+				btn= driver.findElement(By.xpath(xpath+"/td[2]/div/button)"));
 				if(btn.getAttribute("disabled")!=null)
 				{
 					testLogPass("Go the text '"+selectedFacility+ "' Matches with selected Facility" );
@@ -85,6 +87,7 @@ public class Patients extends ApplicationKeyword
 				}
 				break;
 			}
+
 		}
 
 		if(!facFound)
@@ -153,7 +156,7 @@ public class Patients extends ApplicationKeyword
 	@Test
 	public void Tc_Patients_05()
 	{
-		testStarts("Tc_Patients_05", "Drill-down > Verify that edit case page opens when user clicks Edit button.");
+		testStarts("Tc_Patients_07", "Drill-down > Verify that edit case page opens when user clicks Edit button.");
 		NavigateUrl(DashBoardURL);	
 		  System.out.println("Tc_Patients_05");
 		PrefcardPageObject.patientsPageLinkandwait();
@@ -171,14 +174,12 @@ public class Patients extends ApplicationKeyword
 		NavigateUrl(DashBoardURL);	
 		System.out.println("Tc_Patients_07");
 		PrefcardPageObject.patientsPageLinkandwait();
+		//waitTime(5);
 		waitForElementToDisplayWithoutFail(OR.Patient_plusIcon, 10);
 		clickOn(OR.Patient_plusIcon);
-		if(driver.findElements(By.xpath("(//*[@class='fa fa-print'])[1]")).size()!=0)
-		{
 		clickOn(OR.Patient_PrintIcon);
 		verifyElementText(OR.Patient_previewpopup, "Download case");
 		clickOn(OR.Patient_ClosePreview);
-		}
 		
 	}
 

@@ -5,28 +5,26 @@
  <parameter name="siteUrl" value="https://qa1.test.hybrent.com/b/" />
  <parameter name="nodeUrl" value="http://localhost:4444/wd/hub" />
  <parameter name="siteName" value="qa-1" />
-  <test name="ShopPage" preserve-order="true">
-   <classes>
-   <class name="testCases.ShopPage">
+ <test name="Alert" preserve-order="true">
+  <classes>
+   <class name="testcases_functionality.TC_Shop">
    <methods>
-     <include name="Tc_Shop_1"/>
-     <include name="Tc_Shop_2_3"/>
-     <include name="Tc_Shop_4"/>
-     <include name="Tc_Shop_5"/>
-	 <include name="Tc_Shop_6"/>
-	 <include name="Tc_Shop_7"/>
-	 <include name="Tc_Shop_08"/>
-	 <include name="Tc_Shop_09"/>
-	 <include name="Tc_Shop_10"/>
-	 <include name="Tc_Shop_12"/>
-	 <include name="Tc_Shop_15"/>
-	 <include name="Tc_Shop_16"/>
-	 <include name="Tc_Shop_17"/>
-	 <include name="Tc_Shop_19"/>
-	 <include name="Tc_Shop_21"/>
-	</methods>
+            <include name="Tc_Shop_001" />
+            <include name="Tc_Shop_002" />
+            <include name="Tc_Shop_003" />
+            <include name="Tc_Shop_005" />
+            <include name="Tc_Shop_006" />
+            <include name="Tc_Shop_007" />
+            <include name="Tc_Shop_008" />
+            <include name="Tc_Shop_009" />
+            <include name="Tc_Shop_010" />
+            <include name="Tc_Shop_011" />
+            <include name="Tc_Shop_012" />
+            <include name="Tc_Shop_013" />
+            <include name="Tc_Shop_014" />
+     </methods>
 	</class>
   </classes>
    </test>
-</suite>
+   </suite>
 

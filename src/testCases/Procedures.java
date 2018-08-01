@@ -161,15 +161,13 @@ public class Procedures extends ApplicationKeyword
 		String procNmae=getProperty("procName");		
 		typeIn(OR.Procedure_SearchTextBox, procNmae);
 		waitForElementToDisplayWithoutFail(OR.Procedure_firstElem, 10);
+		waitTime(4);
 		String firstElemAfterSearch=getText(OR.Procedure_firstElem);
 		if(firstElemAfterSearch.equals("+ "+procNmae))
 		{
-			waitForElement(OR.Procedure_waitForDelete);
+			waitForElementToDisplayWithoutFail(OR.Procedure_waitForDelete, 5);
 			clickOn(OR.Procedure_DeleteButton);
-			waitforPaageload();
-			waitForElement(OR.Procedure_DeleteButton);
 			clickOn(OR.Procedure_ConfirmButton);
-			ToastmesssageSucess();
 			waitForElementToDisplayWithoutFail(OR.Procedure_SearchTextBox, 5);
 			clearEditBox(OR.Procedure_SearchTextBox);
 			typeIn(OR.Procedure_SearchTextBox, procNmae);

@@ -80,11 +80,9 @@ public class OperatingRoom extends ApplicationKeyword
 			testLogFail("SAVE button is not enabled");				
 		}
 		clickOn(OR.OP_disabledSaveButton);
-		ToastmesssageSucess();
-		waitForElement(OR.OP_searchTextBox);
 		typeIn(OR.OP_searchTextBox, opRoom);
 		clickOn(OR.OP_searchButton);
-		
+		waitForElementToDisplayWithoutFail(OR.OP_firstOPRoom, 10);
 		String s=getText(OR.OP_firstOPRoom);
 		if(s.equalsIgnoreCase(opRoom))
 		{
@@ -105,7 +103,6 @@ public class OperatingRoom extends ApplicationKeyword
 			{
 				testLogPass("Operating room is Edited successfuly");
 				clickOn(OR.OP_DeleteButton);
-				waitForElement(OR.OP_confirmButton);
 				clickOn(OR.OP_confirmButton);
 				clearEditBox(OR.OP_searchTextBox);
 				waitForElementToDisplayWithoutFail(OR.OP_firstOPRoom, 10);

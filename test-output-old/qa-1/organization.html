@@ -53,7 +53,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2018-07-11 10:56:53</span>
+					<span class='suite-started-time'>2018-07-20 15:55:18</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +83,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 33s+733ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 3m 0s+448ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 33s+733ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 3m 0s+448ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2018-07-11 10:56:20</span> 
+							<span class='panel-lead suite-started-time'>2018-07-20 15:52:17</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2018-07-11 10:56:53</span> 
+							<span class='panel-lead suite-ended-time'>2018-07-20 15:55:18</span> 
 						</div> 
 					</div>
 				</div>
@@ -237,19 +237,19 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='9b41fe02-2413-4354-8b8a-54b16da84c57'>
+										<li class='collection-item test displayed active fail ' extentid='b1ad95f4-2ef2-406c-9511-a1115a69274b'>
 											<div class='test-head'>
-												<span class='test-name'>TC_ORG_01_02_03_04 </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>TC_Organization_018 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-07-11 10:56:24</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-07-20 15:52:24</span>
 													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'></span>
 													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'></span>
 												</div>
-												<div class='test-desc'>Verify that Organization Details page appears when user clicks on organization option in admin dropdown.</div>
+												<div class='test-desc'>Update Organization > Settings > Sage Intacct Integration > Verify that "Configure Intacct" button appears if "Sage Intacct Integration" is set as Active.</div>
 												<div class='test-attributes'>
 												</div>
 												<div class='test-steps'>
@@ -263,88 +263,454 @@
 														</thead>
 														<tbody>
 																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>15:52:31</td>
+																	<td class='step-details'>navigate to URL Exception java.lang.NullPointerException</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>15:52:31</td>
+																	<td class='step-details'><a href='D:\hari-hybrint\Hybrent-Fullfunctionality/test-output/screenshots/qa-1/Automation20180720035231.png' data-featherlight='image'><img class='report-img' src='file:///D:\hari-hybrint\Hybrent-Fullfunctionality/test-output/screenshots/qa-1/Automation20180720035231.png' /></a></td>
+																</tr>
+																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:38</td>
+																	<td class='timestamp'>15:52:31</td>
 																	<td class='step-details'>Open the url https://qa1.test.hybrent.com/b/#/login/</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:40</td>
-																	<td class='step-details'>Click on :LinkLogin</td>
+																	<td class='timestamp'>15:52:48</td>
+																	<td class='step-details'>Adf login is present</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:40</td>
-																	<td class='step-details'>Type 'admin' in : Input_UserName</td>
+																	<td class='timestamp'>15:52:49</td>
+																	<td class='step-details'>Click on :LoginHybrent</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:41</td>
-																	<td class='step-details'>Type 'goouser1' in : Input_Password</td>
+																	<td class='timestamp'>15:52:49</td>
+																	<td class='step-details'>Type 'AnkurCDXGA2' in : Input_UserName</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:41</td>
+																	<td class='timestamp'>15:52:50</td>
+																	<td class='step-details'>Type 'gouser1' in : Input_Password</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:52:50</td>
+																	<td class='step-details'>Sucessfully got the attribute value 'password'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:52:50</td>
+																	<td class='step-details'>Password is masked</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:52:55</td>
 																	<td class='step-details'>Click on :LoginBtn</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:45</td>
+																	<td class='timestamp'>15:53:17</td>
+																	<td class='step-details'>Click on :DashBoard</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:18</td>
 																	<td class='step-details'>Click on :DropDown_Admin</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:46</td>
-																	<td class='step-details'>verify if the AdminMenuText element contains text 'Admin</td>
+																	<td class='timestamp'>15:53:18</td>
+																	<td class='step-details'>Click on :organization</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:47</td>
-																	<td class='step-details'>Click on :Shop_Shop_orgpage</td>
+																	<td class='timestamp'>15:53:19</td>
+																	<td class='step-details'>Got the child text ' ORGANIZATION DETAILS</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:48</td>
-																	<td class='step-details'>Verify if the page title contains text 'Organization'</td>
+																	<td class='timestamp'>15:53:20</td>
+																	<td class='step-details'>Click on :Features</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:48</td>
-																	<td class='step-details'>verify if the orgPageTextt element contains text 'ORGANIZATION DETAILS</td>
+																	<td class='timestamp'>15:53:28</td>
+																	<td class='step-details'>Sage Intacct  is off</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:48</td>
-																	<td class='step-details'>Click on :Shop_orgFeaturesPage</td>
+																	<td class='timestamp'>15:53:32</td>
+																	<td class='step-details'>configure_intacct is present</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:49</td>
-																	<td class='step-details'>verify if the orgFeaturesPage element contains text 'INVENTORY</td>
+																	<td class='timestamp'>15:53:38</td>
+																	<td class='step-details'>verify if the AuthorizeInteract element contains text 'Authorize with Intacct.</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:50</td>
+																	<td class='timestamp'>15:53:39</td>
+																	<td class='step-details'>Verify Element : 'companyid' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:40</td>
+																	<td class='step-details'>Verify Element : 'intacctid' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:41</td>
+																	<td class='step-details'>Verify Element : 'intacctpass' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:41</td>
+																	<td class='step-details'>Verify Element : 'AuthorizeBtn' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:41</td>
+																	<td class='step-details'>Verify Element : 'Cancel' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:45</td>
+																	<td class='step-details'>Click on :Cancel</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:46</td>
+																	<td class='step-details'>verify if the OrgSettingUpdate element contains text 'Organization update.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:46</td>
+																	<td class='step-details'>Sucessfully got the text 'Are you sure you want to update Organization settings?
+System will log out all currently active users!'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:46</td>
+																	<td class='step-details'>Click on :confirmButton</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:48</td>
+																	<td class='step-details'>verify if the SettingUpdate element contains text 'Setting update.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:48</td>
+																	<td class='step-details'>Sucessfully got the text 'Organization settings has been updated its mandatory that you re-login.
+System will now log you out.'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:49</td>
+																	<td class='step-details'>Click on :Logout</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:54</td>
+																	<td class='step-details'>Click on :signinnewuser</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:54</td>
+																	<td class='step-details'>Adf login is present</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:54</td>
+																	<td class='step-details'>Click on :LoginHybrent</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:55</td>
+																	<td class='step-details'>Type 'AnkurCDXGA2' in : Input_UserName</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:56</td>
+																	<td class='step-details'>Type 'gouser1' in : Input_Password</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:56</td>
+																	<td class='step-details'>Sucessfully got the attribute value 'password'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:56</td>
+																	<td class='step-details'>Password is masked</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:53:56</td>
+																	<td class='step-details'>Click on :LoginBtn</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:00</td>
+																	<td class='step-details'>Click on :DashBoard</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:02</td>
 																	<td class='step-details'>Click on :DropDown_Admin</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:50</td>
-																	<td class='step-details'>Click on :orgBudgetPage</td>
+																	<td class='timestamp'>15:54:02</td>
+																	<td class='step-details'>Click on :organization</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:52</td>
-																	<td class='step-details'>Verify if the page title contains text 'Organization'</td>
+																	<td class='timestamp'>15:54:03</td>
+																	<td class='step-details'>Got the child text ' ORGANIZATION DETAILS</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:53</td>
-																	<td class='step-details'>verify if the orgBudgetPageText element contains text 'MANAGE ORGANIZATION BUDGET</td>
+																	<td class='timestamp'>15:54:04</td>
+																	<td class='step-details'>Click on :Features</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>10:56:53</td>
+																	<td class='timestamp'>15:54:04</td>
+																	<td class='step-details'>Sage Intacct  is ON</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>15:54:20</td>
+																	<td class='step-details'>configure_intacct is not present</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>15:54:20</td>
+																	<td class='step-details'><a href='D:\hari-hybrint\Hybrent-Fullfunctionality/test-output/screenshots/qa-1/Automation20180720035420.png' data-featherlight='image'><img class='report-img' src='file:///D:\hari-hybrint\Hybrent-Fullfunctionality/test-output/screenshots/qa-1/Automation20180720035420.png' /></a></td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:21</td>
+																	<td class='step-details'>verify if the OrgSettingUpdate element contains text 'Organization update.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:21</td>
+																	<td class='step-details'>Sucessfully got the text 'Are you sure you want to update Organization settings?
+System will log out all currently active users!'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:22</td>
+																	<td class='step-details'>Click on :confirmButton</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:23</td>
+																	<td class='step-details'>verify if the SettingUpdate element contains text 'Setting update.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:23</td>
+																	<td class='step-details'>Sucessfully got the text 'Organization settings has been updated its mandatory that you re-login.
+System will now log you out.'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:24</td>
+																	<td class='step-details'>Click on :Logout</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:25</td>
+																	<td class='step-details'>Click on :signinnewuser</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:25</td>
+																	<td class='step-details'>Adf login is present</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:26</td>
+																	<td class='step-details'>Click on :LoginHybrent</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:26</td>
+																	<td class='step-details'>Type 'AnkurCDXGA2' in : Input_UserName</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:26</td>
+																	<td class='step-details'>Type 'gouser1' in : Input_Password</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:27</td>
+																	<td class='step-details'>Sucessfully got the attribute value 'password'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:27</td>
+																	<td class='step-details'>Password is masked</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:27</td>
+																	<td class='step-details'>Click on :LoginBtn</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:31</td>
+																	<td class='step-details'>Click on :DashBoard</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:33</td>
+																	<td class='step-details'>Click on :DropDown_Admin</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:33</td>
+																	<td class='step-details'>Click on :organization</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:34</td>
+																	<td class='step-details'>Got the child text ' ORGANIZATION DETAILS</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:35</td>
+																	<td class='step-details'>Click on :Features</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:40</td>
+																	<td class='step-details'>Sage Intacct  is off</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:42</td>
+																	<td class='step-details'>configure_intacct is present</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:45</td>
+																	<td class='step-details'>verify if the AuthorizeInteract element contains text 'Authorize with Intacct.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:45</td>
+																	<td class='step-details'>Verify Element : 'companyid' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:46</td>
+																	<td class='step-details'>Verify Element : 'intacctid' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:47</td>
+																	<td class='step-details'>Verify Element : 'intacctpass' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:48</td>
+																	<td class='step-details'>Verify Element : 'AuthorizeBtn' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:49</td>
+																	<td class='step-details'>Verify Element : 'Cancel' is present as expected</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:51</td>
+																	<td class='step-details'>Click on :Cancel</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:53</td>
+																	<td class='step-details'>verify if the OrgSettingUpdate element contains text 'Organization update.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:55</td>
+																	<td class='step-details'>Sucessfully got the text 'Are you sure you want to update Organization settings?
+System will log out all currently active users!'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:57</td>
+																	<td class='step-details'>Click on :confirmButton</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:54:59</td>
+																	<td class='step-details'>verify if the SettingUpdate element contains text 'Setting update.</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:00</td>
+																	<td class='step-details'>Sucessfully got the text 'Organization settings has been updated its mandatory that you re-login.
+System will now log you out.'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:03</td>
+																	<td class='step-details'>Click on :Logout</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:06</td>
+																	<td class='step-details'>Click on :signinnewuser</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:06</td>
+																	<td class='step-details'>Adf login is present</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:08</td>
+																	<td class='step-details'>Click on :LoginHybrent</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:09</td>
+																	<td class='step-details'>Type 'AnkurCDXGA2' in : Input_UserName</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:10</td>
+																	<td class='step-details'>Type 'gouser1' in : Input_Password</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:13</td>
+																	<td class='step-details'>Sucessfully got the attribute value 'password'</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:13</td>
+																	<td class='step-details'>Password is masked</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:14</td>
+																	<td class='step-details'>Click on :LoginBtn</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>15:55:17</td>
 																	<td class='step-details'>Closed browser sucessfully</td>
 																</tr>
 														</tbody>

@@ -5,18 +5,15 @@
  <parameter name="siteUrl" value="https://qa1.test.hybrent.com/b/" />
  <parameter name="nodeUrl" value="http://localhost:4444/wd/hub" />
  <parameter name="siteName" value="qa-1" />
-    <test name="InvoicePage" preserve-order="true">
-   <classes>
-   <class name="testCases.InvoicePage">
+ <test name="Dashboard" preserve-order="true">
+  <classes>
+   <class name="testcases_functionality.TC_Invoice">
    <methods>
-     <include name="Tc_INV_01"/>
-	 <include name="Tc_INV_09_10"/>
-	 <include name="Tc_INV_02"/>
-	 <include name="Tc_INV_03"/>
-	 <include name="Tc_INV_04"/>
-	</methods>
+   <include name="Tc_Invoice_001" />
+   <include name="Tc_Invoice_002" />
+     </methods>
 	</class>
   </classes>
-  </test>
-</suite>
+   </test>
+   </suite>
 

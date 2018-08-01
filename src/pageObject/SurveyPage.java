@@ -2,6 +2,7 @@ package pageObject;
 
 import AutomationFramework.ApplicationKeyword;
 import AutomationFramework.OR;
+import AutomationFramework._OR;
 
 public class SurveyPage extends ApplicationKeyword{
     public static void VerifySurvey()
@@ -9,6 +10,6 @@ public class SurveyPage extends ApplicationKeyword{
     	waitForElementToDisplay(OR.Survey_txt_Survey, 60);
     	String one = getText(OR.Survey_txt_Survey);
     	verifyElementText(OR.Survey_txt_Survey, one);
-        
+    	clickOn(_OR.HeaderClose);
     }
 }

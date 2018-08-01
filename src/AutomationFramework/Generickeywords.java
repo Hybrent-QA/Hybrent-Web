@@ -1,5 +1,6 @@
 package AutomationFramework;
 import Utilities.Common;
+import funcation_PageObject.Loginpage;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,6 +34,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -61,10 +63,11 @@ public class Generickeywords extends Common
 {
 	public static ExtentReports extent;
 	public static ExtentTest logger;
-	public static WebDriver driver;
+	public static WebDriver driver = null;
 	public static NgWebDriver ngdriver;
 	public static String identifier;
 	public static String locator;
+	 public static ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<RemoteWebDriver>();
 	public static String locatorDescription;
 	public static String outputDirectory;
 	public static String currentExcelBook;
@@ -78,7 +81,7 @@ public class Generickeywords extends Common
 	public static String testStatus = "";
 	public static int testCaseDataRow;
 	public static int testLoadWaitTime = 40;
-	public static int elementLoadWaitTime = 20;
+	public static int elementLoadWaitTime = 10;
 	public static int implicitlyWaitTime = 15;
 	public static int pageLoadWaitTime = 40;
 	public static boolean windowreadyStateStatus = true;
@@ -93,7 +96,7 @@ public class Generickeywords extends Common
 	public static String OutputDirectory =System.getProperty("user.dir")+"/test-output";
 	//	public static String firefoxPath=System.getProperty("user.dir")+"/geckodriver.exe";
 	//	public static String chromePath=System.getProperty("user.dir")+"/chromedriver.exe";
-	public static String firefoxPath=System.getProperty("user.dir")+"/geckodriver";
+	public static String firefoxPath=System.getProperty("user.dir")+"/geckodriver.exe";
 	public static String chromePath=System.getProperty("user.dir")+"/chromedriver.exe";
 	public static  JavascriptExecutor executor;
 	public static WebDriverWait wait ;
@@ -155,15 +158,16 @@ public class Generickeywords extends Common
 		{
 			propsFileName = setPropFile(siteName);
 
-			if (browser.equalsIgnoreCase("Firefox")) {
+			if (browser.equalsIgnoreCase("firefox")) {
 				System.setProperty("webdriver.gecko.driver", firefoxPath);
 				System.out.println(" Executing on FireFox");
 				DesiredCapabilities cap = DesiredCapabilities.firefox();
 				cap.setBrowserName("firefox");
+				cap.setCapability("marionette", true);
 				cap.setPlatform(Platform.ANY);
-				driver = new RemoteWebDriver(new URL(nodeUrl), cap);
-				ngdriver.waitForAngularRequestsToFinish();
-				//openBrowser(url);
+				System.out.println(nodeUrl);
+				//driver = new RemoteWebDriver(new URL(nodeUrl), cap);
+				driver = new FirefoxDriver(cap);
 			}
 			else 
 				if (browser.equalsIgnoreCase("Chrome")) {
@@ -174,23 +178,25 @@ public class Generickeywords extends Common
 					ChromeOptions options = new ChromeOptions();
 					options.setExperimentalOption("prefs", prefs);
 					//options.addArguments("--headless");
-
 					DesiredCapabilities cap = DesiredCapabilities.chrome();
 					cap.setBrowserName("chrome");
 					cap.setPlatform(Platform.ANY);
 					cap.setCapability(ChromeOptions.CAPABILITY, options);
+					System.out.println(nodeUrl);
 					driver = new RemoteWebDriver(new URL(nodeUrl), cap);
-					//openBrowser(url);
+						
 				}
 				else {	
 					throw new IllegalArgumentException("Invalid browser value!!");
 				}
-			
 		}
 		catch (Exception e) {
 			System.out.println(e.toString());
 		}
 	}
+	
+	
+	 
 
 	public static void openBrowser(String URL)
 	{
@@ -214,6 +220,7 @@ public class Generickeywords extends Common
 			((WebDriver) driver).manage().timeouts().pageLoadTimeout(elementLoadWaitTime, TimeUnit.SECONDS);
 			wait = new WebDriverWait(driver, testLoadWaitTime);
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			ngdriver = new NgWebDriver((JavascriptExecutor) driver);
 			System.out.println("WIndow Maximized");
 		}
@@ -232,9 +239,8 @@ public class Generickeywords extends Common
 	{
 		try
 		{
-			waitforPaageload();
 			driver.navigate().to(URL);
-			waitforPaageload();
+			waitUntilPageReady();
 			if(refresh)
 			{
 				driver.navigate().refresh();
@@ -244,7 +250,7 @@ public class Generickeywords extends Common
 		catch(Exception e)
 		{ 
 			System.out.println("---ERROR ON NavigateUrl--- " + e.toString());
-			testLogFail("navigate to URL Exception " + e.toString());
+			//testLogFail("navigate to URL Exception " + e.toString());
 		}
 	}
 
@@ -304,20 +310,19 @@ public class Generickeywords extends Common
 
 	public static void waitForElement(String objName)
 	{
-		waitforPaageload();
+		waitUntilPageReady();
 		waitForElement(objName, elementLoadWaitTime);
 	}
 
 	public static void waitForElement(String objectName, int timeout) {
 		try {
 			driver.manage().timeouts().implicitlyWait(0L, TimeUnit.SECONDS);
-			waitforPaageload();
+			waitJQueryAngular();
 			
 			for (int i = 1; i <= timeout; i++)
 			{
 				try
 				{
-					waitforPaageload();
 					findWebElement(objectName);
 				}
 				catch (InvalidSelectorException e)
@@ -359,6 +364,7 @@ public class Generickeywords extends Common
 	{
 
 		waitForElementToDisplay(objectLocator, elementLoadWaitTime);
+		waitUntilPageReady();
 		try 
 		{
 			if (webElement.getText().trim().contains((expectedText.trim())))
@@ -446,7 +452,7 @@ public class Generickeywords extends Common
 		try
 		{
 			driver.navigate().refresh();
-			waitforPaageload();
+			waitJQueryAngular();
 			ApplicationKeyword.testLogPass("Sucessfully Refreshed browser");
 		}
 		catch (InvalidSelectorException e)
@@ -487,7 +493,7 @@ public class Generickeywords extends Common
 			try
 			{
 				driver.navigate().back();
-				waitforPaageload();
+				waitJQueryAngular();
 				ApplicationKeyword.testLogPass("Sucessfully moved to 'Back' page");
 			}
 			catch (InvalidSelectorException e)
@@ -532,7 +538,7 @@ public class Generickeywords extends Common
 			try
 			{
 				driver.navigate().forward();
-				waitforPaageload();
+				waitJQueryAngular();
 				ApplicationKeyword.testLogPass("Sucessfully moved to 'Forward' page");
 			}
 			catch (InvalidSelectorException e)
@@ -675,7 +681,7 @@ public class Generickeywords extends Common
 	}
 
 	public static void verifyElement(String objLocator)
-	{
+	{waitUntilPageReady();
 		waitForElementToDisplay(objLocator, elementLoadWaitTime);
 
 		try
@@ -700,6 +706,7 @@ public class Generickeywords extends Common
 		{
 			try
 			{
+				waitUntilPageReady();
 				Actions builder = new Actions(driver);
 				builder.moveToElement(webElement).build().perform();
 
@@ -766,7 +773,7 @@ public class Generickeywords extends Common
 
 			try
 			{
-				waitforPaageload();
+				waitJQueryAngular();
 				//webElement.click();
 				Select select = new Select(webElement);
 				select.selectByVisibleText(valueToSelect);
@@ -867,12 +874,8 @@ public class Generickeywords extends Common
 			{
 				webElement.click();
 				Select select = new Select(webElement);
-				waitTime(5);
 				select.selectByIndex(indexNumber);
-				waitTime(3);
-
 				elemText=select.getFirstSelectedOption().getText();
-
 				ApplicationKeyword.testLogPass(  "Select '" + indexNumber + "' option from : " + locatorDescription);
 			}
 			catch (UnreachableBrowserException e)
@@ -900,7 +903,7 @@ public class Generickeywords extends Common
 	{
 
 		try {
-			waitforPaageload();
+			waitJQueryAngular();
 			if (driver.getTitle().contains(partialTitle))
 			{
 
@@ -948,7 +951,7 @@ public class Generickeywords extends Common
 	{
 		try
 		{
-			waitforPaageload();
+			waitJQueryAngular();
 			driver.findElement(By.linkText(txt));
 
 			ApplicationKeyword.testLogPass(  "Verify if link '" + txt + "' is present");
@@ -1017,7 +1020,7 @@ public class Generickeywords extends Common
 	}
 
 	public static void waitForText(String txt)
-	{waitforPaageload();
+	{waitJQueryAngular();
 		waitForText(txt, testLoadWaitTime);
 	}
 
@@ -1026,7 +1029,7 @@ public class Generickeywords extends Common
 		for (int second = 0; second < timeout; second++)
 		{
 			try {
-				waitforPaageload();
+				waitJQueryAngular();
 				driver.getCurrentUrl();
 			} catch (Exception e) {
 				ApplicationKeyword.testLogFail("WebDriver is not found");
@@ -1057,10 +1060,8 @@ public class Generickeywords extends Common
 		waitForElementToDisplay(objLocator, elementLoadWaitTime);
 
 		try
-		{	
-			waitforPaageload();
+		{	waitJQueryAngular();
 			webElement.click();
-			//System.out.println("Click on :" + locatorDescription);
 			ApplicationKeyword.testLogPass(  "Click on :" + locatorDescription);
 		}
 		catch (InvalidSelectorException e)
@@ -1749,12 +1750,12 @@ public class Generickeywords extends Common
 	public static String getText(String objLocator)
 	{
 		String getText = null;
+		waitUntilPageReady();
 		for (int i = 1; i <= elementLoadWaitTime; i++)
 		{
 			try {
 				//Since for loop is already present for required waitTime,
 				//waitForElement does not have to wait for another full wait cycle
-				waitforPaageload();
 				waitForElement(objLocator, 1);
 				getText = webElement.getText();
 				//Following condition is added to make sure that it waits for element
@@ -1766,6 +1767,7 @@ public class Generickeywords extends Common
 				}
 
 				testLogPass("Sucessfully got the text '" + getText + "'");
+				waitUntilPageReady();
 				break;
 			}
 			catch (InvalidSelectorException e)
@@ -1955,7 +1957,7 @@ public class Generickeywords extends Common
 				{
 					if (!webElementStatus)
 					{		
-						waitforPaageload();
+						waitJQueryAngular();
 						findWebElement(objLocator);
 						webElementStatus = true;
 				}
@@ -1993,7 +1995,7 @@ public class Generickeywords extends Common
 				{
 					if (webElementStatus)
 					{
-						testLogFail(locatorDescription + " element is present but its not in clickable/editable state within '" + timeout + "' timeout");
+						testLogPass(locatorDescription + " element is present but its not in clickable/editable state within '" + timeout + "' timeout");
 					}
 					else
 					{
@@ -2018,6 +2020,7 @@ public class Generickeywords extends Common
 	{
 		boolean webElementStatus = false;
 		try {
+			waitUntilPageReady();
 			driver.manage().timeouts().implicitlyWait(0L, TimeUnit.SECONDS);
 
 			for (int i = 1; i <= timeout; i++)
@@ -2025,8 +2028,8 @@ public class Generickeywords extends Common
 				try
 				{
 					if (!webElementStatus)
-					{	
-						waitforPaageload();
+					{		
+						//new WebDriverWait(driver, 40).until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 						findWebElement(objLocator);
 						webElementStatus = true;
 					}
@@ -2241,6 +2244,7 @@ public class Generickeywords extends Common
 
 	public static boolean isElementDisplayed(String objectLocator)
 	{
+		waitUntilPageReady();
 		findWebElement(objectLocator);
 
 		if (webElement.isDisplayed())
@@ -2299,6 +2303,23 @@ public class Generickeywords extends Common
 				webElement.click();
 			}
 			testLogPass("Checked on the " + locatorDescription + " checkbox");
+		}
+		catch (Exception e)
+		{
+			testLogFail(e.toString());
+		}
+	}
+	
+	public static void selectRadioBtn(String objLocator)
+	{
+		waitForElementToDisplay(objLocator, elementLoadWaitTime);
+		try
+		{
+			if (!webElement.isSelected())
+			{
+				webElement.click();
+			}
+			testLogPass("Checked on the " + locatorDescription + " RadioBtn");
 		}
 		catch (Exception e)
 		{
@@ -2688,22 +2709,21 @@ public class Generickeywords extends Common
  
     //Wait for JQuery Load
     public static void waitForJQueryLoad() {
-    	 JavascriptExecutor jsExec = (JavascriptExecutor) driver;
-    	 
-         Boolean angularUnDefined = (Boolean) executor.executeScript("return window.angular === undefined");
-         if (!angularUnDefined) {
-             Boolean angularInjectorUnDefined = (Boolean) jsExec.executeScript("return angular.element(document).injector() === undefined");
-             if(!angularInjectorUnDefined) {
-                 sleep(20);
-                 waitForAngularLoad();
-                 waitUntilJSReady();
-                 sleep(20);
-             } else {
-                 System.out.println("Angular injector is not defined on this site!");
-             }
-         }  else {
-             System.out.println("Angular is not defined on this site!");
-         }
+        //Wait for jQuery to load
+        ExpectedCondition<Boolean> jQueryLoad = driver -> ((Long) ((JavascriptExecutor) driver)
+                .executeScript("return jQuery.active") == 0);
+ 
+        //Get JQuery is Ready
+        boolean jqueryReady = (Boolean) jsExec.executeScript("return jQuery.active==0");
+ 
+        //Wait JQuery until it is Ready!
+        if(!jqueryReady) {
+            System.out.println("JQuery is NOT Ready!");
+            //Wait for jQuery to load
+            jsWait.until(jQueryLoad);
+        } else {
+            System.out.println("JQuery is Ready!");
+        }
     }
  
  
@@ -2777,24 +2797,16 @@ public class Generickeywords extends Common
     }
  
     //Wait Until Angular and JS Ready
-    public static void waitUntilAngularReady() {
+    public static void waitUntilPageReady() {
         JavascriptExecutor jsExec = (JavascriptExecutor) driver;
  
-        //First check that ANGULAR is defined on the page. If it is, then wait ANGULAR
-        Boolean angularUnDefined = (Boolean) jsExec.executeScript("return window.angular === undefined");
+        Boolean angularUnDefined = (Boolean) executor.executeScript("return window.angular === undefined");
         if (!angularUnDefined) {
             Boolean angularInjectorUnDefined = (Boolean) jsExec.executeScript("return angular.element(document).injector() === undefined");
             if(!angularInjectorUnDefined) {
-                //Pre Wait for stability (Optional)
                 sleep(20);
- 
-                //Wait Angular Load
                 waitForAngularLoad();
- 
-                //Wait JS Load
                 waitUntilJSReady();
- 
-                //Post Wait for stability (Optional)
                 sleep(20);
             } else {
                 System.out.println("Angular injector is not defined on this site!");
@@ -2805,8 +2817,8 @@ public class Generickeywords extends Common
     }
  
     //Wait Until JQuery Angular and JS is ready
-    public static void waitforPaageload() {
-        waitUntilAngularReady();
+    public static void waitJQueryAngular() {
+    	waitUntilPageReady();
     }
  
     public static void sleep (Integer seconds) {
@@ -2817,4 +2829,5 @@ public class Generickeywords extends Common
             e.printStackTrace();
         }
     }
+   
 }

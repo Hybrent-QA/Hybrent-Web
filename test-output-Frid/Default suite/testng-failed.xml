@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Shop">
+        <methods>
+          <include name="Tc_Shop_011"/>
+          <include name="Tc_Shop_010"/>
+          <include name="Tc_Shop_006"/>
+          <include name="Tc_Shop_008"/>
+          <include name="Tc_Shop_005"/>
+          <include name="Tc_Shop_002"/>
+          <include name="Tc_Shop_013"/>
+          <include name="Tc_Shop_007"/>
+          <include name="Tc_Shop_001"/>
+          <include name="Tc_Shop_012"/>
+          <include name="Tc_Shop_003"/>
+          <include name="Tc_Shop_009"/>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Shop -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

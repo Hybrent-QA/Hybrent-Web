@@ -49,47 +49,43 @@ public class InvoicePage extends ApplicationKeyword
 	@Test
 	public void Tc_INV_01() throws InterruptedException
 	{
-		testStarts("Tc_INV_01", "Verify that following dropdown filters(Vendor,Status,Search By ,Due Date,Facility,Departments,Ordered By	) appear on page");
+		testStarts("Tc_INV_01_", "Verify that following dropdown filters(Vendor,Status,Search By ,Due Date,Facility,Departments,Ordered By	) appear on page");
 		Loginpage.OpenBrowserAndLogin();	
 		System.out.println("Tc_INV_01");
-		waitForElement(OR.Shop_Menu, 60);
-		//get the By default Facility Name of User	
+		waitForElementToDisplayWithoutFail(OR.Shop_Menu, 60);
+		//get the By default Facility Name of USer	
 		clickOn(OR.Orders_Link);	
-		waitForElement(OR.Receive_selectedFacInDropDown, 5);
+		waitForElementToDisplayWithoutFail(OR.Receive_selectedFacInDropDown, 5);
 		ReceivePageObject.shopFacility();
 		clickOn(OR.Order_status_dropdown);
-		waitForElement(OR.Order_PO_StatusDropdown_Assigned, 5);
+		waitForElementToDisplayWithoutFail(OR.Order_PO_StatusDropdown_Assigned, 5);
 		clickOn(OR.Order_PO_StatusDropdown_Assigned);
 		clickOn(OR.Order_PO_SearchBtn);
-		waitForElement(OR.conditionForNoOrder, 10);
+		waitForElementToDisplayWithoutFail(OR.conditionForNoOrder, 10);
 		String s=getText(OR.conditionForNoOrder);
 		if (s.trim().equalsIgnoreCase("No Order Found"))
 		{
 			testLogPass("Assigned State has no orders");
 			clickOn(OR.Order_status_dropdown);
-			waitForElement(OR.Order_PO_StatusDropdown_Confirmed);
 			clickOn(OR.Order_PO_StatusDropdown_Confirmed);
 			clickOn(OR.Order_PO_SearchBtn);
-			waitForElement(OR.conditionForNoOrder, 5);
+			waitForElementToDisplayWithoutFail(OR.conditionForNoOrder, 5);
 			String s1=getText(OR.conditionForNoOrder);
 			if(s1.trim().equalsIgnoreCase("No Order Found"))
 			{
 				testLogPass("Confirmed State has no orders");
 				clickOn(OR.Order_status_dropdown);
-				waitForElement(OR.Order_PO_StatusDropdown_PartialReceived);
 				clickOn(OR.Order_PO_StatusDropdown_PartialReceived);
 				clickOn(OR.Order_PO_SearchBtn);
-				waitForElement(OR.conditionForNoOrder, 5);
+				waitForElementToDisplayWithoutFail(OR.conditionForNoOrder, 5);
 				String s2=getText(OR.conditionForNoOrder);
 				if(s2.trim().equalsIgnoreCase("No Order Found"))
 				{
 					testLogPass("PartialReceived State has no orders");
 					clickOn(OR.Order_status_dropdown);
-					waitForElement(OR.Order_PO_StatusDropdown_Completed);
 					clickOn(OR.Order_PO_StatusDropdown_Completed);
-					waitForElement(OR.Order_PO_SearchBtn);
 					clickOn(OR.Order_PO_SearchBtn);
-					waitForElement(OR.conditionForNoOrder, 5);
+					waitForElementToDisplayWithoutFail(OR.conditionForNoOrder, 5);
 					String s3=getText(OR.conditionForNoOrder);
 					if(s3.trim().equalsIgnoreCase("No Order Found"))
 					{
@@ -116,31 +112,30 @@ public class InvoicePage extends ApplicationKeyword
 
 	public void CreateInvoice() throws InterruptedException
 	{
-		waitForElement(OR.Order_PO_first_dropdown, 5);
+		waitForElementToDisplayWithoutFail(OR.Order_PO_first_dropdown, 5);
 		if(isElementDisplayedwithoutFail(OR.Order_PO_first_dropdown, 5))
 		{
-			//waitForElement(OR.Order_PO_first_dropdown, 20);
+			//waitForElementToDisplayWithoutFail(OR.Order_PO_first_dropdown, 20);
 			clickOn(OR.Order_PO_first_dropdown);
-			waitForElement(OR.Invoice_wait, 60);
+			waitForElementToDisplayWithoutFail(OR.Invoice_wait, 60);
 			WebElement element = driver.findElement(By.xpath("(//a[text()='Invoices'])[1]"));
 			Actions action = new Actions(driver);
 			action.moveToElement(element).build().perform();
-			waitForElement(OR.Order_PO_first_Addinvoice, 60);
+			waitForElementToDisplayWithoutFail(OR.Order_PO_first_Addinvoice, 60);
 			clickOn(OR.Order_PO_first_Addinvoice);
-			waitForElement(OR.Invoice_InvoicePONum, 60);
+			waitForElementToDisplayWithoutFail(OR.Invoice_InvoicePONum, 60);
 			String PoNum=getText(OR.Invoice_InvoicePONum);
 			String invoiceName="TestINV000AA"+ApplicationKeyword.randomAlphaNumeric(3);
 			setProperty("invoiceName", invoiceName);
 			typeIn(OR.Invoice_InvoiceDesc, invoiceName);
 			clickOn(OR.Invoice_SaveButton);
-			waitForElement(OR.Invoice_ConfirmButton);
 			clickOn(OR.Invoice_ConfirmButton);
 			testLogPass("Second Test case starts");
-			waitForElement(OR.Invoice_PONUmInHeader);
-			String PONUmberHeader=getText(OR.Invoice_PONUmInHeader).trim().replace(" (ASSIGNED)", "");
+			waitForElementToDisplayWithoutFail(OR.Invoice_PONUmInHeader, 5);
+			String PONUmberHeader=getText(OR.Invoice_PONUmInHeader).trim();
 			System.out.println(PONUmberHeader);
 			clickOn(OR.Invoice_SelectFirstInvoice);
-			waitForElement(OR.Invoice_PageHeadTextIncludingPONum, 5);
+			waitForElementToDisplayWithoutFail(OR.Invoice_PageHeadTextIncludingPONum, 5);
 			String header1=getText(OR.Invoice_PageHeadTextIncludingPONum).trim();
 			System.out.println(header1);
 			if(header1.contains(PONUmberHeader))
@@ -153,12 +148,12 @@ public class InvoicePage extends ApplicationKeyword
 			}
 			testLogPass("Third Test case starts");		
 			clickOn(OR.Invoice_DocButton);
-			waitForElement(OR.Order_PO_Doc_UploadFiles);
+			//waitForElementToDisplay(OR.Invoice_clickOnUploadFIle,12);
 			WebElement elem=driver.findElement(By.xpath("//*[@type='file']"));
 			String projectPath = System.getProperty("user.dir");
 			System.out.println("Project path --- " + projectPath);
 			elem.sendKeys(projectPath + "/assets/images.jpeg");
-			waitForElement(OR.Invoice_UploadDocName, 10);
+			waitForElementToDisplayWithoutFail(OR.Invoice_UploadDocName, 10);
 			String nameOfFile_Expected="images.jpeg";
 			String s2=getText(OR.Invoice_UploadDocName).trim();
 			if(s2.contains(nameOfFile_Expected))
@@ -171,19 +166,19 @@ public class InvoicePage extends ApplicationKeyword
 				testLogFail("Name not matched");
 			}
 			clickOn(OR.Invoice_closeButton);
-			waitForElement(OR.Request_InvoicePageLink);
 			clickOn(OR.Request_InvoicePageLink);
-			waitForElement(OR.Receive_selectedFacInDropDown, 10);
-			ReceivePageObject.InvoiceshopFacility();	
+			waitForElementToDisplayWithoutFail(OR.Receive_selectedFacInDropDown, 10);
+			ReceivePageObject.shopFacility();	
 			typeIn(OR.Invoice_SearchInInvoiceTextBox, PoNum);
 			clickOn(OR.Invoice_SearchButton);
 			//Thread.sleep(4000);
-			waitForElement(OR.Invoice_SelectFirstPONUmFromInvoicePage, 10);
+			waitForElementToDisplayWithoutFail(OR.Invoice_SelectFirstPONUmFromInvoicePage, 10);
 			verifyElementText(OR.Invoice_SelectFirstPONUmFromInvoicePage, PoNum);		
 			clearEditBox(OR.Invoice_SearchInInvoiceTextBox);
 			typeIn(OR.Invoice_SearchInInvoiceTextBox, invoiceName);
 			clickOn(OR.Invoice_SearchButton);
-			waitForElement(OR.Invoice_SelectFirstPONUmFromInvoicePage, 10);
+			//	Thread.sleep(4000);
+			waitForElementToDisplayWithoutFail(OR.Invoice_SelectFirstPONUmFromInvoicePage, 10);
 			String abc=getText(OR.Invoice_SelectFirstInvoiceFromInvoicePage);
 			if(abc.equalsIgnoreCase(invoiceName))
 			{
@@ -197,7 +192,7 @@ public class InvoicePage extends ApplicationKeyword
 			typeIn(OR.Invoice_SearchInInvoiceTextBox, nameOfFile_Expected);
 			clickOn(OR.Invoice_SearchButton);
 			Thread.sleep(4000);
-			waitForElement(OR.Invoice_SelectFirstPONUmFromInvoicePage, 10);
+			waitForElementToDisplayWithoutFail(OR.Invoice_SelectFirstPONUmFromInvoicePage, 10);
 			verifyElementText(OR.Invoice_SelectFirstPONUmFromInvoicePage , PoNum);
 
 		}
@@ -214,9 +209,9 @@ public class InvoicePage extends ApplicationKeyword
 		NavigateUrl(DashBoardURL);
 		System.out.println("Tc_INV_09_10");
 		Invoicespage.typeAndSearchInvoice();	
-		waitForElement(OR.Invoice_DownoadPDF, 10);
+		waitForElementToDisplayWithoutFail(OR.Invoice_DownoadPDF, 10);
 		clickOn(OR.Invoice_DownoadPDF);	
-		waitForElement(OR.Invoice_PrintPDF, 10);
+		waitForElementToDisplayWithoutFail(OR.Invoice_PrintPDF, 10);
 		clickOn(OR.Invoice_PrintPDF);
 		//waitForElementToDisplay(OR.Invoice_PrintPReviewWindow,10);
 		String IvnoiceText=getText(OR.Invoice_PrintPReviewWindow);
@@ -240,7 +235,7 @@ public class InvoicePage extends ApplicationKeyword
 		NavigateUrl(DashBoardURL);
 		clickOn(OR.Request_InvoicePageLink);		
 		//Vendor DropDpwn		
-		waitForElement(OR.Invoice_vendorDropDownLabels, 5);
+		waitForElementToDisplayWithoutFail(OR.Invoice_vendorDropDownLabels, 5);
 		verifyElementText(OR.Invoice_vendorDropDownLabels, "Vendor:");
 		if(isElementDisplayed(OR.Invoice_vendorDropDowns, 10))
 		{
@@ -313,16 +308,8 @@ public class InvoicePage extends ApplicationKeyword
 		{
 			Invoicespage.typeAndSearchInvoice();
 			clickOn(OR.Invoice_SelectFirstInvoice);
-			String one = driver.findElement(By.xpath("//*[contains(text(),'Send To Accounting')]")).getText();
-			
-			if(one.contains("Send To Accounting"))
-			{
-				testLogPass("Sent to Accounting button is present");
-			}
-			else
-			{
-				testLogFail("Sent to Accounting button is NOt present");
-			}
+			verifyElementText(OR.Invoice_SentToAccounting, "Send To Accounting");
+			testLogPass("Sent to Accounting button is present");
 		}
 		else
 		{
@@ -338,15 +325,14 @@ public class InvoicePage extends ApplicationKeyword
 		System.out.println("Tc_INV_04");
 		NavigateUrl(DashBoardURL);
 		Invoicespage.typeAndSearchInvoice();
-		waitForElement(OR.Invoice_firstInvoice);
+		waitForElementToDisplayWithoutFail(OR.Invoice_firstInvoice, 10);
 		String invoiceName=getProperty("invoiceName");
 		if(getText(OR.Invoice_firstInvoice).equalsIgnoreCase(invoiceName))
 		{
-			waitForElement(OR.Invoice_Delete, 10);
+			waitForElementToDisplayWithoutFail(OR.Invoice_Delete, 10);
 			clickOn(OR.Invoice_Delete);
-			waitForElement(OR.Invoice_confirmButton);
 			clickOn(OR.Invoice_confirmButton);
-			waitForElement(OR.Invoice_firstInvoice, 10);
+			waitForElementToDisplayWithoutFail(OR.Invoice_firstInvoice, 10);
 			Invoicespage.typeAndSearchInvoice();
 			if(!getText(OR.Invoice_firstInvoice).equalsIgnoreCase(invoiceName))
 			{
