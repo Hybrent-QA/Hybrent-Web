@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [example suite 1]">
+  <parameter name="siteUrl" value="https://dev2.test.hybrent.com"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="siteName" value="dev2"/>
+  <parameter name="nodeUrl" value="http://localhost:4444/wd/hub"/>
+  <test name="CartPage(failed)">
+    <classes>
+      <class name="testCases.CartPage">
+        <methods>
+          <include name="startReport"/>
+          <include name="Tc_Cart_15"/>
+          <include name="endReport"/>
+          <include name="setBrowser"/>
+        </methods>
+      </class> <!-- testCases.CartPage -->
+    </classes>
+  </test> <!-- CartPage(failed) -->
+  <test name="AdminPart(failed)">
+    <classes>
+      <class name="testCases.AdminPart">
+        <methods>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="Tc_PriceTier_04"/>
+          <include name="Tc_PTerms_01_02"/>
+          <include name="setBrowser"/>
+          <include name="Tc_PTerms_03_04"/>
+        </methods>
+      </class> <!-- testCases.AdminPart -->
+    </classes>
+  </test> <!-- AdminPart(failed) -->
+  <test name="Facility(failed)">
+    <classes>
+      <class name="testCases.Facility">
+        <methods>
+          <include name="startReport"/>
+          <include name="Tc_Patterns_06"/>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- testCases.Facility -->
+    </classes>
+  </test> <!-- Facility(failed) -->
+</suite> <!-- Failed suite [example suite 1] -->

@@ -1,7 +1,9 @@
 package pageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import AutomationFramework.ApplicationKeyword;
 import AutomationFramework.OR;
@@ -10,6 +12,7 @@ public class ReceivePageObject extends ApplicationKeyword {
 
 	public static void pageLinkandwait()
 	{
+		waitForElement(OR.Receive_pageLink);
 		clickOn(OR.Receive_pageLink);
 		waitForElementToDisplayWithoutFail(OR.Receive_wait, 10);
 	}
@@ -50,24 +53,27 @@ public class ReceivePageObject extends ApplicationKeyword {
 	public static void shopFacility()
 	{
 		String fac=getProperty("userdefaultFac");
-		waitForElementToDisplayWithoutFail(OR.Receive_selectedFacInDropDown, 10);
-		String alreadySelectedFac=getText(OR.Receive_selectedFacInDropDown);
+		waitForElementToDisplayWithoutFail(OR.Invoice_Receive_selectedFacInDropDown, 10);
+		String alreadySelectedFac=getText(OR.Invoice_Receive_selectedFacInDropDown);
 		System.out.println(alreadySelectedFac);
 		boolean flag=false;
 		boolean flaf_02=false;
 		if(!alreadySelectedFac.equals(fac))
 		{
-			clickOn(OR.Receive_facilityDropdown);
-			WebElement elem=driver.findElement(By.xpath("//*[text()='"+fac+"']"));
-			elem.click();
+			clickOn(OR.Invoice_Receive_selectedFacInDropDown);
+			String searc = "Search#xpath=//*[@type='search']";
+			typeIn(searc, fac);
+			String one = "Fac#xpath=//*[text()='"+fac+"']";
+			clickOn(one);
 			flag=true;
 		}						
-		String alreadySelectedUser=getText(OR.Receive_selectedUserInDropDown);
+		String alreadySelectedUser=getText(OR.Order_UsersDropdown1);
 		System.out.println(alreadySelectedUser);
 		if(!alreadySelectedUser.equals("All"))
 		{
 			clickOn(OR.Receive_UsersDropdown);
-			WebElement elem2=driver.findElement(By.xpath("//*[text()='All']"));
+			waitTime(1);
+			WebElement elem2=driver.findElement(By.xpath("//*[@name='ddlOrderby']//*[text()='All']"));
 			elem2.click();
 			flaf_02=true;
 		}
@@ -77,7 +83,38 @@ public class ReceivePageObject extends ApplicationKeyword {
 		}
 	} 
 	
-	
+	public static void InvoiceshopFacility()
+	{
+		String fac=getProperty("userdefaultFac");
+		waitForElementToDisplayWithoutFail(OR.Invoice_Receive_selectedFacInDropDown, 10);
+		String alreadySelectedFac=getText(OR.Invoice_Receive_selectedFacInDropDown);
+		System.out.println(alreadySelectedFac);
+		boolean flag=false;
+		boolean flaf_02=false;
+		if(!alreadySelectedFac.equals(fac))
+		{
+			clickOn(OR.Invoice_Receive_selectedFacInDropDown1);
+			String searc = "Search#xpath=//*[@type='search']";
+			typeIn(searc, fac);
+			String one = "Fac#xpath=//*[text()='"+fac+"']";
+			clickOn(one);
+			flag=true;
+		}						
+		String alreadySelectedUser=getText(OR.Invoice_UsersDropdown);
+		System.out.println(alreadySelectedUser);
+		if(!alreadySelectedUser.equals("All"))
+		{
+			clickOn(OR.Receive_UsersDropdown);
+			waitTime(2);
+			WebElement elem2=driver.findElement(By.xpath("//*[@name='ddlOrderby']//*[text()='All']"));
+			elem2.click();
+			flaf_02=true;
+		}
+		if(flag||flaf_02)
+		{
+			clickOn(OR.Receive_searchButton);
+		}
+	} 
 	
 	
 

@@ -3,6 +3,7 @@ package testCases;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -103,9 +104,8 @@ public class Facility extends ApplicationKeyword{
 		System.out.println("Tc_Fac_03");
 		NavigateUrl(DashBoardURL);
 		Organisation_settingspage.AdminAndFacilityLink();
-		
 		clickOn(OR.Facilty_AddFacilityButton);	
-		waitForElementToDisplay(OR.Facilty_AddFacilityText, 10);
+		waitForElement(OR.Facilty_AddFacilityText);
 		List<String> tabs = new ArrayList<String>( Arrays.asList("Facility Detail", "Shipping Address", "Invoice Address"));
 
 		List<WebElement> actualTabs = driver.findElements
@@ -162,11 +162,11 @@ public class Facility extends ApplicationKeyword{
 		selectFromDropdown(OR.Dep_SelectFac, facName);
 		clickOn(OR.Dep_SearchButton);
 		waitForElementToDisplayWithoutFail(OR.Dep_wait, 10);	
-		List<WebElement> allDeps=driver.findElements(By.xpath("//*[@class='grid-item ng-scope']//*[@class='grid-heading grid-title-label ng-binding']"));
+		List<WebElement> allDeps=driver.findElements(By.xpath("//*[starts-with(@class,'grid-heading')]"));
 		depNames_FacPage= new ArrayList<String>() ;
 		for(int i=1;i<=allDeps.size();i++)
 		{
-			String depName=allDeps.get(i-1).getText();
+			String depName=allDeps.get(i-1).getText().toLowerCase().trim();
 			System.out.println(depName);
 			depNames_FacPage.add(depName);
 		}
@@ -175,23 +175,26 @@ public class Facility extends ApplicationKeyword{
 		typeIn(OR.Facilty_SearchBox, facName);
 		clickOn(OR.Facilty_SearchButton);
 		waitForElementToDisplayWithoutFail(OR.Facility_wait, 10);
+		ArrayList<String> tempdata = new ArrayList<String>();
 		if(getText(OR.Facilty_firstFacility).equalsIgnoreCase("+ "+facName))
 		{
 			clickOn(OR.Facilty_firstdrillDown);
 			List<WebElement> depNames_DepPage=driver.findElements(By.xpath("//ul[@class='facility_department_sublist'][1]//li"));
 			for(int i=1;i<=depNames_DepPage.size();i++)
 			{
-				String temp=depNames_DepPage.get(i-1).getText();
-				if(temp.equalsIgnoreCase(depNames_FacPage.get(i-1)))
-				{
-					testLogPass(depNames_FacPage.get(i-1)+ "- Department matched with -" + temp);
+				
+				String temp=depNames_DepPage.get(i-1).getText().toLowerCase().trim();
+				tempdata.add(temp);								
+			}	
+			Collections.sort(depNames_FacPage);
+			Collections.sort(tempdata);
+				for(int i=0;i<depNames_FacPage.size();i++){
+					if(depNames_FacPage.contains(tempdata.get(i))){
+						testLogPass(depNames_FacPage.get(i)+ "- Department matched with -" + tempdata.get(i));
+					}else{
+						testLogFail(depNames_FacPage.get(i)+"- Department doesnot match with- " + tempdata.get(i));
+					}
 				}
-				else
-				{
-					testLogFail(depNames_FacPage.get(i-1)+"- Department doesnot match with- " + temp);
-				}								
-			}			
-
 		}
 		else
 		{
@@ -316,7 +319,9 @@ public class Facility extends ApplicationKeyword{
 		waitForElementToDisplayWithoutFail(OR.Dep_firstDeps, 10);
 		if(getText(OR.Dep_firstDeps).equals(createdDep))
 		{
+			waitForElement(OR.Dep_DeleteButton);
 			clickOn(OR.Dep_DeleteButton);
+			waitForElement(OR.Dep_confirmButton);
 			clickOn(OR.Dep_confirmButton);
 			waitForElementToDisplayWithoutFail(OR.Dep_wait, 10);
 			clearEditBox(OR.Dep_SearchTextBox);
@@ -481,6 +486,7 @@ public class Facility extends ApplicationKeyword{
 		if(getText(OR.Phy_firstNPIAfterSearch).equalsIgnoreCase(npi))
 		{
 			clickOn(OR.Phy_deleteButton);
+			waitForElement(OR.Phy_confirmButton);
 			clickOn(OR.Phy_confirmButton);
 			waitForElementToDisplayWithoutFail(OR.Phy_addNewPhy, 10);
 			clearEditBox(OR.Phy_SearchTextBox);
@@ -587,9 +593,9 @@ public class Facility extends ApplicationKeyword{
 			testLogPass("SAVE/Create Button is disabled if mandatory fields are not filled");
 		}
 		String glCode="TestGLCOde"+ApplicationKeyword.randomAlphaNumeric(2);		
-		typeIn(OR.glCode_add_code, glCode);
+		typeIn(OR.glCode_addcode, glCode);
 		String glCodeName="Name"+ApplicationKeyword.randomAlphaNumeric(2);
-		typeIn(OR.glCode_add_Name, glCodeName);
+		typeIn(OR.glCode_addName, glCodeName);
 		setProperty("glCodeName", glCodeName);
 		if(Organisation_settingspage.ifButtonDisabled(OR.glCode_saveButton))
 		{
@@ -638,14 +644,12 @@ public class Facility extends ApplicationKeyword{
 		if(getText(OR.glCode_firstGlCOde).equalsIgnoreCase(glCodeName))
 		{
 			clickOn(OR.glCode_editButton);
-			clearEditBox(OR.glCode_addName);
 			String glCodeNameNew="Name"+ApplicationKeyword.randomAlphaNumeric(2);
 			typeIn(OR.glCode_addName, glCodeNameNew);
 			setProperty("glCodeName", glCodeNameNew);	
 			clickOn(OR.glCode_saveButton);
 			//waitTime(5);
 			waitForElementToDisplayWithoutFail("firstGlCode#xpath=//*[@id='isotopeContainer-']//*[@class='grid-heading grid-title-label ng-binding' and text()='"+glCodeNameNew+"']", 10);	
-			clearEditBox(OR.glCode_searchTextBox);
 			typeIn(OR.glCode_searchTextBox, glCodeNameNew);
 			clickOn(OR.glCode_searchButton);
 			//waitForElementToDisplay(OR.glCode_wait, 10);
@@ -654,9 +658,9 @@ public class Facility extends ApplicationKeyword{
 			if(getText(OR.glCode_firstGlCOde).equalsIgnoreCase(glCodeNameNew))
 			{
 				testLogPass("Gl code is successfully edited");
-				waitForElementToDisplayWithoutFail(OR.glCode_deleteButton, 10);
+				waitForElement(OR.glCode_deleteButton);
 				clickOn(OR.glCode_deleteButton);
-				waitForElementToDisplayWithoutFail(OR.glCode_confirmButton, 10);
+				waitForElement(OR.glCode_confirmButton);
 				clickOn(OR.glCode_confirmButton);
 				waitForElementToDisplayWithoutFail(OR.glCode_NoRecordFound, 10);
 				if(getText(OR.glCode_NoRecordFound).equalsIgnoreCase("No records found"))
@@ -880,8 +884,8 @@ public class Facility extends ApplicationKeyword{
 		System.out.println("Tc_Patterns_02");
 		Organisation_settingspage.patternPage();
 		String s=getProperty("patternName");
-		waitForElementToDisplayWithoutFail(OR.pattern_firstPattern, 10);
-		//waitTime(5);	
+		waitForElement(OR.pattern_firstPattern, 10);
+		waitTime(2);	
 		String pattern_firstPattern="firstPattern#xpath=//*[@id='reqListing']//tr//td[@text()='" + s + "']";
 		List<WebElement> rows=driver.findElements(By.xpath("//*[@id='reqListing']//tr"));
 		int rowCount=rows.size();
@@ -892,18 +896,19 @@ public class Facility extends ApplicationKeyword{
 			pattern_firstPattern="firstPattern#xpath=//*[@id='reqListing']//tr[" + i + "]//td[1]";				
 			if(getText(pattern_firstPattern).equalsIgnoreCase(s))
 			{
-				found=true;				
-				waitForElementToDisplayWithoutFail(OR.pattern_trashButton, 10);
-				WebElement btn = rows.get(i).findElement(By.xpath("td[4]//i[@class='fa fa-trash']"));
+				found=true;				 
+				waitForElement(OR.SI_DeleteButton);
+				waitTime(1);
+				WebElement btn = rows.get(i).findElement(By.xpath("//*[@class='fa fa-trash']"));
 				btn.click();
+				waitForElement(OR.pattern_confirmButton);
 				clickOn(OR.pattern_confirmButton);
-				waitForElementToDisplayWithoutFail(OR.pattern_firstPattern, 10);				
+				ToastmesssageSucess();
 				rows=driver.findElements(By.xpath("//*[@id='reqListing']//tr"));
 				
 				for(int j=1; j<=rowCount;j++)
 				{
 					pattern_firstPattern="firstPattern#xpath=//*[@id='reqListing']//tr[" + j + "]//td[1]";	
-					
 					if(getText(pattern_firstPattern).equalsIgnoreCase(s))
 					{
 						found2=true;
@@ -930,6 +935,7 @@ public class Facility extends ApplicationKeyword{
 	@AfterTest
 	public void endReport()
 	{
+		closeBrowser();
 		extent.flush();
 	}
 }

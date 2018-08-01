@@ -65,17 +65,16 @@ public class ReceiveDetails extends ApplicationKeyword
 			waitForElementToDisplayWithoutFail(OR.Receive_firstPONum, 10);
 			//waitTime(5);
 			clickOn(OR.Receive_firstPONum);
-			waitForElementToDisplay(OR.Receive_NotesLinkPODetail, 10);
+			waitForElement(OR.Receive_NotesLinkPODetail);
 			clickOn(OR.Receive_NotesLinkPODetail);
-			waitForElementToDisplay(OR.Receive_NotesLinkText, 10);
+			waitForElement(OR.Receive_NotesLinkText);
 			verifyElementText(OR.Receive_NotesLinkText, "Notes for PO # ");
 			clickOn(OR.Receive_AddNewNotesLink);
-			waitForElementToDisplay(OR.Receive_NotesLinkText, 10);
+			waitForElement(OR.Receive_NotesLinkText);
 			verifyElementText(OR.Receive_NotesLinkText, "Add Note for PO # ");
 			clickOn(OR.Receive_PrintCloseclose);
-			waitTime(2);
-			clickOn(OR.Receive_PrintCloseclose);	
-			waitTime(3);
+			waitForElement(OR.Receive_PrintCloseclose);
+			clickOn(OR.Receive_PrintCloseclose);
 		}
 
 		else
@@ -121,7 +120,9 @@ public class ReceiveDetails extends ApplicationKeyword
 			//waitTime(5);
 			String s=getText(OR.Receive_firstPONum);
 			clickOn(OR.Receive_firstPONum);
+			waitForElement(OR.Receive_DocsLinkPODetail);
 			clickOn(OR.Receive_DocsLinkPODetail);
+			waitForElement(OR.Receive_DocsLinkText);
 			verifyElementText(OR.Receive_DocsLinkText, "PO # " +s+ " Documents");		
 			WebElement elem=driver.findElement(By.xpath("//*[@type='file']"));
 			String projectPath = System.getProperty("user.dir");
@@ -169,9 +170,9 @@ public class ReceiveDetails extends ApplicationKeyword
 			//waitTime(5);
 			clickOn(OR.Receive_firstPONum);
 			//waitTime(5);
-			waitForElementToDisplayWithoutFail(OR.Receive_DrillDownPODetailPage,10);
+			waitForElement(OR.Receive_DrillDownPODetailPage,10);
 			clickOn(OR.Receive_DrillDownPODetailPage);
-			waitForElementToDisplayWithoutFail(OR.Receive_AddOrderItemsTOCartDetaipPage,10);
+			waitForElement(OR.Receive_AddOrderItemsTOCartDetaipPage,10);
 			clickOn(OR.Receive_AddOrderItemsTOCartDetaipPage);
 			waitTime(4);
 			//waitForElementToDisplay(OR.Receive_firstPOHeadingText, 10);
@@ -240,12 +241,17 @@ public class ReceiveDetails extends ApplicationKeyword
 			//waitTime(3);
 			//waitForElementToDisplay(OR.Receive_firstPONum,10);
 			clickOn(OR.Receive_firstPONum);
-			//waitForElementToDisplay(OR.Receive_DrillDownPODetailPage, 10);
+			waitForElement(OR.Receive_firstPONum);
 			clickOn(OR.Receive_DrillDownPODetailPage);
+			waitTime(2);
+			if(driver.findElements(By.xpath("//*[text()='Print PO']")).size()!=0)
+			{
+			waitForElementToDisplay(OR.Receive_PrintPOLinkPoDetail, 20);
 			clickOn(OR.Receive_PrintPOLinkPoDetail);
 			waitForElementToDisplay(OR.Receive_PrintPOText, 10);		
 			verifyElementText(OR.Receive_PrintPOText, " Print PO");
 			clickOn(OR.Receive_PrintPReviewclose);
+			}
 		}
 		else
 		{
@@ -267,11 +273,12 @@ public class ReceiveDetails extends ApplicationKeyword
 		if(isElementDisplayedwithoutFail(OR.Receive_firstPONum, 5))
 		{
 			waitForElementToDisplayWithoutFail(OR.Receive_firstPONum, 10);
-			//waitTime(5);
-			//waitForElementToDisplay(OR.Receive_firstPONum,10);
-			clickOn(OR.Receive_firstPONum);		
+			clickOn(OR.Receive_firstPONum);
+			waitForElement(OR.Receive_DrillDownPODetailPage);
 			clickOn(OR.Receive_DrillDownPODetailPage);
+			waitForElementToDisplay(OR.Receive_printItemsDetailPage, 20);
 			clickOn(OR.Receive_printItemsDetailPage);
+			waitForElement(OR.Receive_printPOText);
 			verifyElementText(OR.Receive_printPOText, "Order Items");
 			clickOn(OR.Receive_PrintCloseclose);
 		}
@@ -294,15 +301,15 @@ public class ReceiveDetails extends ApplicationKeyword
 		waitForElementToDisplayWithoutFail(OR.Receive_firstPONum, 3);
 		if(isElementDisplayedwithoutFail(OR.Receive_firstPONum, 5))
 		{
-			waitForElementToDisplayWithoutFail(OR.Receive_firstPONum, 10);
+			waitForElement(OR.Receive_firstPONum, 10);
 			//waitTime(3);
 			//waitForElementToDisplay(OR.Receive_firstPONum,10);
-			clickOn(OR.Receive_firstPONum);		
+			clickOn(OR.Receive_firstPONum);
+			waitForElement(OR.Receive_DrillDownPODetailPage);
 			clickOn(OR.Receive_DrillDownPODetailPage);
-			WebElement element = driver.findElement(By.xpath("(//a[text()='Invoices'])[1]"));
-			Actions action = new Actions(driver);
-			action.moveToElement(element).build().perform();
+			mouseOver(OR.Order_PO_first_invoice);
 			//		waitForElementToDisplay(OR.Receive_PODetailAddInvoice, 60);
+			waitForElement(OR.Receive_PODetailAddInvoice);
 			clickOn(OR.Receive_PODetailAddInvoice);
 			verifyElementText(OR.Receive_PODetailInvoiceText, "INVOICE FOR PO #:");
 		}
@@ -315,7 +322,7 @@ public class ReceiveDetails extends ApplicationKeyword
 	@Test
 	public void Tc_RECDET_09() 
 	{
-		testStarts("Tc__RECDET_9()", "Verify that �INVOICES FOR PO #� page appears when user clicks on All Invoices option.");
+		testStarts("Tc_RECDET_09()", "Verify that �INVOICES FOR PO #� page appears when user clicks on All Invoices option.");
 		NavigateUrl(DashBoardURL);	
 		System.out.println("Tc_RECDET_09");
 		ReceivePageObject.pageLinkandwait();
@@ -326,10 +333,10 @@ public class ReceiveDetails extends ApplicationKeyword
 		{
 			waitForElementToDisplayWithoutFail(OR.Receive_firstPONum, 10);
 			clickOn(OR.Receive_firstPONum);		
+			waitForElement(OR.Receive_DrillDownPODetailPage);
 			clickOn(OR.Receive_DrillDownPODetailPage);
-			WebElement element = driver.findElement(By.xpath("(//a[text()='Invoices'])[1]"));
-			Actions action = new Actions(driver);
-			action.moveToElement(element).build().perform();
+			waitTime(3);
+			mouseOver(OR.Order_PO_first_invoice);
 			clickOn(OR.Receive_AllInvoiceDetailPage);
 			String s=getText(OR.Order_PO_first_AllInvoice_Header);
 			System.out.println(s);
@@ -517,7 +524,10 @@ public class ReceiveDetails extends ApplicationKeyword
 			}
 			waitTime(5);
 			typeIn(OR.Receive_searchBox, testNote);
-			verifyElementText(OR.Receive_NoNOteavailable, "No note available.");
+			if(driver.findElements(By.xpath("//*[contains(text(),'"+testNote+"')]")).size()!=0)
+			{
+				testLogPass("Note is not displays");
+			}
 			clickOn(OR.Receive_PrintCloseclose);		
 		}	
 		else
@@ -531,7 +541,6 @@ public class ReceiveDetails extends ApplicationKeyword
 	{
 		testStarts("Tc_RECDET_15_16()", "Verify that �PO # XXXX11 Documents� pop up appears when clicks on Documents icon with count +"
 				+ "Verify that select file from computer window opens when user clicks on Upload File button.");
-		//	Loginpage.OpenBrowserAndLogin();	
 		NavigateUrl(DashBoardURL);
 		System.out.println("Tc_RECDET_15_16");
 		ReceivePageObject.pageLinkandwait();
@@ -589,12 +598,11 @@ public class ReceiveDetails extends ApplicationKeyword
 		{
 			waitForElementToDisplayWithoutFail(OR.Receive_firstPONum, 10);
 			//waitForElementToDisplay(OR.Receive_DrillDownIconwait,20);
-			clickOn(OR.Receive_firstPONum);		
+			clickOn(OR.Receive_firstPONum);
+			waitForElement(OR.Receive_DrillDownPODetailPage);
 			clickOn(OR.Receive_DrillDownPODetailPage);
 			//waitForElementToDisplay(OR.Receive_PODetailNotesLinkDrillDown, 10);
-			waitTime(5);
-			//verifyElementText(OR.Receive_ReceiveOnlyText, "Mark as Receive Only");
-			waitForElementToDisplayWithoutFail(OR.ApprovePO_markAsReceive, 10);			
+			waitForElement(OR.ApprovePO_markAsReceive);			
 			String text=getText(OR.ApprovePO_markAsReceive);
 			if(text.equalsIgnoreCase("Mark as Non Receive Only") || text.equalsIgnoreCase("Mark as Receive Only"))
 

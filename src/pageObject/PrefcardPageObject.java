@@ -20,9 +20,11 @@ public class PrefcardPageObject extends ApplicationKeyword {
 	}
 	public static void patientsPageLinkandwait()
 	{	 
+		waitforPaageload();
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath("//a[@href='#/preference-card/patients']"));
 		je.executeScript("arguments[0].scrollIntoView(true);",element);
+		waitForElement(OR.Patient_PatientsPageLink);
 		clickOn(OR.Patient_PatientsPageLink);
 		waitForElementToDisplay(OR.OP_wait2, 10);
 
@@ -79,6 +81,7 @@ public class PrefcardPageObject extends ApplicationKeyword {
 		PrefcardPageObject.prefCardPagePageLinkandwait();
 		waitForElementToDisplay(OR.prefCard_AddPrefCard, 10);
 		clickOn(OR.prefCard_AddPrefCard);
+		waitForElement(OR.prefCard_addStage);
 		clickOn(OR.prefCard_addStage);
 		String sName=getProperty("Prefcard_StageName");
 		typeIn(OR.prefCard_addStageName, sName);

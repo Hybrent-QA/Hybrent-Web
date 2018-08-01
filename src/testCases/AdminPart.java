@@ -80,7 +80,6 @@ public class AdminPart  extends ApplicationKeyword
 			testLogFail("Save button is not disabled if Name field is not filled");
 		}
 		ItemCatName = "TestItemcat"+ApplicationKeyword.randomAlphaNumeric(2);
-		waitTime(3);
 		setProperty("ItemCatName", ItemCatName);
 		typeIn(OR.ItemCat_CatName, ItemCatName);
 		if(getAttributeValue(OR.ItemCat_SAveButton, "disabled")==null)
@@ -115,11 +114,11 @@ public class AdminPart  extends ApplicationKeyword
 		//waitTime(5);
 		if(getText(OR.ItemCat_firstCatName).equals(ItemCatName))
 		{
-			waitForElementToDisplayWithoutFail(OR.ItemCat_DeleteButton, 10);
+			waitForElement(OR.ItemCat_DeleteButton);
 			clickOn(OR.ItemCat_DeleteButton);
-			waitForElementToDisplayWithoutFail(OR.ItemCat_ConfirmButton, 10);
+			waitForElement(OR.ItemCat_ConfirmButton);
 			clickOn(OR.ItemCat_ConfirmButton);
-			waitForElementToDisplayWithoutFail(OR.ItemCat_NoRecordFoundText, 10);
+			waitForElement(OR.ItemCat_NoRecordFoundText, 10);
 			//waitTime(4);
 			compareText(OR.ItemCat_NoRecordFoundText, "Item Category is deleted", "Item Category is not deleted", "No records found");
 		}
@@ -140,28 +139,31 @@ public class AdminPart  extends ApplicationKeyword
 		System.out.println("Tc_PrintBarcode_01_02");
 		NavigateUrl(DashBoardURL);
 		clickOn(OR.Shop_Menu);
-		waitForElementToDisplayWithoutFail(OR.Shop_SHopfor_getfacilityName, 10);
+		waitForElement(OR.Shop_SHopfor_getfacilityName);
 		String facility_Name=getText(OR.Shop_SHopfor_getfacilityName);
 		System.out.println(facility_Name);
 		Organisation_settingspage.AdminAndPrintBarcodeLink();
 		verifyElementText(OR.PrintBarcodes_text, "PRINT BARCODES/QRCODES FOR");
 		clickOn(OR.PrintBarcodes_SelectFAc);
 		verifyElementText(OR.PrintBarcodes_SelectFac_title, "Select Facility");
-		int one = driver.findElements(By.xpath("//*[@class='table table-responsive table-striped table-bordered']/tbody/tr[@class='ng-scope']")).size();
+	
+		typeIn(OR.Invoice_SearchInInvoiceTextBox, facility_Name);
+		waitTime(2);
+		int one = driver.findElements(By.xpath("(//*[starts-with(@class, 'table table-responsive')]//tbody//td[1])")).size();
+		
 		boolean facFound=false;
-		String xpath;
 		String selectedFacility;
 		WebElement btn;
 		for(int i=1; i<=one; i++)
 		{
-			xpath="(//table[@class='table table-responsive table-striped table-bordered']/tbody/tr["+i+"]";
-			selectedFacility=driver.findElement(By.xpath(xpath+"/td)")).getText();
+			selectedFacility=driver.findElement(By.xpath("(//*[@class='table table-responsive table-striped table-bordered']//tbody//td)["+i+"]")).getText();
 			System.out.println(selectedFacility);
 
 			if(selectedFacility.equals(facility_Name))
 			{  
 				facFound=true;
-				btn= driver.findElement(By.xpath(xpath+"/td[2]/div/button)"));
+				btn= driver.findElement(By.xpath("(//*[text()='Selected'])["+i+"]"));
+				String ones =btn.getAttribute("disabled");
 				if(btn.getAttribute("disabled")!=null)
 				{
 					testLogPass("Got the text '"+selectedFacility+ "' And it Matches with selected Facility" );
@@ -374,6 +376,7 @@ public class AdminPart  extends ApplicationKeyword
 	{
 		testStarts("Tc_SI_04", "Verify that Special instruction gets deleted on clicking Delete button.");		
 		System.out.println("Tc_SI_04");
+			
 		NavigateUrl(DashBoardURL);
 		Organisation_settingspage.SIPage();
 		String SI=getProperty("SI");
@@ -484,7 +487,7 @@ public class AdminPart  extends ApplicationKeyword
 			clickOn(OR.Pterms_closePopup);	
 			clickOn(OR.Pterms_Deleteicon);
 			clickOn(OR.Pterms_confirmButton);
-			clickOn(OR.Pterms_OKbutton);
+			ToastmesssageSucess();
 			waitForElementToDisplayWithoutFail(OR.Pterms_firstItem, 15);
 			if(!getText(OR.Pterms_firstItem).equals(PT))
 			{
@@ -518,7 +521,7 @@ public class AdminPart  extends ApplicationKeyword
 		typeIn(OR.News_addTitle, NewsTitle);
 		typeIn(OR.News_addDec, "This is a Test News");	 	
 		clickOn(OR.News_saveButton);
-		waitForElementToDisplayWithoutFail(OR.News_firstNews, 15);
+		ToastmesssageSucess();
 		typeIn(OR.News_searchTextBox, NewsTitle);
 		clickOn(OR.News_searchButton);
 		waitForElementToDisplayWithoutFail(OR.News_firstNews, 15);
@@ -551,6 +554,7 @@ public class AdminPart  extends ApplicationKeyword
 				testLogPass("Edit News Page is not opened");
 			}
 			clickOn(OR.News_ActiveInactiveClass);
+			waitForElement(OR.News_ActiveInactiveClass);
 			if(getAttributeValue(OR.News_ActiveInactiveClass, "class").contains("-off"))
 			{
 				testLogPass("Toggle is set to InACTIVE");
@@ -566,7 +570,17 @@ public class AdminPart  extends ApplicationKeyword
 			}
 			else
 			{
-				testLogFail("Toggle is set to ON");
+				testLogPass("Toggle is set to ON");
+				clickOn(OR.News_InActiveButtn);
+				waitforPaageload();
+				if(getAttributeValue(OR.News_ActiveInactiveClass, "class").contains("-off"))
+				{
+					testLogPass("Toggle is set to OFF"); 		
+				}
+				else
+				{
+					testLogPass("Toggle is set to Active");
+				}
 			}
 		}	
 		
@@ -575,6 +589,7 @@ public class AdminPart  extends ApplicationKeyword
 	@Test
 	public void Tc_News_05()
 	{
+		testStarts("Tc_News_05", "Verify that User can delete the news");
 		System.out.println("Tc_News_03_04");
 		NavigateUrl(DashBoardURL);
 		//Loginpage.OpenBrowserAndLogin();
@@ -586,9 +601,9 @@ public class AdminPart  extends ApplicationKeyword
 		if(getText(OR.News_firstNews).trim().equals(newsAdded))
 		{
 		clickOn(OR.News_deleteNews);
-		waitForElementToDisplayWithoutFail(OR.News_confirmButton, 10);
+		waitForElement(OR.News_confirmButton);
 		clickOn(OR.News_confirmButton);
-		waitForElementToDisplayWithoutFail(OR.News_NoRecordFound, 10);
+		waitForElement(OR.News_NoRecordFound);
 		if(getText(OR.News_NoRecordFound).equalsIgnoreCase("No records found"))
 		{
 			testLogPass("News is Deleted");
@@ -676,6 +691,7 @@ public class AdminPart  extends ApplicationKeyword
 		System.out.println("Tc_PriceTier_01_02");
 		NavigateUrl(DashBoardURL);
 		Organisation_settingspage.priceTierPage();
+		waitForElement(OR.priceTier_addPriceTier);
 		clickOn(OR.priceTier_addPriceTier);
 		String Name = "PTier"+ApplicationKeyword.randomAlphaNumeric(3);	 
 		setProperty("PriceTierName", Name);
@@ -757,8 +773,7 @@ public class AdminPart  extends ApplicationKeyword
 		{
 			clickOn(OR.priceTier_DeleteButton);
 			clickOn(OR.priceTier_confirmButton);
-			waitForElementToDisplayWithoutFail(OR.priceTier_firstItem, 10);
-			clearEditBox(OR.priceTier_searchTextBox);
+			ToastmesssageSucess();
 			typeIn(OR.priceTier_searchTextBox, Name);
 			compareExactText(OR.priceTier_firstItem, "Price Tier is successfully Deleted", "Price Tier is not successfully Deleted", "No data available in table");			
 		}
@@ -792,7 +807,7 @@ public class AdminPart  extends ApplicationKeyword
 		String SkuName=getProperty("Sku");
 		typeIn(OR.ItemCatalog_searchTextBox,SkuName);
 		clickOn(OR.ItemCatalog_searchbutton);
-		waitForElementToDisplayWithoutFail(OR.ItemCatalog_firstItemSku, 10);
+		waitForElement(OR.ItemCatalog_firstItemSku, 10);
 		compareExactText(OR.ItemCatalog_firstItemSku, "Item is searched with " + SkuName, "Item is not searched with " + SkuName, SkuName);	
 		clearEditBox(OR.ItemCatalog_searchTextBox);			
 		//With Mfr#
@@ -800,7 +815,7 @@ public class AdminPart  extends ApplicationKeyword
 		String ItemMfrNumber=getProperty("ItemMfr");
 		typeIn(OR.ItemCatalog_searchTextBox,ItemMfrNumber);
 		clickOn(OR.ItemCatalog_searchbutton);
-		waitForElementToDisplayWithoutFail(OR.ItemCatalog_firstItemMfr, 10);
+		waitForElement(OR.ItemCatalog_firstItemMfr, 10);
 		compareExactText(OR.ItemCatalog_firstItemMfr, "Item is searched with " + ItemMfrNumber, "Item is not searched with " + ItemMfrNumber, ItemMfrNumber);					
 
 		// with alias Name
@@ -808,8 +823,8 @@ public class AdminPart  extends ApplicationKeyword
 		String alias=getProperty("alias");
 		typeIn(OR.ItemCatalog_searchTextBox,alias);
 		clickOn(OR.ItemCatalog_searchbutton);
-		waitForElementToDisplayWithoutFail(OR.ItemCatalog_firstItemDesc, 10);
-		compareExactText(OR.ItemCatalog_firstItemDesc, "Item is searched with AliasName" + alias, "Item is not searched with AliasName" + alias, ItemDescription);	 		
+		waitForElement(OR.ItemCatalog_firstItemDesc);
+		compareExactText(OR.ItemCatalog_firstItemDesc, "Item is searched with AliasName: " + alias, "Item is not searched with AliasName" + alias, ItemDescription);	 		
 		
 	}
 	@Test
@@ -887,7 +902,6 @@ public class AdminPart  extends ApplicationKeyword
 		}
 		String InvLoc = "InvLoc"+ApplicationKeyword.randomAlphaNumeric(3);	 
 		setProperty("InventoryLocation", InvLoc);
-		waitTime(2);
 		typeIn(OR.InvLoc_addName, InvLoc);
 		String userfac=getProperty("userdefaultFac");
 		selectFromDropdown(OR.InvLoc_addFacility, userfac);
