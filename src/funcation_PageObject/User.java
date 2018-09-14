@@ -349,7 +349,7 @@ public class User extends ApplicationKeyword{
 			 actions.moveToElement(element);
 			 element.click();
 		 }
-		 verifyElementText(_OR.user_Terms, "Terms");
+		// verifyElementText(_OR.user_Terms, "Terms");
 		 verifyElement(_OR.user_Agree);
 		 if(driver.findElements(By.xpath("//p[text()='Privacy Policy']")).size()!=0)
 		 {
@@ -406,7 +406,7 @@ public class User extends ApplicationKeyword{
 				WebElement elem = driver.findElement(By.xpath("//button[text()='Ok']"));
 				executor.executeScript("arguments[0].scrollIntoView(true);",elem);
 				executor.executeScript("arguments[0].click();", elem);
-				
+				testLogPass("Clicked on Ok button");
 			}
 //			WebElement element2 = driver.findElement(By.xpath("//button[@ng-click='readNote()']"));
 //			actions.moveToElement(element2);

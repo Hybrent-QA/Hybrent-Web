@@ -32,7 +32,7 @@ public class TC_Planner extends ApplicationKeyword
 			}
 
 			extent = new ExtentReports(folderPath+"/planner.html", true);
-			extent.addSystemInfo("User Name", "Ravneet");
+			extent.addSystemInfo("User Name", "QA");
 			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
 		} catch (Exception e) 
 		{

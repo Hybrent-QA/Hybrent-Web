@@ -37,7 +37,7 @@ public class TC_Patients extends ApplicationKeyword
 
 			extent = new ExtentReports(folderPath+"/patients.html", true);
 			// extent.addSystemInfo("Environment","Environment Name")
-			extent.addSystemInfo("User Name", "Ravneet");
+			extent.addSystemInfo("User Name", "QA");
 			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
 
 		} catch (Exception e) 

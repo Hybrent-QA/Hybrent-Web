@@ -199,9 +199,9 @@ public class Shop extends ApplicationKeyword{
 	
 	public static void Organiationchange()
 	{
-		waitForElement(_OR.DashBoard_Admin);
+		waitUntilPageReady();
 		clickOn(_OR.DashBoard_Admin);
-		waitForElement(_OR.DashBoard_Admin_organization);
+		waitUntilPageReady();
 		clickOn(_OR.DashBoard_Admin_organization);
 		waitForElement(_OR.DashBoard_Admin_organization_Features);
 		clickOn(_OR.DashBoard_Admin_organization_Features);
@@ -212,6 +212,7 @@ public class Shop extends ApplicationKeyword{
 			driver.findElement(By.xpath("//*[text()='Is Item Receive In Inventory']/following-sibling::div/div")).click();
 			clickOn(OR.Template_SaveBtn);
 			waitUntilPageReady();
+			waitTime(6);
 			if(driver.findElements(By.xpath("//button[contains(text(),'Yes')]")).size()!=0)
 			{
 				clickOn(OR.MyCart_yesInPopup);
@@ -224,6 +225,7 @@ public class Shop extends ApplicationKeyword{
 		}
 		waitUntilPageReady();
 		clickOn(OR.Shop_Menu);
+		waitUntilPageReady();
 		ArrayList<String> obtainedList = new ArrayList<>(); 
 		List<WebElement> elementList= driver.findElements(By.xpath("//*[@id='vendor']/option"));
 		for(WebElement we:elementList){

@@ -157,7 +157,7 @@ public class _OR {
 		public static String user_dropdown_searchFacility="dropdown_Facility#angular_model=searchFacility";
 		public static String user_Addbutton="AdduserBtn#xpath=//button[@ng-click='createUser()']";
 		public static String user_Editbutton="AdduserBtn#xpath=//button[@ng-click='createUser()']";
-		public static String user_top_Img="top_Img#xpath=//*[@class='user-img']";
+		public static String user_top_Img="top_Img#xpath=//ng-letter-avatar/img";
 
 	// User - Add User
 		public static String user_add_usertab="tab_user#xpath=//*[@heading='User']/a";

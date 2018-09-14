@@ -36,6 +36,10 @@ public class Invoices extends ApplicationKeyword{
 		{
 			testLogPass("Department Name is disable");
 		}
+		else
+		{
+			
+		}
 	}
 	
 	public static void Print()

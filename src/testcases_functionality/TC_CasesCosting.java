@@ -46,7 +46,7 @@ public class TC_CasesCosting extends ApplicationKeyword
 			}
 
 			extent = new ExtentReports(folderPath+"/CasesCosting.html", true);
-			// extent.addSystemInfo("Environment","Environment Name")
+			extent.addSystemInfo("User Name", "QA");
 			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
 
 		} catch (Exception e) 

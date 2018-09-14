@@ -101,7 +101,7 @@ public class Loginpage  extends ApplicationKeyword{
 
 public static void OpenBrowserAndLoginnew()
 {
-	openBrowser(URL);		
+	openBrowser(URL);	
 		Loginpage.newlogin(getProperty("created_NeUser"), getProperty("updated_NewPassword"));
 		waitUntilPageReady();
 		if(driver.findElements(By.xpath("//*[text()='Past Due Notice.']")).size()!=0)

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" ignored="0" total="157" passed="152">
+<testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="example suite 1" duration-ms="4611295" started-at="2018-07-24T11:06:54Z" finished-at="2018-07-24T12:23:46Z">
+  <suite name="example suite 1" duration-ms="13430" started-at="2018-09-14T12:37:06Z" finished-at="2018-09-14T12:37:19Z">
     <groups>
     </groups>
-    <test name="CartPage" duration-ms="398282" started-at="2018-07-24T11:06:54Z" finished-at="2018-07-24T11:13:33Z">
-      <class name="testCases.CartPage">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.CartPage@63753b6d]" name="startReport" is-config="true" duration-ms="1072" started-at="2018-07-24T16:36:54Z" finished-at="2018-07-24T16:36:55Z">
+    <test name="PreferenceCards" duration-ms="13430" started-at="2018-09-14T12:37:06Z" finished-at="2018-09-14T12:37:19Z">
+      <class name="testcases_functionality.TC_PreferenceCards">
+        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testcases_functionality.TC_PreferenceCards@78e67e0a]" name="startReport" is-config="true" duration-ms="883" started-at="2018-09-14T18:07:06Z" finished-at="2018-09-14T18:07:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[dev2]]>
+                <![CDATA[qa-1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
+                <![CDATA[https://qa1.test.hybrent.com/b/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.CartPage@63753b6d]" name="setBrowser" is-config="true" duration-ms="3788" started-at="2018-07-24T16:36:55Z" finished-at="2018-07-24T16:36:59Z">
+        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases_functionality.TC_PreferenceCards@78e67e0a]" name="setBrowser" is-config="true" duration-ms="3895" started-at="2018-09-14T18:07:06Z" finished-at="2018-09-14T18:07:10Z">
           <params>
             <param index="0">
               <value>
@@ -37,80 +37,38 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[dev2]]>
+                <![CDATA[qa-1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Cart_01()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_01" duration-ms="45368" started-at="2018-07-24T16:36:59Z" finished-at="2018-07-24T16:37:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_01 -->
-        <test-method status="PASS" signature="Tc_Cart_03()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_03" duration-ms="71501" started-at="2018-07-24T16:37:45Z" finished-at="2018-07-24T16:38:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_03 -->
-        <test-method status="PASS" signature="Tc_Cart_05()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_05" duration-ms="71346" started-at="2018-07-24T16:38:56Z" finished-at="2018-07-24T16:40:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_05 -->
-        <test-method status="PASS" signature="Tc_Cart_06()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_06" duration-ms="18003" started-at="2018-07-24T16:40:07Z" finished-at="2018-07-24T16:40:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_06 -->
-        <test-method status="PASS" signature="Tc_Cart_07()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_07" duration-ms="18433" started-at="2018-07-24T16:40:25Z" finished-at="2018-07-24T16:40:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_07 -->
-        <test-method status="PASS" signature="Tc_Cart_08()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_08" duration-ms="24290" started-at="2018-07-24T16:40:44Z" finished-at="2018-07-24T16:41:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_08 -->
-        <test-method status="PASS" signature="Tc_Cart_09()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_09" duration-ms="31443" started-at="2018-07-24T16:41:08Z" finished-at="2018-07-24T16:41:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_09 -->
-        <test-method status="PASS" signature="Tc_Cart_10()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_10" duration-ms="14998" started-at="2018-07-24T16:41:40Z" finished-at="2018-07-24T16:41:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_10 -->
-        <test-method status="PASS" signature="Tc_Cart_12()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_12" duration-ms="14836" started-at="2018-07-24T16:41:55Z" finished-at="2018-07-24T16:42:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_12 -->
-        <test-method status="PASS" signature="Tc_Cart_11()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_11" duration-ms="17856" started-at="2018-07-24T16:42:09Z" finished-at="2018-07-24T16:42:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_11 -->
-        <test-method status="PASS" signature="Tc_Cart_14()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_14" duration-ms="50410" started-at="2018-07-24T16:42:27Z" finished-at="2018-07-24T16:43:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cart_14 -->
-        <test-method status="FAIL" signature="Tc_Cart_15()[pri:0, instance:testCases.CartPage@63753b6d]" name="Tc_Cart_15" duration-ms="13878" started-at="2018-07-24T16:43:18Z" finished-at="2018-07-24T16:43:32Z">
-          <exception class="org.openqa.selenium.ElementNotVisibleException">
+        <test-method status="FAIL" signature="Tc_PreferenceCards_001()[pri:0, instance:testcases_functionality.TC_PreferenceCards@78e67e0a]" name="Tc_PreferenceCards_001" duration-ms="7939" started-at="2018-09-14T18:07:10Z" finished-at="2018-09-14T18:07:18Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[element not visible
-  (Session info: chrome=66.0.3359.181)
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'DESKTOP-URKGA8H', ip: '192.168.3.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 7672e8fa8c23d10316d7bb5bcfb...}
-Session ID: 7672e8fa8c23d10316d7bb5bcfb87edb]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true, webdriver.remote.sessionid: ea4ca7b9c7111ae4ed1cf736e39...}
+Session ID: ea4ca7b9c7111ae4ed1cf736e396f9cd]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=66.0.3359.181)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'DESKTOP-URKGA8H', ip: '192.168.3.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 7672e8fa8c23d10316d7bb5bcfb...}
-Session ID: 7672e8fa8c23d10316d7bb5bcfb87edb
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true, webdriver.remote.sessionid: ea4ca7b9c7111ae4ed1cf736e39...}
+Session ID: ea4ca7b9c7111ae4ed1cf736e396f9cd
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -122,9 +80,11 @@ Session ID: 7672e8fa8c23d10316d7bb5bcfb87edb
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at testCases.CartPage.Tc_Cart_15(CartPage.java:592)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:482)
+	at AutomationFramework.Generickeywords.waitUntilPageReady(Generickeywords.java:2802)
+	at funcation_PageObject.Loginpage.newlogin(Loginpage.java:52)
+	at funcation_PageObject.Loginpage.OpenBrowserAndLoginnew(Loginpage.java:105)
+	at testcases_functionality.TC_PreferenceCards.Tc_PreferenceCards_001(TC_PreferenceCards.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -152,408 +112,37 @@ Session ID: 7672e8fa8c23d10316d7bb5bcfb87edb
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_Cart_15 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.CartPage@63753b6d]" name="endReport" is-config="true" duration-ms="967" started-at="2018-07-24T16:43:32Z" finished-at="2018-07-24T16:43:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.CartPage -->
-    </test> <!-- CartPage -->
-    <test name="PrefCard" duration-ms="305521" started-at="2018-07-24T11:13:33Z" finished-at="2018-07-24T11:18:38Z">
-      <class name="testCases.PrefCard">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.PrefCard@5b87ed94]" name="startReport" is-config="true" duration-ms="10" started-at="2018-07-24T16:43:33Z" finished-at="2018-07-24T16:43:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.PrefCard@5b87ed94]" name="setBrowser" is-config="true" duration-ms="2321" started-at="2018-07-24T16:43:33Z" finished-at="2018-07-24T16:43:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_prefCard_01()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_01" duration-ms="34939" started-at="2018-07-24T16:43:35Z" finished-at="2018-07-24T16:44:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_01 -->
-        <test-method status="PASS" signature="Tc_prefCard_02()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_02" duration-ms="16400" started-at="2018-07-24T16:44:10Z" finished-at="2018-07-24T16:44:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_02 -->
-        <test-method status="PASS" signature="Tc_prefCard_03_04()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_03_04" duration-ms="18106" started-at="2018-07-24T16:44:26Z" finished-at="2018-07-24T16:44:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_03_04 -->
-        <test-method status="PASS" signature="Tc_prefCard_06()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_06" duration-ms="23167" started-at="2018-07-24T16:44:44Z" finished-at="2018-07-24T16:45:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_06 -->
-        <test-method status="PASS" signature="Tc_prefCard_07()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_07" duration-ms="57391" started-at="2018-07-24T16:45:08Z" finished-at="2018-07-24T16:46:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_07 -->
-        <test-method status="PASS" signature="Tc_prefCard_08()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_08" duration-ms="19984" started-at="2018-07-24T16:46:05Z" finished-at="2018-07-24T16:46:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_08 -->
-        <test-method status="PASS" signature="Tc_prefCard_09()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_09" duration-ms="20965" started-at="2018-07-24T16:46:25Z" finished-at="2018-07-24T16:46:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_09 -->
-        <test-method status="PASS" signature="Tc_prefCard_010()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_010" duration-ms="31242" started-at="2018-07-24T16:46:46Z" finished-at="2018-07-24T16:47:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_010 -->
-        <test-method status="PASS" signature="Tc_prefCard_12()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_12" duration-ms="26137" started-at="2018-07-24T16:47:17Z" finished-at="2018-07-24T16:47:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_12 -->
-        <test-method status="PASS" signature="Tc_prefCard_14()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_14" duration-ms="42205" started-at="2018-07-24T16:47:43Z" finished-at="2018-07-24T16:48:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_14 -->
-        <test-method status="PASS" signature="Tc_prefCard_15()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="Tc_prefCard_15" duration-ms="12095" started-at="2018-07-24T16:48:26Z" finished-at="2018-07-24T16:48:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_prefCard_15 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.PrefCard@5b87ed94]" name="endReport" is-config="true" duration-ms="540" started-at="2018-07-24T16:48:38Z" finished-at="2018-07-24T16:48:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.PrefCard -->
-    </test> <!-- PrefCard -->
-    <test name="Shipments" duration-ms="81918" started-at="2018-07-24T11:18:38Z" finished-at="2018-07-24T11:20:00Z">
-      <class name="testCases.Shipments">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Shipments@43814d18]" name="startReport" is-config="true" duration-ms="44" started-at="2018-07-24T16:48:38Z" finished-at="2018-07-24T16:48:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Shipments@43814d18]" name="setBrowser" is-config="true" duration-ms="2742" started-at="2018-07-24T16:48:38Z" finished-at="2018-07-24T16:48:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_SH_01()[pri:0, instance:testCases.Shipments@43814d18]" name="Tc_SH_01" duration-ms="36905" started-at="2018-07-24T16:48:41Z" finished-at="2018-07-24T16:49:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SH_01 -->
-        <test-method status="PASS" signature="Tc_SH_02()[pri:0, instance:testCases.Shipments@43814d18]" name="Tc_SH_02" duration-ms="10931" started-at="2018-07-24T16:49:18Z" finished-at="2018-07-24T16:49:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SH_02 -->
-        <test-method status="PASS" signature="Tc_SH_03()[pri:0, instance:testCases.Shipments@43814d18]" name="Tc_SH_03" duration-ms="12999" started-at="2018-07-24T16:49:29Z" finished-at="2018-07-24T16:49:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SH_03 -->
-        <test-method status="PASS" signature="Tc_SH_04()[pri:0, instance:testCases.Shipments@43814d18]" name="Tc_SH_04" duration-ms="17864" started-at="2018-07-24T16:49:42Z" finished-at="2018-07-24T16:50:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SH_04 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Shipments@43814d18]" name="endReport" is-config="true" duration-ms="426" started-at="2018-07-24T16:50:00Z" finished-at="2018-07-24T16:50:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Shipments -->
-    </test> <!-- Shipments -->
-    <test name="RequestService" duration-ms="121610" started-at="2018-07-24T11:20:00Z" finished-at="2018-07-24T11:22:02Z">
-      <class name="testCases.RequestService">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.RequestService@551aa95a]" name="startReport" is-config="true" duration-ms="27" started-at="2018-07-24T16:50:00Z" finished-at="2018-07-24T16:50:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.RequestService@551aa95a]" name="setBrowser" is-config="true" duration-ms="3362" started-at="2018-07-24T16:50:00Z" finished-at="2018-07-24T16:50:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_SPO_01()[pri:0, instance:testCases.RequestService@551aa95a]" name="Tc_SPO_01" duration-ms="71277" started-at="2018-07-24T16:50:04Z" finished-at="2018-07-24T16:51:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SPO_01 -->
-        <test-method status="PASS" signature="Tc_SPO_02()[pri:0, instance:testCases.RequestService@551aa95a]" name="Tc_SPO_02" duration-ms="12536" started-at="2018-07-24T16:51:15Z" finished-at="2018-07-24T16:51:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SPO_02 -->
-        <test-method status="PASS" signature="Tc_SPO_03()[pri:0, instance:testCases.RequestService@551aa95a]" name="Tc_SPO_03" duration-ms="10781" started-at="2018-07-24T16:51:27Z" finished-at="2018-07-24T16:51:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SPO_03 -->
-        <test-method status="PASS" signature="Tc_SPO_04()[pri:0, instance:testCases.RequestService@551aa95a]" name="Tc_SPO_04" duration-ms="11468" started-at="2018-07-24T16:51:38Z" finished-at="2018-07-24T16:51:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SPO_04 -->
-        <test-method status="PASS" signature="Tc_SPO_05()[pri:0, instance:testCases.RequestService@551aa95a]" name="Tc_SPO_05" duration-ms="11746" started-at="2018-07-24T16:51:50Z" finished-at="2018-07-24T16:52:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SPO_05 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.RequestService@551aa95a]" name="endReport" is-config="true" duration-ms="406" started-at="2018-07-24T16:52:01Z" finished-at="2018-07-24T16:52:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.RequestService -->
-    </test> <!-- RequestService -->
-    <test name="ManageInventory" duration-ms="165106" started-at="2018-07-24T11:22:02Z" finished-at="2018-07-24T11:24:47Z">
-      <class name="testCases.ManageInventory">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="startReport" is-config="true" duration-ms="13" started-at="2018-07-24T16:52:02Z" finished-at="2018-07-24T16:52:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="setBrowser" is-config="true" duration-ms="2900" started-at="2018-07-24T16:52:02Z" finished-at="2018-07-24T16:52:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_manageInv_01()[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="Tc_manageInv_01" duration-ms="54862" started-at="2018-07-24T16:52:05Z" finished-at="2018-07-24T16:53:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_manageInv_01 -->
-        <test-method status="PASS" signature="Tc_manageInv_03()[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="Tc_manageInv_03" duration-ms="70875" started-at="2018-07-24T16:53:00Z" finished-at="2018-07-24T16:54:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_manageInv_03 -->
-        <test-method status="PASS" signature="Tc_manageInv_05_06()[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="Tc_manageInv_05_06" duration-ms="13663" started-at="2018-07-24T16:54:10Z" finished-at="2018-07-24T16:54:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_manageInv_05_06 -->
-        <test-method status="PASS" signature="Tc_manageInv_07()[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="Tc_manageInv_07" duration-ms="10962" started-at="2018-07-24T16:54:24Z" finished-at="2018-07-24T16:54:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_manageInv_07 -->
-        <test-method status="PASS" signature="Tc_manageInv_02_09()[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="Tc_manageInv_02_09" duration-ms="11423" started-at="2018-07-24T16:54:35Z" finished-at="2018-07-24T16:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_manageInv_02_09 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.ManageInventory@3d99d22e]" name="endReport" is-config="true" duration-ms="401" started-at="2018-07-24T16:54:47Z" finished-at="2018-07-24T16:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.ManageInventory -->
-    </test> <!-- ManageInventory -->
-    <test name="AdminPart" duration-ms="654081" started-at="2018-07-24T11:24:47Z" finished-at="2018-07-24T11:35:41Z">
-      <class name="testCases.AdminPart">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.AdminPart@57855c9a]" name="startReport" is-config="true" duration-ms="11" started-at="2018-07-24T16:54:47Z" finished-at="2018-07-24T16:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.AdminPart@57855c9a]" name="setBrowser" is-config="true" duration-ms="2689" started-at="2018-07-24T16:54:47Z" finished-at="2018-07-24T16:54:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_ItemCat_01_02_03()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_ItemCat_01_02_03" duration-ms="41172" started-at="2018-07-24T16:54:50Z" finished-at="2018-07-24T16:55:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_ItemCat_01_02_03 -->
-        <test-method status="PASS" signature="Tc_ItemCat_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_ItemCat_04" duration-ms="36897" started-at="2018-07-24T16:55:31Z" finished-at="2018-07-24T16:56:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_ItemCat_04 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_01_02" duration-ms="27141" started-at="2018-07-24T16:56:08Z" finished-at="2018-07-24T16:56:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_01_02 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_03()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_03" duration-ms="45735" started-at="2018-07-24T16:56:35Z" finished-at="2018-07-24T16:57:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_03 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_04" duration-ms="16734" started-at="2018-07-24T16:57:21Z" finished-at="2018-07-24T16:57:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_04 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_06()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_06" duration-ms="17103" started-at="2018-07-24T16:57:37Z" finished-at="2018-07-24T16:57:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_06 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_07()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_07" duration-ms="18259" started-at="2018-07-24T16:57:54Z" finished-at="2018-07-24T16:58:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_07 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_08()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_08" duration-ms="22528" started-at="2018-07-24T16:58:13Z" finished-at="2018-07-24T16:58:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_08 -->
-        <test-method status="PASS" signature="Tc_PrintBarcode_10()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PrintBarcode_10" duration-ms="20824" started-at="2018-07-24T16:58:35Z" finished-at="2018-07-24T16:58:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PrintBarcode_10 -->
-        <test-method status="PASS" signature="Tc_SI_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_SI_01_02" duration-ms="15527" started-at="2018-07-24T16:58:56Z" finished-at="2018-07-24T16:59:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SI_01_02 -->
-        <test-method status="PASS" signature="Tc_SI_03()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_SI_03" duration-ms="11433" started-at="2018-07-24T16:59:12Z" finished-at="2018-07-24T16:59:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SI_03 -->
-        <test-method status="PASS" signature="Tc_SI_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_SI_04" duration-ms="12299" started-at="2018-07-24T16:59:23Z" finished-at="2018-07-24T16:59:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_SI_04 -->
-        <test-method status="FAIL" signature="Tc_PTerms_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PTerms_01_02" duration-ms="15682" started-at="2018-07-24T16:59:35Z" finished-at="2018-07-24T16:59:51Z">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        </test-method> <!-- Tc_PreferenceCards_001 -->
+        <test-method status="FAIL" signature="Tc_PreferenceCards_002()[pri:0, instance:testcases_functionality.TC_PreferenceCards@78e67e0a]" name="Tc_PreferenceCards_002" duration-ms="22" started-at="2018-09-14T18:07:18Z" finished-at="2018-09-14T18:07:18Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[stale element reference: element is not attached to the page document
-  (Session info: chrome=66.0.3359.181)
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'DESKTOP-URKGA8H', ip: '192.168.3.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 0343460a1a527fecd735b396b6f...}
-Session ID: 0343460a1a527fecd735b396b6fc63cf]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true, webdriver.remote.sessionid: ea4ca7b9c7111ae4ed1cf736e39...}
+Session ID: ea4ca7b9c7111ae4ed1cf736e396f9cd
+*** Element info: {Using=xpath, value=//*[@href='#/preference-card/cards']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=66.0.3359.181)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'DESKTOP-URKGA8H', ip: '192.168.3.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 0343460a1a527fecd735b396b6f...}
-Session ID: 0343460a1a527fecd735b396b6fc63cf
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true, webdriver.remote.sessionid: ea4ca7b9c7111ae4ed1cf736e39...}
+Session ID: ea4ca7b9c7111ae4ed1cf736e396f9cd
+*** Element info: {Using=xpath, value=//*[@href='#/preference-card/cards']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -565,9 +154,12 @@ Session ID: 0343460a1a527fecd735b396b6fc63cf
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:160)
-	at testCases.AdminPart.Tc_PTerms_01_02(AdminPart.java:458)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at funcation_PageObject.PreferenceCards.prefCardPagePageLinkandwait(PreferenceCards.java:72)
+	at testcases_functionality.TC_PreferenceCards.Tc_PreferenceCards_002(TC_PreferenceCards.java:63)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -595,38 +187,39 @@ Session ID: 0343460a1a527fecd735b396b6fc63cf
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_PTerms_01_02 -->
-        <test-method status="FAIL" signature="Tc_PTerms_03_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PTerms_03_04" duration-ms="27631" started-at="2018-07-24T16:59:51Z" finished-at="2018-07-24T17:00:19Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- Tc_PreferenceCards_002 -->
+        <test-method status="FAIL" signature="Tc_PreferenceCards_003()[pri:0, instance:testcases_functionality.TC_PreferenceCards@78e67e0a]" name="Tc_PreferenceCards_003" duration-ms="11" started-at="2018-09-14T18:07:18Z" finished-at="2018-09-14T18:07:18Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"class name","selector":"toast-title"}
-  (Session info: chrome=66.0.3359.181)
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'DESKTOP-URKGA8H', ip: '192.168.3.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 0343460a1a527fecd735b396b6f...}
-Session ID: 0343460a1a527fecd735b396b6fc63cf
-*** Element info: {Using=class name, value=toast-title}]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true, webdriver.remote.sessionid: ea4ca7b9c7111ae4ed1cf736e39...}
+Session ID: ea4ca7b9c7111ae4ed1cf736e396f9cd
+*** Element info: {Using=xpath, value=//*[@href='#/preference-card/cards']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"class name","selector":"toast-title"}
-  (Session info: chrome=66.0.3359.181)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=68.0.3440.106)
   (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+System info: host: 'DESKTOP-URKGA8H', ip: '192.168.3.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 0343460a1a527fecd735b396b6f...}
-Session ID: 0343460a1a527fecd735b396b6fc63cf
-*** Element info: {Using=class name, value=toast-title}
-	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true, webdriver.remote.sessionid: ea4ca7b9c7111ae4ed1cf736e39...}
+Session ID: ea4ca7b9c7111ae4ed1cf736e396f9cd
+*** Element info: {Using=xpath, value=//*[@href='#/preference-card/cards']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
@@ -637,11 +230,11 @@ Session ID: 0343460a1a527fecd735b396b6fc63cf
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:405)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at AutomationFramework.ApplicationKeyword.ToastmesssageSucess(ApplicationKeyword.java:53)
-	at testCases.AdminPart.Tc_PTerms_03_04(AdminPart.java:490)
+	at funcation_PageObject.PreferenceCards.prefCardPagePageLinkandwait(PreferenceCards.java:72)
+	at testcases_functionality.TC_PreferenceCards.Tc_PreferenceCards_003(TC_PreferenceCards.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -669,1087 +262,15 @@ Session ID: 0343460a1a527fecd735b396b6fc63cf
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_PTerms_03_04 -->
-        <test-method status="PASS" signature="Tc_News_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_News_01_02" duration-ms="21101" started-at="2018-07-24T17:00:19Z" finished-at="2018-07-24T17:00:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_News_01_02 -->
-        <test-method status="PASS" signature="Tc_News_03_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_News_03_04" duration-ms="27426" started-at="2018-07-24T17:00:40Z" finished-at="2018-07-24T17:01:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_News_03_04 -->
-        <test-method status="PASS" signature="Tc_News_05()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_News_05" duration-ms="24990" started-at="2018-07-24T17:01:07Z" finished-at="2018-07-24T17:01:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_News_05 -->
-        <test-method status="PASS" signature="Tc_Vendor_01()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_Vendor_01" duration-ms="33748" started-at="2018-07-24T17:01:32Z" finished-at="2018-07-24T17:02:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Vendor_01 -->
-        <test-method status="PASS" signature="Tc_Vendor_02_03()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_Vendor_02_03" duration-ms="16197" started-at="2018-07-24T17:02:06Z" finished-at="2018-07-24T17:02:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Vendor_02_03 -->
-        <test-method status="PASS" signature="Tc_PriceTier_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PriceTier_01_02" duration-ms="22670" started-at="2018-07-24T17:02:22Z" finished-at="2018-07-24T17:02:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PriceTier_01_02 -->
-        <test-method status="PASS" signature="Tc_PriceTier_03_05()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PriceTier_03_05" duration-ms="20864" started-at="2018-07-24T17:02:45Z" finished-at="2018-07-24T17:03:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PriceTier_03_05 -->
-        <test-method status="FAIL" signature="Tc_PriceTier_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_PriceTier_04" duration-ms="31786" started-at="2018-07-24T17:03:06Z" finished-at="2018-07-24T17:03:37Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"class name","selector":"toast-title"}
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 0343460a1a527fecd735b396b6f...}
-Session ID: 0343460a1a527fecd735b396b6fc63cf
-*** Element info: {Using=class name, value=toast-title}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"class name","selector":"toast-title"}
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:15.31Z'
-System info: host: 'DESKTOP-URKGA8H', ip: '192.168.2.110', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\Acer\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true, webdriver.remote.sessionid: 0343460a1a527fecd735b396b6f...}
-Session ID: 0343460a1a527fecd735b396b6fc63cf
-*** Element info: {Using=class name, value=toast-title}
-	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:405)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at AutomationFramework.ApplicationKeyword.ToastmesssageSucess(ApplicationKeyword.java:53)
-	at testCases.AdminPart.Tc_PriceTier_04(AdminPart.java:776)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_PriceTier_04 -->
-        <test-method status="PASS" signature="Tc_ItemCatalog_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_ItemCatalog_01_02" duration-ms="23082" started-at="2018-07-24T17:03:37Z" finished-at="2018-07-24T17:04:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_ItemCatalog_01_02 -->
-        <test-method status="PASS" signature="Tc_ItemCatalog_03()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_ItemCatalog_03" duration-ms="21799" started-at="2018-07-24T17:04:01Z" finished-at="2018-07-24T17:04:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_ItemCatalog_03 -->
-        <test-method status="PASS" signature="Tc_ItemCatalog_04()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_ItemCatalog_04" duration-ms="13056" started-at="2018-07-24T17:04:22Z" finished-at="2018-07-24T17:04:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_ItemCatalog_04 -->
-        <test-method status="PASS" signature="Tc_InventoryLoc_01_02()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_InventoryLoc_01_02" duration-ms="25719" started-at="2018-07-24T17:04:35Z" finished-at="2018-07-24T17:05:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_InventoryLoc_01_02 -->
-        <test-method status="PASS" signature="Tc_InventoryLoc_04_05()[pri:0, instance:testCases.AdminPart@57855c9a]" name="Tc_InventoryLoc_04_05" duration-ms="39480" started-at="2018-07-24T17:05:01Z" finished-at="2018-07-24T17:05:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_InventoryLoc_04_05 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.AdminPart@57855c9a]" name="endReport" is-config="true" duration-ms="456" started-at="2018-07-24T17:05:41Z" finished-at="2018-07-24T17:05:41Z">
+        </test-method> <!-- Tc_PreferenceCards_003 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testcases_functionality.TC_PreferenceCards@78e67e0a]" name="endReport" is-config="true" duration-ms="623" started-at="2018-09-14T18:07:18Z" finished-at="2018-09-14T18:07:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- testCases.AdminPart -->
-    </test> <!-- AdminPart -->
-    <test name="Users" duration-ms="115886" started-at="2018-07-24T11:35:41Z" finished-at="2018-07-24T11:37:37Z">
-      <class name="testCases.Users">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Users@30b8a058]" name="startReport" is-config="true" duration-ms="10" started-at="2018-07-24T17:05:41Z" finished-at="2018-07-24T17:05:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Users@30b8a058]" name="setBrowser" is-config="true" duration-ms="2667" started-at="2018-07-24T17:05:41Z" finished-at="2018-07-24T17:05:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Users_01()[pri:0, instance:testCases.Users@30b8a058]" name="Tc_Users_01" duration-ms="32709" started-at="2018-07-24T17:05:44Z" finished-at="2018-07-24T17:06:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Users_01 -->
-        <test-method status="PASS" signature="Tc_Users_02()[pri:0, instance:testCases.Users@30b8a058]" name="Tc_Users_02" duration-ms="41746" started-at="2018-07-24T17:06:17Z" finished-at="2018-07-24T17:06:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Users_02 -->
-        <test-method status="PASS" signature="Tc_Users_03_08()[pri:0, instance:testCases.Users@30b8a058]" name="Tc_Users_03_08" duration-ms="12549" started-at="2018-07-24T17:06:58Z" finished-at="2018-07-24T17:07:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Users_03_08 -->
-        <test-method status="PASS" signature="Tc_Users_04_08()[pri:0, instance:testCases.Users@30b8a058]" name="Tc_Users_04_08" duration-ms="14213" started-at="2018-07-24T17:07:11Z" finished-at="2018-07-24T17:07:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Users_04_08 -->
-        <test-method status="PASS" signature="Tc_Users_09()[pri:0, instance:testCases.Users@30b8a058]" name="Tc_Users_09" duration-ms="11639" started-at="2018-07-24T17:07:25Z" finished-at="2018-07-24T17:07:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Users_09 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Users@30b8a058]" name="endReport" is-config="true" duration-ms="348" started-at="2018-07-24T17:07:37Z" finished-at="2018-07-24T17:07:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Users -->
-    </test> <!-- Users -->
-    <test name="ShopPage" duration-ms="488644" started-at="2018-07-24T11:37:37Z" finished-at="2018-07-24T11:45:46Z">
-      <class name="testCases.ShopPage">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.ShopPage@5d76b067]" name="startReport" is-config="true" duration-ms="14" started-at="2018-07-24T17:07:37Z" finished-at="2018-07-24T17:07:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.ShopPage@5d76b067]" name="setBrowser" is-config="true" duration-ms="2743" started-at="2018-07-24T17:07:37Z" finished-at="2018-07-24T17:07:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Shop_1()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_1" duration-ms="40429" started-at="2018-07-24T17:07:40Z" finished-at="2018-07-24T17:08:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_1 -->
-        <test-method status="PASS" signature="Tc_Shop_2_3()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_2_3" duration-ms="17564" started-at="2018-07-24T17:08:20Z" finished-at="2018-07-24T17:08:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_2_3 -->
-        <test-method status="PASS" signature="Tc_Shop_4()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_4" duration-ms="140122" started-at="2018-07-24T17:08:38Z" finished-at="2018-07-24T17:10:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_4 -->
-        <test-method status="PASS" signature="Tc_Shop_5()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_5" duration-ms="31955" started-at="2018-07-24T17:10:58Z" finished-at="2018-07-24T17:11:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_5 -->
-        <test-method status="PASS" signature="Tc_Shop_6()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_6" duration-ms="21684" started-at="2018-07-24T17:11:30Z" finished-at="2018-07-24T17:11:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_6 -->
-        <test-method status="PASS" signature="Tc_Shop_7()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_7" duration-ms="13674" started-at="2018-07-24T17:11:52Z" finished-at="2018-07-24T17:12:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_7 -->
-        <test-method status="PASS" signature="Tc_Shop_08()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_08" duration-ms="27548" started-at="2018-07-24T17:12:05Z" finished-at="2018-07-24T17:12:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_08 -->
-        <test-method status="PASS" signature="Tc_Shop_09()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_09" duration-ms="29061" started-at="2018-07-24T17:12:33Z" finished-at="2018-07-24T17:13:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_09 -->
-        <test-method status="PASS" signature="Tc_Shop_10()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_10" duration-ms="14515" started-at="2018-07-24T17:13:02Z" finished-at="2018-07-24T17:13:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_10 -->
-        <test-method status="PASS" signature="Tc_Shop_12()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_12" duration-ms="26456" started-at="2018-07-24T17:13:16Z" finished-at="2018-07-24T17:13:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_12 -->
-        <test-method status="PASS" signature="Tc_Shop_15()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_15" duration-ms="16207" started-at="2018-07-24T17:13:43Z" finished-at="2018-07-24T17:13:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_15 -->
-        <test-method status="PASS" signature="Tc_Shop_16()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_16" duration-ms="12873" started-at="2018-07-24T17:13:59Z" finished-at="2018-07-24T17:14:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_16 -->
-        <test-method status="PASS" signature="Tc_Shop_17()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_17" duration-ms="13591" started-at="2018-07-24T17:14:12Z" finished-at="2018-07-24T17:14:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_17 -->
-        <test-method status="PASS" signature="Tc_Shop_19()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_19" duration-ms="13900" started-at="2018-07-24T17:14:25Z" finished-at="2018-07-24T17:14:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_19 -->
-        <test-method status="PASS" signature="Tc_Shop_21()[pri:0, instance:testCases.ShopPage@5d76b067]" name="Tc_Shop_21" duration-ms="65739" started-at="2018-07-24T17:14:39Z" finished-at="2018-07-24T17:15:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Shop_21 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.ShopPage@5d76b067]" name="endReport" is-config="true" duration-ms="542" started-at="2018-07-24T17:15:45Z" finished-at="2018-07-24T17:15:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.ShopPage -->
-    </test> <!-- ShopPage -->
-    <test name="Receive" duration-ms="263282" started-at="2018-07-24T11:45:46Z" finished-at="2018-07-24T11:50:09Z">
-      <class name="testCases.Receive">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Receive@1c3a4799]" name="startReport" is-config="true" duration-ms="6" started-at="2018-07-24T17:15:46Z" finished-at="2018-07-24T17:15:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Receive@1c3a4799]" name="setBrowser" is-config="true" duration-ms="3870" started-at="2018-07-24T17:15:46Z" finished-at="2018-07-24T17:15:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Receive_01()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_01" duration-ms="46032" started-at="2018-07-24T17:15:50Z" finished-at="2018-07-24T17:16:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_01 -->
-        <test-method status="PASS" signature="Tc_Receive_03()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_03" duration-ms="13571" started-at="2018-07-24T17:16:36Z" finished-at="2018-07-24T17:16:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_03 -->
-        <test-method status="PASS" signature="Tc_Receive_05_06()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_05_06" duration-ms="17913" started-at="2018-07-24T17:16:49Z" finished-at="2018-07-24T17:17:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_05_06 -->
-        <test-method status="PASS" signature="Tc_Receive_07_19()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_07_19" duration-ms="23059" started-at="2018-07-24T17:17:07Z" finished-at="2018-07-24T17:17:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_07_19 -->
-        <test-method status="PASS" signature="Tc_Receive_09()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_09" duration-ms="15623" started-at="2018-07-24T17:17:30Z" finished-at="2018-07-24T17:17:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_09 -->
-        <test-method status="PASS" signature="Tc_Receive_10()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_10" duration-ms="16122" started-at="2018-07-24T17:17:46Z" finished-at="2018-07-24T17:18:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_10 -->
-        <test-method status="PASS" signature="Tc_Receive_11()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_11" duration-ms="14885" started-at="2018-07-24T17:18:02Z" finished-at="2018-07-24T17:18:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_11 -->
-        <test-method status="PASS" signature="Tc_Receive_12()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_12" duration-ms="16071" started-at="2018-07-24T17:18:17Z" finished-at="2018-07-24T17:18:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_12 -->
-        <test-method status="PASS" signature="Tc_Receive_014()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_014" duration-ms="20651" started-at="2018-07-24T17:18:33Z" finished-at="2018-07-24T17:18:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_014 -->
-        <test-method status="PASS" signature="Tc_Receive_017()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_017" duration-ms="23911" started-at="2018-07-24T17:18:54Z" finished-at="2018-07-24T17:19:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_017 -->
-        <test-method status="PASS" signature="Tc_Receive_20()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_20" duration-ms="35818" started-at="2018-07-24T17:19:17Z" finished-at="2018-07-24T17:19:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_20 -->
-        <test-method status="PASS" signature="Tc_Receive_21()[pri:0, instance:testCases.Receive@1c3a4799]" name="Tc_Receive_21" duration-ms="15299" started-at="2018-07-24T17:19:53Z" finished-at="2018-07-24T17:20:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Receive_21 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Receive@1c3a4799]" name="endReport" is-config="true" duration-ms="436" started-at="2018-07-24T17:20:09Z" finished-at="2018-07-24T17:20:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Receive -->
-    </test> <!-- Receive -->
-    <test name="ReceiveDetails" duration-ms="501670" started-at="2018-07-24T11:50:09Z" finished-at="2018-07-24T11:58:31Z">
-      <class name="testCases.ReceiveDetails">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="startReport" is-config="true" duration-ms="10" started-at="2018-07-24T17:20:09Z" finished-at="2018-07-24T17:20:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="setBrowser" is-config="true" duration-ms="4149" started-at="2018-07-24T17:20:09Z" finished-at="2018-07-24T17:20:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_RECDET_01()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_01" duration-ms="50840" started-at="2018-07-24T17:20:13Z" finished-at="2018-07-24T17:21:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_01 -->
-        <test-method status="PASS" signature="Tc_RECDET_03_04()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_03_04" duration-ms="30362" started-at="2018-07-24T17:21:04Z" finished-at="2018-07-24T17:21:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_03_04 -->
-        <test-method status="PASS" signature="Tc_RECDET_05()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_05" duration-ms="66540" started-at="2018-07-24T17:21:34Z" finished-at="2018-07-24T17:22:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_05 -->
-        <test-method status="PASS" signature="Tc_RECDET_06()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_06" duration-ms="42118" started-at="2018-07-24T17:22:41Z" finished-at="2018-07-24T17:23:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_06 -->
-        <test-method status="PASS" signature="Tc_RECDET_07()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_07" duration-ms="22895" started-at="2018-07-24T17:23:23Z" finished-at="2018-07-24T17:23:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_07 -->
-        <test-method status="PASS" signature="Tc_RECDET_08()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_08" duration-ms="24659" started-at="2018-07-24T17:23:46Z" finished-at="2018-07-24T17:24:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_08 -->
-        <test-method status="PASS" signature="Tc_RECDET_09()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_09" duration-ms="21930" started-at="2018-07-24T17:24:11Z" finished-at="2018-07-24T17:24:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_09 -->
-        <test-method status="PASS" signature="Tc_RECDET_10()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_10" duration-ms="17519" started-at="2018-07-24T17:24:33Z" finished-at="2018-07-24T17:24:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_10 -->
-        <test-method status="PASS" signature="Tc_RECDET_11()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_11" duration-ms="17231" started-at="2018-07-24T17:24:50Z" finished-at="2018-07-24T17:25:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_11 -->
-        <test-method status="PASS" signature="Tc_RECDET_12()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_12" duration-ms="17399" started-at="2018-07-24T17:25:07Z" finished-at="2018-07-24T17:25:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_12 -->
-        <test-method status="PASS" signature="Tc_RECDET_13()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_13" duration-ms="22769" started-at="2018-07-24T17:25:25Z" finished-at="2018-07-24T17:25:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_13 -->
-        <test-method status="PASS" signature="Tc_RECDET_14()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_14" duration-ms="45609" started-at="2018-07-24T17:25:47Z" finished-at="2018-07-24T17:26:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_14 -->
-        <test-method status="PASS" signature="Tc_RECDET_15_16()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_15_16" duration-ms="31330" started-at="2018-07-24T17:26:33Z" finished-at="2018-07-24T17:27:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_15_16 -->
-        <test-method status="PASS" signature="Tc_RECDET_17()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_17" duration-ms="20864" started-at="2018-07-24T17:27:04Z" finished-at="2018-07-24T17:27:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_17 -->
-        <test-method status="PASS" signature="Tc_RECDET_19()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_19" duration-ms="18052" started-at="2018-07-24T17:27:25Z" finished-at="2018-07-24T17:27:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_19 -->
-        <test-method status="PASS" signature="Tc_RECDET_20()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_20" duration-ms="15074" started-at="2018-07-24T17:27:43Z" finished-at="2018-07-24T17:27:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_20 -->
-        <test-method status="PASS" signature="Tc_RECDET_21()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_21" duration-ms="14780" started-at="2018-07-24T17:27:58Z" finished-at="2018-07-24T17:28:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_21 -->
-        <test-method status="PASS" signature="Tc_RECDET_22_23()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="Tc_RECDET_22_23" duration-ms="17188" started-at="2018-07-24T17:28:13Z" finished-at="2018-07-24T17:28:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_RECDET_22_23 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.ReceiveDetails@d44fc21]" name="endReport" is-config="true" duration-ms="331" started-at="2018-07-24T17:28:30Z" finished-at="2018-07-24T17:28:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.ReceiveDetails -->
-    </test> <!-- ReceiveDetails -->
-    <test name="Procedures" duration-ms="168335" started-at="2018-07-24T11:58:31Z" finished-at="2018-07-24T12:01:19Z">
-      <class name="testCases.Procedures">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Procedures@184f6be2]" name="startReport" is-config="true" duration-ms="10" started-at="2018-07-24T17:28:31Z" finished-at="2018-07-24T17:28:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Procedures@184f6be2]" name="setBrowser" is-config="true" duration-ms="3921" started-at="2018-07-24T17:28:31Z" finished-at="2018-07-24T17:28:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Procedures_01_02_03()[pri:0, instance:testCases.Procedures@184f6be2]" name="Tc_Procedures_01_02_03" duration-ms="52957" started-at="2018-07-24T17:28:35Z" finished-at="2018-07-24T17:29:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Procedures_01_02_03 -->
-        <test-method status="PASS" signature="Tc_Procedures_04()[pri:0, instance:testCases.Procedures@184f6be2]" name="Tc_Procedures_04" duration-ms="18074" started-at="2018-07-24T17:29:28Z" finished-at="2018-07-24T17:29:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Procedures_04 -->
-        <test-method status="PASS" signature="Tc_Procedures_05_06()[pri:0, instance:testCases.Procedures@184f6be2]" name="Tc_Procedures_05_06" duration-ms="12767" started-at="2018-07-24T17:29:46Z" finished-at="2018-07-24T17:29:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Procedures_05_06 -->
-        <test-method status="PASS" signature="Tc_Procedures_07()[pri:0, instance:testCases.Procedures@184f6be2]" name="Tc_Procedures_07" duration-ms="80279" started-at="2018-07-24T17:29:58Z" finished-at="2018-07-24T17:31:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Procedures_07 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Procedures@184f6be2]" name="endReport" is-config="true" duration-ms="323" started-at="2018-07-24T17:31:19Z" finished-at="2018-07-24T17:31:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Procedures -->
-    </test> <!-- Procedures -->
-    <test name="Cases" duration-ms="56360" started-at="2018-07-24T12:01:19Z" finished-at="2018-07-24T12:02:15Z">
-      <class name="testCases.Cases">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Cases@5f282abb]" name="startReport" is-config="true" duration-ms="8" started-at="2018-07-24T17:31:19Z" finished-at="2018-07-24T17:31:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Cases@5f282abb]" name="setBrowser" is-config="true" duration-ms="3730" started-at="2018-07-24T17:31:19Z" finished-at="2018-07-24T17:31:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Cases_01()[pri:0, instance:testCases.Cases@5f282abb]" name="Tc_Cases_01" duration-ms="39991" started-at="2018-07-24T17:31:23Z" finished-at="2018-07-24T17:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cases_01 -->
-        <test-method status="PASS" signature="Tc_Cases_02()[pri:0, instance:testCases.Cases@5f282abb]" name="Tc_Cases_02" duration-ms="12212" started-at="2018-07-24T17:32:03Z" finished-at="2018-07-24T17:32:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Cases_02 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Cases@5f282abb]" name="endReport" is-config="true" duration-ms="417" started-at="2018-07-24T17:32:15Z" finished-at="2018-07-24T17:32:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Cases -->
-    </test> <!-- Cases -->
-    <test name="Facility" duration-ms="433370" started-at="2018-07-24T12:02:15Z" finished-at="2018-07-24T12:09:29Z">
-      <class name="testCases.Facility">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Facility@15d0c81b]" name="startReport" is-config="true" duration-ms="11" started-at="2018-07-24T17:32:15Z" finished-at="2018-07-24T17:32:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Facility@15d0c81b]" name="setBrowser" is-config="true" duration-ms="3857" started-at="2018-07-24T17:32:15Z" finished-at="2018-07-24T17:32:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Fac_01()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Fac_01" duration-ms="35545" started-at="2018-07-24T17:32:19Z" finished-at="2018-07-24T17:32:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Fac_01 -->
-        <test-method status="PASS" signature="Tc_Fac_02()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Fac_02" duration-ms="13990" started-at="2018-07-24T17:32:55Z" finished-at="2018-07-24T17:33:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Fac_02 -->
-        <test-method status="PASS" signature="Tc_Fac_03()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Fac_03" duration-ms="15873" started-at="2018-07-24T17:33:09Z" finished-at="2018-07-24T17:33:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Fac_03 -->
-        <test-method status="PASS" signature="Tc_Fac_04()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Fac_04" duration-ms="14618" started-at="2018-07-24T17:33:25Z" finished-at="2018-07-24T17:33:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Fac_04 -->
-        <test-method status="PASS" signature="Tc_Fac_05_Dep_02()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Fac_05_Dep_02" duration-ms="17033" started-at="2018-07-24T17:33:39Z" finished-at="2018-07-24T17:33:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Fac_05_Dep_02 -->
-        <test-method status="PASS" signature="Tc_Dep_03_04()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Dep_03_04" duration-ms="36335" started-at="2018-07-24T17:33:56Z" finished-at="2018-07-24T17:34:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Dep_03_04 -->
-        <test-method status="PASS" signature="Tc_Dep_07()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Dep_07" duration-ms="21214" started-at="2018-07-24T17:34:33Z" finished-at="2018-07-24T17:34:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Dep_07 -->
-        <test-method status="PASS" signature="Tc_Dep_06()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Dep_06" duration-ms="29922" started-at="2018-07-24T17:34:54Z" finished-at="2018-07-24T17:35:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Dep_06 -->
-        <test-method status="PASS" signature="Tc_Phy_01_02_03()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Phy_01_02_03" duration-ms="28327" started-at="2018-07-24T17:35:24Z" finished-at="2018-07-24T17:35:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Phy_01_02_03 -->
-        <test-method status="PASS" signature="Tc_Phy_01()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Phy_01" duration-ms="11968" started-at="2018-07-24T17:35:52Z" finished-at="2018-07-24T17:36:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Phy_01 -->
-        <test-method status="PASS" signature="Tc_Phy_04()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Phy_04" duration-ms="20345" started-at="2018-07-24T17:36:04Z" finished-at="2018-07-24T17:36:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Phy_04 -->
-        <test-method status="PASS" signature="Tc_Phy_05()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Phy_05" duration-ms="33644" started-at="2018-07-24T17:36:25Z" finished-at="2018-07-24T17:36:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Phy_05 -->
-        <test-method status="PASS" signature="Tc_ManageApprovalFlow_01()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_ManageApprovalFlow_01" duration-ms="9415" started-at="2018-07-24T17:36:58Z" finished-at="2018-07-24T17:37:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_ManageApprovalFlow_01 -->
-        <test-method status="PASS" signature="Tc_Manufacturers_01()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Manufacturers_01" duration-ms="9507" started-at="2018-07-24T17:37:08Z" finished-at="2018-07-24T17:37:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Manufacturers_01 -->
-        <test-method status="PASS" signature="Tc_Manufacturers_02()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Manufacturers_02" duration-ms="12013" started-at="2018-07-24T17:37:17Z" finished-at="2018-07-24T17:37:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Manufacturers_02 -->
-        <test-method status="PASS" signature="Tc_GL_Code_01_02()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_GL_Code_01_02" duration-ms="18187" started-at="2018-07-24T17:37:29Z" finished-at="2018-07-24T17:37:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_GL_Code_01_02 -->
-        <test-method status="PASS" signature="Tc_GL_Code_04_05()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_GL_Code_04_05" duration-ms="35898" started-at="2018-07-24T17:37:47Z" finished-at="2018-07-24T17:38:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_GL_Code_04_05 -->
-        <test-method status="PASS" signature="Tc_Patterns_01_03()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Patterns_01_03" duration-ms="19295" started-at="2018-07-24T17:38:23Z" finished-at="2018-07-24T17:38:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patterns_01_03 -->
-        <test-method status="FAIL" signature="Tc_Patterns_06()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Patterns_06" duration-ms="8449" started-at="2018-07-24T17:38:43Z" finished-at="2018-07-24T17:38:51Z">
-          <exception class="java.lang.NumberFormatException">
-            <message>
-              <![CDATA[For input string: "1532434118096"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NumberFormatException: For input string: "1532434118096"
-	at java.lang.NumberFormatException.forInputString(Unknown Source)
-	at java.lang.Integer.parseInt(Unknown Source)
-	at java.lang.Integer.parseInt(Unknown Source)
-	at testCases.Facility.Tc_Patterns_06(Facility.java:767)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NumberFormatException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patterns_06 -->
-        <test-method status="PASS" signature="Tc_Patterns_05()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Patterns_05" duration-ms="13326" started-at="2018-07-24T17:38:51Z" finished-at="2018-07-24T17:39:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patterns_05 -->
-        <test-method status="PASS" signature="Tc_Patterns_02()[pri:0, instance:testCases.Facility@15d0c81b]" name="Tc_Patterns_02" duration-ms="24194" started-at="2018-07-24T17:39:04Z" finished-at="2018-07-24T17:39:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patterns_02 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Facility@15d0c81b]" name="endReport" is-config="true" duration-ms="380" started-at="2018-07-24T17:39:28Z" finished-at="2018-07-24T17:39:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Facility -->
-    </test> <!-- Facility -->
-    <test name="Planner" duration-ms="60752" started-at="2018-07-24T12:09:29Z" finished-at="2018-07-24T12:10:30Z">
-      <class name="testCases.Planner">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Planner@27a8c74e]" name="startReport" is-config="true" duration-ms="11" started-at="2018-07-24T17:39:29Z" finished-at="2018-07-24T17:39:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Planner@27a8c74e]" name="setBrowser" is-config="true" duration-ms="4103" started-at="2018-07-24T17:39:29Z" finished-at="2018-07-24T17:39:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Planner_01()[pri:0, instance:testCases.Planner@27a8c74e]" name="Tc_Planner_01" duration-ms="44657" started-at="2018-07-24T17:39:33Z" finished-at="2018-07-24T17:40:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Planner_01 -->
-        <test-method status="PASS" signature="Tc_Planner_02()[pri:0, instance:testCases.Planner@27a8c74e]" name="Tc_Planner_02" duration-ms="11480" started-at="2018-07-24T17:40:18Z" finished-at="2018-07-24T17:40:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Planner_02 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Planner@27a8c74e]" name="endReport" is-config="true" duration-ms="498" started-at="2018-07-24T17:40:29Z" finished-at="2018-07-24T17:40:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Planner -->
-    </test> <!-- Planner -->
-    <test name="Patients" duration-ms="202837" started-at="2018-07-24T12:10:30Z" finished-at="2018-07-24T12:13:53Z">
-      <class name="testCases.Patients">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Patients@76f2b07d]" name="startReport" is-config="true" duration-ms="23" started-at="2018-07-24T17:40:30Z" finished-at="2018-07-24T17:40:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Patients@76f2b07d]" name="setBrowser" is-config="true" duration-ms="3590" started-at="2018-07-24T17:40:30Z" finished-at="2018-07-24T17:40:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_Patients_01_02()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_01_02" duration-ms="35713" started-at="2018-07-24T17:40:33Z" finished-at="2018-07-24T17:41:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_01_02 -->
-        <test-method status="PASS" signature="Tc_Patients_03()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_03" duration-ms="13304" started-at="2018-07-24T17:41:09Z" finished-at="2018-07-24T17:41:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_03 -->
-        <test-method status="PASS" signature="Tc_Patients_05()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_05" duration-ms="13477" started-at="2018-07-24T17:41:22Z" finished-at="2018-07-24T17:41:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_05 -->
-        <test-method status="PASS" signature="Tc_Patients_07()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_07" duration-ms="50517" started-at="2018-07-24T17:41:36Z" finished-at="2018-07-24T17:42:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_07 -->
-        <test-method status="PASS" signature="Tc_Patients_08_09()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_08_09" duration-ms="31425" started-at="2018-07-24T17:42:26Z" finished-at="2018-07-24T17:42:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_08_09 -->
-        <test-method status="PASS" signature="Tc_Patients_10()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_10" duration-ms="40302" started-at="2018-07-24T17:42:58Z" finished-at="2018-07-24T17:43:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_10 -->
-        <test-method status="PASS" signature="Tc_Patients_11()[pri:0, instance:testCases.Patients@76f2b07d]" name="Tc_Patients_11" duration-ms="14047" started-at="2018-07-24T17:43:38Z" finished-at="2018-07-24T17:43:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_Patients_11 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Patients@76f2b07d]" name="endReport" is-config="true" duration-ms="433" started-at="2018-07-24T17:43:52Z" finished-at="2018-07-24T17:43:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Patients -->
-    </test> <!-- Patients -->
-    <test name="Organization" duration-ms="40236" started-at="2018-07-24T12:13:53Z" finished-at="2018-07-24T12:14:33Z">
-      <class name="testCases.Organization">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.Organization@305fd85d]" name="startReport" is-config="true" duration-ms="11" started-at="2018-07-24T17:43:53Z" finished-at="2018-07-24T17:43:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Organization@305fd85d]" name="setBrowser" is-config="true" duration-ms="4626" started-at="2018-07-24T17:43:53Z" finished-at="2018-07-24T17:43:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="TC_ORG_01()[pri:0, instance:testCases.Organization@305fd85d]" name="TC_ORG_01" duration-ms="35226" started-at="2018-07-24T17:43:57Z" finished-at="2018-07-24T17:44:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_ORG_01 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.Organization@305fd85d]" name="endReport" is-config="true" duration-ms="371" started-at="2018-07-24T17:44:32Z" finished-at="2018-07-24T17:44:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.Organization -->
-    </test> <!-- Organization -->
-    <test name="OperatingRoom" duration-ms="62998" started-at="2018-07-24T12:14:33Z" finished-at="2018-07-24T12:15:36Z">
-      <class name="testCases.OperatingRoom">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.OperatingRoom@1563da5]" name="startReport" is-config="true" duration-ms="6" started-at="2018-07-24T17:44:33Z" finished-at="2018-07-24T17:44:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.OperatingRoom@1563da5]" name="setBrowser" is-config="true" duration-ms="2615" started-at="2018-07-24T17:44:33Z" finished-at="2018-07-24T17:44:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_OP_01_02()[pri:0, instance:testCases.OperatingRoom@1563da5]" name="Tc_OP_01_02" duration-ms="60067" started-at="2018-07-24T17:44:35Z" finished-at="2018-07-24T17:45:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_OP_01_02 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.OperatingRoom@1563da5]" name="endReport" is-config="true" duration-ms="309" started-at="2018-07-24T17:45:36Z" finished-at="2018-07-24T17:45:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.OperatingRoom -->
-    </test> <!-- OperatingRoom -->
-    <test name="InvoicePage" duration-ms="489683" started-at="2018-07-24T12:15:36Z" finished-at="2018-07-24T12:23:46Z">
-      <class name="testCases.InvoicePage">
-        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testCases.InvoicePage@17d677df]" name="startReport" is-config="true" duration-ms="12" started-at="2018-07-24T17:45:36Z" finished-at="2018-07-24T17:45:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://dev2.test.hybrent.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.InvoicePage@17d677df]" name="setBrowser" is-config="true" duration-ms="2524" started-at="2018-07-24T17:45:36Z" finished-at="2018-07-24T17:45:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dev2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method status="PASS" signature="Tc_INV_01()[pri:0, instance:testCases.InvoicePage@17d677df]" name="Tc_INV_01" duration-ms="181809" started-at="2018-07-24T17:45:38Z" finished-at="2018-07-24T17:48:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_INV_01 -->
-        <test-method status="PASS" signature="Tc_INV_09_10()[pri:0, instance:testCases.InvoicePage@17d677df]" name="Tc_INV_09_10" duration-ms="93611" started-at="2018-07-24T17:48:40Z" finished-at="2018-07-24T17:50:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_INV_09_10 -->
-        <test-method status="PASS" signature="Tc_INV_02()[pri:0, instance:testCases.InvoicePage@17d677df]" name="Tc_INV_02" duration-ms="12627" started-at="2018-07-24T17:50:14Z" finished-at="2018-07-24T17:50:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_INV_02 -->
-        <test-method status="PASS" signature="Tc_INV_03()[pri:0, instance:testCases.InvoicePage@17d677df]" name="Tc_INV_03" duration-ms="14654" started-at="2018-07-24T17:50:26Z" finished-at="2018-07-24T17:50:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_INV_03 -->
-        <test-method status="PASS" signature="Tc_INV_04()[pri:0, instance:testCases.InvoicePage@17d677df]" name="Tc_INV_04" duration-ms="184068" started-at="2018-07-24T17:50:41Z" finished-at="2018-07-24T17:53:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Tc_INV_04 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.InvoicePage@17d677df]" name="endReport" is-config="true" duration-ms="369" started-at="2018-07-24T17:53:45Z" finished-at="2018-07-24T17:53:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testCases.InvoicePage -->
-    </test> <!-- InvoicePage -->
+      </class> <!-- testcases_functionality.TC_PreferenceCards -->
+    </test> <!-- PreferenceCards -->
   </suite> <!-- example suite 1 -->
 </testng-results>

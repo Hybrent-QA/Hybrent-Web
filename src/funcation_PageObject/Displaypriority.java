@@ -26,33 +26,33 @@ public class Displaypriority extends ApplicationKeyword{
 		verifyElement(OR.DisplayPriority_SaveBtn);
 		verifyElement(OR.DisplayPriority_DragInfo);
 		//getTextchild("//strong");
-		 Screen s=new Screen();
-		 try {
-			
-			 String one = System.getProperty("user.dir")+"/Medline.png";
-			 String one2 = System.getProperty("user.dir")+"/MCKESSON.png";
-			s.find(one2);
-		
-		 System.out.println("Source image found");
-		 s.find(one);
-		 System.out.println("target image found");
-		 s.dragDrop(one, one2);
-		 } catch (FindFailed e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		WebElement Drag= driver.findElement(By.xpath("(//*[@dnd-draggable='item']/i)[1]"));
-		WebElement Drop= driver.findElement(By.xpath("(//*[@dnd-draggable='item']/i)[3]"));
-		 Actions act=new Actions(driver);
-		 
-		 
-
-		 
-		 
-		 act.keyDown(Keys.CONTROL)
-		   .click(Drag)
-		   .dragAndDrop(Drag, Drop)
-		   .keyDown(Keys.CONTROL);
+//		 Screen s=new Screen();
+//		 try {
+//			
+//			 String one = System.getProperty("user.dir")+"/Medline.png";
+//			 String one2 = System.getProperty("user.dir")+"/MCKESSON.png";
+//			s.find(one2);
+//		
+//		 System.out.println("Source image found");
+//		 s.find(one);
+//		 System.out.println("target image found");
+//		 s.dragDrop(one, one2);
+//		 } catch (FindFailed e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		WebElement Drag= driver.findElement(By.xpath("(//*[@dnd-draggable='item']/i)[1]"));
+//		WebElement Drop= driver.findElement(By.xpath("(//*[@dnd-draggable='item']/i)[3]"));
+//		 Actions act=new Actions(driver);
+//		 
+//		 
+//
+//		 
+//		 
+//		 act.keyDown(Keys.CONTROL)
+//		   .click(Drag)
+//		   .dragAndDrop(Drag, Drop)
+//		   .keyDown(Keys.CONTROL);
 //
 //		// Then get the action:
 //		 Action selectMultiple = act.build();

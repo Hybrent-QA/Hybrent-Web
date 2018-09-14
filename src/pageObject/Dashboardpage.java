@@ -120,8 +120,8 @@ public class Dashboardpage extends ApplicationKeyword{
       {
     	  NotificationName();
     	  waitUntilPageReady();
-    	  waitForElement(OR.NotficationPage_FirstNotificationDelete);	
-    	  clickOn(OR.NotficationPage_FirstNotificationDelete);
+    	  waitForElement(OR.NotficationPage_FirstNotificationDelete1);	
+    	  clickOn(OR.NotficationPage_FirstNotificationDelete1);
     	  verifyElementText(_OR.Delete_Areyousure, "Are you sure?");
     	  verifyElementText(_OR.Notification_Delete_Confirmation, "Are you sure you want to delete this notification?");
     	  verifyElement(_OR.Delete_Confirm_Cancel);

@@ -41,7 +41,7 @@ public class TC_Organization extends ApplicationKeyword
 
 			extent = new ExtentReports(folderPath + "/organization.html", true);
 			// extent.addSystemInfo("Environment","Environment Name")
-			extent.addSystemInfo("User Name", "Ravneet");
+			extent.addSystemInfo("User Name", "QA");
 			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
 
 		} catch (Exception e) {
@@ -603,7 +603,7 @@ public class TC_Organization extends ApplicationKeyword
 	public static void TC_Organization_018()
 	{	
 		testStarts("TC_Organization_018", "Update Organization > Settings > Sage Intacct Integration > Verify that \"Configure Intacct\" button appears if \"Sage Intacct Integration\" is set as Active.");
-		Loginpage.OpenBrowserAndLoginnew();
+		//Loginpage.OpenBrowserAndLoginnew();
 		Organisation.adminAndOrgPage();
 		waitForElement(OR.organization_tab_Features);
 		clickOn(OR.organization_tab_Features);

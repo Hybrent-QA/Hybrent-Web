@@ -273,6 +273,8 @@ clickOn(OR.InvoicePaymentTerm_Edit_Update);
 			waitForElement(OR.OrderDetails_PO_Dropdown);
 			   clickOn(OR.OrderDetails_PO_Dropdown);
 				waitForElement(OR.Order_PrintPOLink);
+				if(driver.findElements(By.xpath("(//*[text()='Print PO'])[1]")).size()!=0)
+				{
 			clickOn(OR.Order_PO_first_printPo);
 			waitForElementToDisplayWithoutFail(OR.Order_PrintPOText, 10);		
 			verifyElementText(OR.Order_PrintPOText, " Print PO");
@@ -282,6 +284,8 @@ clickOn(OR.InvoicePaymentTerm_Edit_Update);
 				testLogPass("Page is not redirected to login page. it is in Order page");
 			}
 			clickOn(OR.Order_PrintPReviewclose);
+				}
+				clickOn(OR.OrderDetails_PO_Dropdown);
 			waitForElement(OR.OrderDetails_PO_Dropdown);
 	   }
 	   
@@ -289,6 +293,8 @@ clickOn(OR.InvoicePaymentTerm_Edit_Update);
 	   {
 		   waitForElementToDisplayWithoutFail(OR.Order_dropDownIcon, 10);
 			clickOn(OR.Order_dropDownIcon);
+			if(driver.findElements(By.xpath("//*[text()='Print Items']")).size()!=0)
+			{
 			clickOn(OR.OrderDetails_PrintItems);
 			waitForElementToDisplayWithoutFail(OR.Receive_printPOText, 10);		
 			getText(OR.Receive_printPOText);
@@ -299,6 +305,8 @@ clickOn(OR.InvoicePaymentTerm_Edit_Update);
 			verifyElement(OR.OrderDetails_PrintItems_cross_walk_id);
 			verifyElement(OR.OrderDetails_PrintItems_mfr);
 			clickOn(OR.MyCart_PrintCloseclose);
+			}
+			clickOn(OR.Order_dropDownIcon);
 	   }
 	   
 	   public static void PrintLog()

@@ -45,6 +45,7 @@ public class TC_Alert extends ApplicationKeyword{
 	@Test
 	public void Tc_Alert_001() {
 		testStarts("Tc_Alert_001", "Verify that user gets redirected to \"User Alert\" page when clicks on \" Alert\" button.");
+		
 		Loginpage.OpenBrowserAndLoginnew();
 		Alert.NavigateToAlert();
 		
@@ -55,6 +56,7 @@ public class TC_Alert extends ApplicationKeyword{
 		testStarts("Tc_Alert_002", "Verify that “Preferred Item Warning” popup appears when user tries to add corresponding item to cart if “Show Preferred Item Warning” is set as Active.");
 		User.adminAndUserPage();
 		User.Search(getProperty("created_NeUser"));
+		waitUntilPageReady();
 		clickOn(OR.glCode_Home_Editfirst);
 		waitForElement(_OR.user_add_poalert);
 		clickOn(_OR.user_add_poalert);

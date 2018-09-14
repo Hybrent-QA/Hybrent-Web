@@ -30,9 +30,9 @@ public class GlCode extends ApplicationKeyword
 	public static void AddGlCode()
 	{
 		clickOn(OR.glCode_addGlCOde);
-		String Code = "glco"+randomAlphaNumeric(6);
-		String Name = "Naame"+randomAlphaNumeric(6);
-		String Description = "Des"+randomAlphaNumeric(6);
+		String Code = "Testglco"+randomAlphaNumeric(6);
+		String Name = "TestNaame"+randomAlphaNumeric(6);
+		String Description = "TestDes"+randomAlphaNumeric(6);
 		setProperty("Gl_code", Code);
 		setProperty("Gl_Name", Name);
 		verifyElementText(OR.glCode_add_Header, "Add GL Code");

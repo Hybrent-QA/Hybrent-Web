@@ -46,10 +46,10 @@ public class TC_Template extends ApplicationKeyword{
 	public void Tc_Template_001() {
 		testStarts("Tc_Template_001", "Verify that \"MY TEMPLATES\" heading appear on page");
 		Loginpage.OpenBrowserAndLoginnew();
-		Itemcatalog.NavigatetoItemcatalog();
-		Itemcatalog.addNewItem();
-		ManageInventory.NavigateManageInvetory();
-		ManageInventory.addItemInInventory();
+//		Itemcatalog.NavigatetoItemcatalog();
+//		Itemcatalog.addNewItem();
+//		ManageInventory.NavigateManageInvetory();
+//		ManageInventory.addItemInInventory();
 		Template.NavigateTemplate();
 		Template.verifyPage();
 		Template.AddTemplate();

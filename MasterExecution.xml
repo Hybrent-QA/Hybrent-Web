@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="example suite 1" verbose="1">
+    <parameter name="browser" value="chrome" />
+    <parameter name="siteUrl" value="https://qa1.test.hybrent.com/b/" />
+    <parameter name="nodeUrl" value="http://localhost:4444/wd/hub" />
+    <parameter name="siteName" value="qa-1Today" />
+    <test name="User" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Users">
+                <methods>
+                    <include name="Tc_User_001" />
+                    <include name="Tc_User_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Userprofile" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Userprofile">
+                <methods>
+                    <include name="Tc_UserProfile_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Dashboard" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Dashboard">
+                <methods>
+                    <include name="Tc_Dashboard_001" />
+                    <include name="Tc_Dashboard_002" />
+                    <include name="Tc_Dashboard_003" />
+                    <include name="Tc_Dashboard_004" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Notification" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Notification">
+                <methods>
+                    <include name="Tc_Notification_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Itemcatalog" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Itemcatalog">
+                <methods>
+                    <include name="Tc_Itemcatalog_001" />
+                    <include name="Tc_Itemcatalog_002" />
+                    <include name="Tc_Itemcatalog_003" />
+                    <include name="Tc_Itemcatalog_004" />
+                    <include name="Tc_Itemcatalog_005" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Alert" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Alert">
+                <methods>
+                    <include name="Tc_Alert_001" />
+                    <include name="Tc_Alert_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Alert" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Changepassword">
+                <methods>
+                    <include name="Tc_changepassword_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Switchuser" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Switchuser">
+                <methods>
+                    <include name="Tc_Switchuser_003" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Inventorylocation" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Inventorylocation">
+                <methods>
+                    <include name="Tc_Inventorylocation_001" />
+                    <include name="Tc_Inventorylocation_002" />
+                    <include name="Tc_Inventorylocation_003" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Barcode" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Barcode">
+                <methods>
+                    <include name="Tc_Barcode_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Vendor" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Vendor">
+                <methods>
+                    <include name="Tc_Vendor_001" />
+                    <include name="Tc_Vendor_002" />
+                    <include name="Tc_Vendor_003" />
+                    <include name="Tc_Vendor_004" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="VendorAccSetup" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_VendorAcountSetup">
+                <methods>
+                    <include name="Tc_VendorAccSetup_001" />
+                    <include name="Tc_VendorAccSetup_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PriceTire" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_PriceTire">
+                <methods>
+                    <include name="Tc_PriceTire_001" />
+                    <include name="Tc_PriceTire_002" />
+                    <include name="Tc_PriceTire_003" />
+                    <include name="Tc_PriceTire_004" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="News" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_News">
+                <methods>
+                    <include name="TC_News_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="DisplayPriority" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_DisplayPriority">
+                <methods>
+                    <include name="Tc_DisplayPriority_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="SpecialPo" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_PoSpecialInstructions">
+                <methods>
+                    <include name="Tc_PoSpecialInstructions_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Pattern" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Patterns">
+                <methods>
+                    <include name="Tc_Pattern_001" />
+                    <include name="Tc_Pattern_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="GlCode" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_GL_Codes">
+                <methods>
+                    <include name="Tc_Gl_Code_001" />
+                    <include name="Tc_Gl_Code_002" />
+                    <include name="Tc_Gl_Code_003" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Manufacturers" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Manufacturers">
+                <methods>
+                    <include name="TC_Manufacturers_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ApprovalFlow" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_ApprovalFlow">
+                <methods>
+                    <include name="TC_ApprovalFlow_001" />
+                    <include name="TC_ApprovalFlow_002" />
+                    <include name="TC_ApprovalFlow_003" />
+                    <include name="TC_ApprovalFlow_004" />
+                    <include name="TC_ApprovalFlow_005" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Shop" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Shop">
+                <methods>
+                    <include name="Tc_Shop_001" />
+                    <include name="Tc_Shop_002" />
+                    <include name="Tc_Shop_003" />
+                    <include name="Tc_Shop_005" />
+                    <include name="Tc_Shop_006" />
+                    <include name="Tc_Shop_007" />
+                    <include name="Tc_Shop_008" />
+                    <include name="Tc_Shop_009" />
+                    <include name="Tc_Shop_010" />
+                    <include name="Tc_Shop_011" />
+                    <include name="Tc_Shop_012" />
+                    <include name="Tc_Shop_013" />
+                    <include name="Tc_Shop_014" />
+                    <include name="Tc_Shop_015" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Shopcart" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_ShopCart">
+                <methods>
+                    <include name="TC_ShopCart_001" />
+                    <include name="TC_ShopCart_002" />
+                    <include name="TC_ShopCart_003" />
+                    <include name="TC_ShopCart_004" />
+                    <include name="TC_ShopCart_005" />
+                    <include name="TC_ShopCart_006" />
+                    <include name="TC_ShopCart_007" />
+                    <include name="TC_ShopCart_008" />
+                    <include name="TC_ShopCart_009" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Template" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Template">
+                <methods>
+                    <include name="Tc_Template_001" />
+                    <include name="Tc_Template_002" />
+                    <include name="Tc_Template_003" />
+                    <include name="Tc_Template_004" />
+                    <include name="Tc_Template_005" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Order" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Order">
+                <methods>
+                    <include name="TC_Order_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OrderDetails" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_OrderDetails">
+                <methods>
+                    <include name="TC_OrderDetails_001" />
+                    <include name="TC_OrderDetails_002" />
+                    <include name="TC_OrderDetails_003" />
+                    <include name="TC_OrderDetails_004" />
+                    <include name="TC_OrderDetails_005" />
+                    <include name="TC_OrderDetails_006" />
+                    <include name="TC_OrderDetails_007" />
+                    <include name="TC_OrderDetails_008" />
+                    <include name="TC_OrderDetails_009" />
+                    <include name="TC_OrderDetails_010" />
+                    <include name="TC_OrderDetails_011" />
+                    <include name="TC_OrderDetails_012" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Receive" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Receive">
+                <methods>
+                    <include name="Tc_Receive_001" />
+                    <include name="Tc_Receive_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ReceiveOrderDetails" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_ReceiveOrderDetails">
+                <methods>
+                    <include name="Tc_ReceiveOrderDetails_001" />
+                    <include name="Tc_ReceiveOrderDetails_002" />
+                    <include name="Tc_ReceiveOrderDetails_003" />
+                    <include name="Tc_ReceiveOrderDetails_004" />
+                    <include name="Tc_ReceiveOrderDetails_006" />
+                    <include name="Tc_ReceiveOrderDetails_007" />
+                    <include name="Tc_ReceiveOrderDetails_008" />
+                    <include name="Tc_ReceiveOrderDetails_009" />
+                    <include name="Tc_ReceiveOrderDetails_010" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="RequestService" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_RequestService">
+                <methods>
+                    <include name="TC_RequestService_001" />
+                    <include name="TC_RequestService_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ApprovedPo" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_ApprovedPo">
+                <methods>
+                    <include name="Tc_ApprovedPo_001" />
+                    <include name="Tc_ApprovedPo_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Invoice" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Invoice">
+                <methods>
+                    <include name="Tc_Invoice_001" />
+                    <include name="Tc_Invoice_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Scanout" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_ScanOut">
+                <methods>
+                    <include name="TC_ScanOut_001" />
+                    <include name="TC_ScanOut_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="ManageInventory" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_ManageInventory">
+                <methods>
+                    <include name="TC_ManageInventory_001" />
+                    <include name="TC_ManageInventory_002" />
+                    <include name="TC_ManageInventory_003" />
+                    <include name="TC_ManageInventory_004" />
+                    <include name="TC_ManageInventory_005" />
+                    <include name="TC_ManageInventory_006" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Physicians" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Physicians">
+                <methods>
+                    <include name="Tc_Physicians_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Procedure" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Procedure">
+                <methods>
+                    <include name="Tc_Procedure_001" />
+                    <include name="Tc_Procedure_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="PreferenceCards" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_PreferenceCards">
+                <methods>
+                    <include name="Tc_PreferenceCards_001" />
+                    <include name="Tc_PreferenceCards_002" />
+                    <include name="Tc_PreferenceCards_003" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OperationRoom" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_OperationRoom">
+                <methods>
+                    <include name="TC_OperationRoom_001" />
+                    <include name="TC_OperationRoom_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Paitent" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Patients">
+                <methods>
+                    <include name="Tc_Patients_01" />
+                    <include name="Tc_Patients_02" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Planner" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Planner">
+                <methods>
+                    <include name="Tc_Planner_01" />
+                    <include name="Tc_Planner_02" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CaseCostingreport" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_CasesCosting">
+                <methods>
+                    <include name="Tc_CasesCosting_01" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="NewsEvent" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_NewsEvent">
+                <methods>
+                    <include name="TC_NewsEvent_001" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Organiation" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Organization">
+                <methods>
+                    <include name="TC_Organization_001" />
+                    <include name="TC_Organization_002" />
+                    <include name="TC_Organization_003" />
+                    <include name="TC_Organization_004" />
+                    <include name="TC_Organization_005" />
+                    <include name="TC_Organization_006" />
+                    <include name="TC_Organization_007" />
+                    <include name="TC_Organization_008" />
+                    <include name="TC_Organization_009" />
+                    <include name="TC_Organization_010" />
+                    <include name="TC_Organization_011" />
+                    <include name="TC_Organization_012" />
+                    <include name="TC_Organization_013" />
+                    <include name="TC_Organization_014" />
+                    <include name="TC_Organization_015" />
+                    <include name="TC_Organization_016" />
+                    <include name="TC_Organization_017" />
+                    <include name="TC_Organization_018" />
+                    <include name="TC_Organization_019" />
+                    <include name="TC_Organization_020" />
+                    <include name="TC_Organization_021" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Alert" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_Alert">
+                <methods>
+                    <include name="Tc_Alert_001" />
+                    <include name="Tc_Alert_002" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="InventoryTransformation" preserve-order="true">
+        <classes>
+            <class name="testcases_functionality.TC_InventoryTransformation">
+                <methods>
+                    <include name="Tc_InventoryItemTransaction_001" />
+                    <include name="Tc_InventoryItemTransaction_002" />
+                    <include name="Tc_InventoryItemTransaction_003" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

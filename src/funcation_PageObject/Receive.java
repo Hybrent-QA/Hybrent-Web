@@ -10,6 +10,7 @@ public class Receive extends ApplicationKeyword
 {
 	public static void NavigateToApprovalflow()
 	{
+		waitUntilPageReady();
 		waitForElement(OR.Receive_pageLink);
 		clickOn(OR.Receive_pageLink);
 		getTextchild("//*[@class='pagehead ng-binding']");

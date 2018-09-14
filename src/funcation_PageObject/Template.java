@@ -14,7 +14,7 @@ public class Template extends ApplicationKeyword
 
 	public static void NavigateTemplate()
 	{
-		waitTime(2);
+		waitUntilPageReady();
 		waitForElement(OR.Templateslink, 30);
 		clickOn(OR.Templateslink);
 	}
@@ -648,6 +648,7 @@ public class Template extends ApplicationKeyword
 	
 	public static void ddPurchaseHistory()
 	{
+		waitUntilPageReady();
 		clickOn(OR.Shop_ItemNameDropDown_First);
 		waitForElement(OR.Template_dd_PurchaseHistoryt);
 		clickOn(OR.Template_dd_PurchaseHistoryt);

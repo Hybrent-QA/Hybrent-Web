@@ -65,11 +65,12 @@ public class TC_OrderDetails extends ApplicationKeyword{
 		}
 		clickOn(OR.Order);
 		OrderPage.SearchItem(getProperty("SpecialGeneratePoNumber"));
+		waitUntilPageReady();
 		if(driver.findElements(By.xpath("//*[text()='"+getProperty("SpecialGeneratePoNumber")+"']")).size()!=0)
 		{
 			driver.findElement(By.xpath("//*[text()='"+getProperty("SpecialGeneratePoNumber")+"']")).click();
 			waitForElement(OR.OrderDetails_PO_Dropdown);
-			getTextchild(" class='pagehead ng-binding'");
+			getTextchild("//*[@class='pagehead ng-binding']");
 			verifyElement(OR.OrderDetails_Close);
 			clickOn(OR.OrderDetails_Close);
 			verifyElement(OR.Order_Search_Input);

@@ -309,7 +309,7 @@ public class OR {
 	public static String ItemCatalog_additem_Vendors_ManageImagedropdown ="ManageImage#xpath=//a[text()='Manage Images']";
 	public static String ItemCatalog_additem_Vendors_CWIIDDdropdown ="CWIIDD#xpath=//*[@ng-click=\"show_cross_walk_id = true;addGAEvents('CrossWalkId');\"]";
 	public static String ItemCatalog_additem_Vendors_QuickCode ="QuickCode#xpath=//*[@ng-model='v.quick_code']";
-	public static String ItemCatalog_additem_Vendors_CWIIDD_label ="CWIIDDlabel#xpath=(//label[contains(text(),'CWIIDD')])[2]";
+	public static String ItemCatalog_additem_Vendors_CWIIDD_label ="CWIIDDlabel#xpath=(//label[contains(text(),'CWID')])[2]";
 	public static String ItemCatalog_additem_Vendors_CWIIDD ="CWIIDD#xpath=//*[@ng-model='v.cross_walk_id']";
 	public static String ItemCatalog_additem_Delete_vendor ="Delete_vendor#xpath=//button[@ng-click='deleteVendorFn($index)']";
 	public static String ItemCatalog_additem_Deletevalidation ="Deletevalidation#xpath=//*[text()='At least one vendor will remain for an item.']";
@@ -373,6 +373,7 @@ public class OR {
 	public static String NotficationPage_Text_Web = "txt_Web#xpath=//*[text()='Web Notification']";
 	public static String NotficationPage_FirstNotificationText = "FirstNotification#xpath=(//*[@id='gridNotificationListing']//p)[1]";
 	public static String NotficationPage_FirstNotificationDelete = "FirstNotificationDelete#xpath=(//a[@ng-click='deleteNotification(notificationsInfo.id)'])[1]";
+	public static String NotficationPage_FirstNotificationDelete1 = "FirstNotificationDelete#xpath=(//i[@title='Remove'])[1]";
 	public static String NotficationPage_Save = "Save#xpath=//*[@id='submit_notification_settings']";
 	public static String NotficationPage_Cancel = "Cancel#xpath=//*[@id='cancel-settings']";
 
@@ -1199,8 +1200,8 @@ public class OR {
 	public static String manageInv_editItem= "editItem#xpath=(//*[@uib-tooltip='Edit']/i)[1]";
 	public static String manageInv_InventoryTab = "InventoryTab#lnktext=Inventories";
 	public static String manageInv_Inv_checkBoxes= "Inv_checkBoxes=#xpath=//*[contains(@id,'tbl_add_vendor')]//input[@type='checkbox']";
-	public static String manageInv_SaveButton= "SaveButton=#xpath=//button[@type='submit']";
-	public static String manageInv_SaveButton1= "SaveButton=#xpath=(//button[contains(text(),'Save')])[1]";
+	public static String manageInv_SaveButton= "SaveButton#xpath=//button[@type='submit']";
+	public static String manageInv_SaveButton1= "SaveButton#xpath=(//button[contains(text(),'Save')])[1]";
 	public static String manageInv_confirmButton= "confirmButton=#xpath=//*[@class='confirm']";
 	public static String manageInv_Stockitem= "Stockitem=#xpath=(//*[@ng-click='popp(item)'])[1]";
 	public static String manageInv_Stockitem_Inventory= "name=#xpath=//*[@id='popoverTemplateH']";

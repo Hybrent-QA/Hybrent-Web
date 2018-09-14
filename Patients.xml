@@ -5,7 +5,7 @@
  <parameter name="siteUrl" value="https://qa1.test.hybrent.com/b/" />
  <parameter name="nodeUrl" value="http://localhost:4444/wd/hub" />
  <parameter name="siteName" value="qa-1" />
- <test name="Dashboard" preserve-order="true">
+ <test name="Paitent" preserve-order="true">
   <classes>
    <class name="testcases_functionality.TC_Patients">
    <methods>

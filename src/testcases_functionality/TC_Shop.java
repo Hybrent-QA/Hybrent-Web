@@ -69,6 +69,12 @@ waitUntilPageReady();
 		if(isElementDisplayed(OR.Shop_SHopfor_Search_Addtocart_First))
 		{
 			clickOn(OR.Shop_SHopfor_Search_Addtocart_First);
+			waitUntilPageReady();
+			if(driver.findElements(By.xpath("//button[contains(text(),'Update Price')]")).size()!=0)
+			{
+				clickOn(OR.MyCart_warningPopup);
+			}
+			waitUntilPageReady();
 		}
 		//clickOn(OR.HeaderClose);
 	}
@@ -348,9 +354,8 @@ if(driver.findElements(By.xpath("(//*[@ng-click='$ctrl.addItemToCart(item)'])[1]
 	public void Tc_Shop_008() {
 		testStarts("Tc_Shop_008", "Verify that “Item reorder warning” popup appears when user tries to add corresponding item to cart which is not received completely within another PO created by current user.");
 		clickOn(OR.MyCart);
-		waitForElement(OR.Shop_SHopfor_SearchBox);
 		waitUntilPageReady();
-		typeIn(OR.Shop_SHopfor_SearchBox,getProperty("ItemDesc"));
+		typeIn(OR.MyCart_searchInCart,getProperty("ItemDesc"));
 		waitUntilPageReady();
 		if(isElementDisplayed(OR.Shop_SHopfor_Search_Addtocart_First))
 		{
@@ -672,8 +677,90 @@ if(driver.findElements(By.xpath("(//*[@ng-click='$ctrl.addItemToCart(item)'])[1]
 		clickOn(OR.Shop_SHopfor_copyLayoutpoup);
 		waitForElementToDisplayWithoutFail(OR.Shop_SHopfor_Layoutpopup, 10);
 		verifyElementText(OR.Shop_SHopfor_Layoutpopup, "Layout");
-		clickOn(OR.Shop_SHopfor_Layoutpoupclose);		
+		clickOn(OR.Shop_SHopfor_Layoutpoupclose);
+		closeBrowser();
 	}
+	
+	
+	
+	@Test
+	public void Tc_Shop_015() {
+		testStarts("Tc_Shop_015", "Generate PO");
+		Loginpage.OpenBrowserAndLoginnew();
+		Itemcatalog.NavigatetoItemcatalog();
+		Itemcatalog.addNewItem();
+		ManageInventory.NavigateManageInvetory();
+		ManageInventory.addItemInInventory();
+		waitUntilPageReady();
+		clickOn(_OR.Dashboard_Submenu_shop);
+		typeIn(OR.Shop_SHopfor_SearchBox,getProperty("ItemDesc"));
+		waitUntilPageReady();
+		if(isElementDisplayed(OR.Shop_SHopfor_Search_Addtocart_First))
+		{
+			clickOn(OR.Shop_SHopfor_Search_Addtocart_First);
+			waitUntilPageReady();
+		}
+		waitUntilPageReady();
+		if(driver.findElements(By.xpath("//*[@class='modal-title']")).size()!=0)
+		{
+		String one = getTextchild("//*[@class='modal-title']") ;
+		if(one.contains("Price check"))
+		{
+			clickOn(OR.MyCart_warningPopup);
+		}
+		
+		waitUntilPageReady();
+		}
+		waitUntilPageReady();
+		
+		if(driver.findElements(By.xpath("//*[text()='This item is not under contract or a preference item from your distributor, It may cost more.']")).size()!=0)
+		{
+		String one3 = getTextchild("//*[text()='This item is not under contract or a preference item from your distributor, It may cost more.']") ;
+		if(one3.contains("This item is not under contract or a preference item from your distributor, It may cost more."))
+		{
+			clickOn(OR.MyCart_warningPopup);
+		}
+		waitUntilPageReady();
+		}
+		waitUntilPageReady();
+		if(driver.findElements(By.xpath("//*[@class='modal-title']")).size()!=0)
+		{
+		String one1 = getTextchild("//*[@class='modal-title']") ;
+		if(one1.contains("Item reorder warning"))
+		{
+			clickOn(OR.MyCart_warningPopup);
+		}
+		}
+		waitUntilPageReady();
+		clickOn(OR.MyCart);
+		waitUntilPageReady();
+		clickOn(OR.MyCart_GeneratePo);
+		waitTime(5);
+
+if(driver.findElements(By.xpath("//button[@class='confirm']")).size()!=0)
+{
+	clickOn(OR.Cpwd_okay);
+}
+waitTime(5);
+if(driver.findElements(By.xpath("//button[@class='confirm']")).size()!=0)
+{
+	clickOn(OR.Cpwd_okay);
+}
+waitTime(5);
+if(driver.findElements(By.xpath("//button[@class='confirm']")).size()!=0)
+{
+	clickOn(OR.Cpwd_okay);
+}
+ToastmesssageSucess();
+waitUntilPageReady();
+waitForElement(OR.Order_Myorder_txt);
+verifyElement(OR.Order_Myorder_txt);
+clickOn(OR.Orders_Link);
+driver.findElement(By.xpath("//a[starts-with(@ng-href,'#/orders/view')]")).click();
+waitUntilPageReady();
+testLogPass(driver.getTitle());
+}
+	
 	@AfterTest
 	public void endReport()
 	{

@@ -110,10 +110,11 @@ public class Itemcatalog extends ApplicationKeyword{
 			verifyElement(OR.ItemCatalog_Mapfacility_iSActive);
 			verifyElement(OR.ItemCatalog_Mapfacility_Cancel);
 			verifyElement(OR.ItemCatalog_Mapfacility_Save);
+			waitUntilPageReady();
 			int ele = driver.findElements(By.xpath("(//select[@name='stock_status'])[1]//option")).size();
 			for(int i=1;i<=ele;i++)
 			{
-				String one = driver.findElement(By.xpath("(//*[@name='stock_status']//option)["+i+"]")).getText();
+				String one = driver.findElement(By.xpath("(//select[@name='stock_status']//option)["+i+"]")).getText();
 				testLogPass("stock drop down value is '"+one);
 			}
 			DiscountPriceInMap();
@@ -161,7 +162,7 @@ public class Itemcatalog extends ApplicationKeyword{
 		verifyElementText(OR.ItemCatalog_additem_Vendors_QuickCode_label, "Quick Code");
 		clickOn(OR.ItemCatalog_downbutton);
 		clickOn(OR.ItemCatalog_additem_Vendors_CWIIDDdropdown);
-		verifyElementText(OR.ItemCatalog_additem_Vendors_CWIIDD_label, "CWIIDD");
+		verifyElementText(OR.ItemCatalog_additem_Vendors_CWIIDD_label, "CWID");
     }
     
     public static void AddVentor()
@@ -185,6 +186,7 @@ public class Itemcatalog extends ApplicationKeyword{
 					waitTime(1);
 					if(e.getText().toLowerCase().contains("medline"))
 					{
+						testLogPass("Selected vendor is "+e.getText());
 						e.click();
 					}
 				}
@@ -196,6 +198,46 @@ public class Itemcatalog extends ApplicationKeyword{
 		vendor_Name=getText(OR.ItemCatalog_firstvendor);
 		setProperty("vendorName", vendor_Name);
 		MycartPage.chkMan_level("ItemMfr");
+		if(driver.findElements(By.xpath("//a[text()='Amkai Detail']")).size()!=0)
+		{
+			driver.findElement(By.xpath("//a[text()='Amkai Detail']")).click();
+			String type="type#xpath=//*[text()='Type']/following-sibling::div/select";
+			String Category="Category#xpath=//*[text()='Category']/following-sibling::div/select";
+			String BilledBy="BilledBy#xpath=//*[text()='Billed By']/following-sibling::div/select";
+			String vqc="vqc#xpath=//*[@id='vqc']";
+			String mqc="mqc#xpath=//*[@id='mqc']";
+			String vcn="vcn#xpath=//*[@id='vcn']";
+			String dfm="dfm#xpath=//*[@id='dfm']";
+			//String vcn="vcn#xpath=//*[@id='vcn']";
+			selectFromDropdown(type, 1);
+			selectFromDropdown(Category, 1);
+			selectFromDropdown(BilledBy, 1);
+			typeIn(vqc, "Testdata");
+			typeIn(mqc, "Testdata");
+			typeIn(vcn, "Testdata");
+			typeIn(dfm, "Testdata");
+		}
+		
+		if(driver.findElements(By.xpath("//a[text()='HST Pathways Detail']")).size()!=0)
+		{
+			driver.findElement(By.xpath("//a[text()='HST Pathways Detail']")).click();
+			String type="type#xpath=(//*[text()='Type']/following-sibling::div/select)[2]";
+			String Category="Category#xpath=(//*[text()='Category']/following-sibling::div/select)[2]";
+			String BilledBy="BilledBy#xpath=(//*[text()='Billed By']/following-sibling::div/select)[2]";
+			
+			String vqc="vqc#xpath=//*[@id='hqc']";
+			String mqc="mqc#xpath=//*[@id='hmqc']";
+			String vcn="vcn#xpath=//*[@id='hvcn']";
+			String dfm="dfm#xpath=//*[@id='hdfm']";
+			//String vcn="vcn#xpath=//*[@id='vcn']";
+			selectFromDropdown(type, 1);
+			selectFromDropdown(Category, 1);
+			selectFromDropdown(BilledBy, 1);
+			typeIn(vqc, "Testdata");
+			typeIn(mqc, "Testdata");
+			typeIn(vcn, "Testdata");
+			typeIn(dfm, "Testdata");
+		}
 		clickOn(OR.ItemCatalog_AddItem_Man_Save);
 		waitForElementToDisplayWithoutFail(OR.ItemCatalog_AddItem_MapValidation, 10);
 		verifyElementText(OR.ItemCatalog_AddItem_MapValidation, "Do you want to map this item to your various facilities?");

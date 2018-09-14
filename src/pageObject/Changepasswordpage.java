@@ -8,7 +8,7 @@ import AutomationFramework._OR;
 public class Changepasswordpage extends ApplicationKeyword {
     public static void VerifyChangePassword()
     {
-    	verifyElement(OR.Cpwd__Header);
+    	getTextchild("//*[@class='headtext']");
         verifyElement(OR.Cpwd_btn_submit);
         verifyElement(OR.Cpwd_txt_changepassword);
         verifyElement(OR.Cpwd_txt_confirmpassword);

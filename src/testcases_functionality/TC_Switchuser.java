@@ -91,24 +91,28 @@ public class TC_Switchuser extends ApplicationKeyword{
 		clickOn(_OR.Dashboard_User);
 		clickOn(_OR.Dashboard_User_SwitchUser);
 		clickOn(_OR.Label_signinnewuser);
-		verifyElement(_OR.Loginusername);
+		waitUntilPageReady();
 		if(driver.findElements(By.xpath("//a[text()='Sign in with new user']")).size()!=0)
 		{
 			clickOn(_OR.Label_signinnewuser);
 		}
+		waitUntilPageReady();
 		if(driver.findElements(By.className("adfslogin-link")).size()!=0)
 		{
 			clickOn(_OR.Login_link_LoginHybrent);
+			waitUntilPageReady();
 			if(driver.findElements(By.xpath("//a[@href='#/selectuser']")).size()!=0)
 			{
 				WebElement Backbtn = driver.findElement(By.xpath("//a[@href='#/selectuser']"));
 				Backbtn.click();
-				verifyElement(_OR.Loginusername);
+				//verifyElement(_OR.Loginusername);
 			}
 		}else
 		{
 			Loginpage.login(Loginpage.UserName, Loginpage.Password);
+			waitUntilPageReady();
 			clickOn(_OR.DashBoard_Admin);
+			waitUntilPageReady();
 			clickOn(_OR.DashBoard_Admin_organization);
 			waitforclick(_OR.DashBoard_Admin_organization_Features);
 			clickOn(_OR.DashBoard_Admin_organization_Features);
@@ -130,6 +134,7 @@ public class TC_Switchuser extends ApplicationKeyword{
 //				{
 //					clickOn(_OR.Label_signinnewuser);
 //				}
+				waitUntilPageReady();
 				if(driver.findElements(By.className("adfslogin-link")).size()!=0)
 				{
 					clickOn(_OR.Login_link_LoginHybrent);

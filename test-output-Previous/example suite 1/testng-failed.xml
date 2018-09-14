@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [example suite 1]">
+  <parameter name="siteUrl" value="https://qa5.test.hybrent.com/b/"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="siteName" value="qa-5"/>
+  <parameter name="nodeUrl" value="http://localhost:4444/wd/hub"/>
+  <test name="OrderDetails(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_ReceiveOrderDetails">
+        <methods>
+          <include name="Tc_ReceiveOrderDetails_009"/>
+          <include name="Tc_ReceiveOrderDetails_007"/>
+          <include name="startReport"/>
+          <include name="Tc_ReceiveOrderDetails_008"/>
+          <include name="setBrowser"/>
+          <include name="Tc_ReceiveOrderDetails_003"/>
+          <include name="Tc_ReceiveOrderDetails_004"/>
+          <include name="endReport"/>
+          <include name="Tc_ReceiveOrderDetails_001"/>
+          <include name="Tc_ReceiveOrderDetails_002"/>
+          <include name="Tc_ReceiveOrderDetails_010"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_ReceiveOrderDetails -->
+    </classes>
+  </test> <!-- OrderDetails(failed) -->
+</suite> <!-- Failed suite [example suite 1] -->

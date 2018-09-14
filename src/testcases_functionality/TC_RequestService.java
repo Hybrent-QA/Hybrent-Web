@@ -103,7 +103,7 @@ public class TC_RequestService extends ApplicationKeyword{
 		clickOn(OR.ItemCatalog_mapallbutton);
 		waitForElementToDisplayWithoutFail(OR.ItemCatalog_AddItem_Map_Closepage, 60);	
 		clickOn(OR.ItemCatalog_AddItem_Map_Closepage);	
-		setProperty("ItemDesc", ReqServDesc);
+		setProperty("ItemDesc1", ReqServDesc);
 		ManageInventory.NavigateManageInvetory();
 		ManageInventory.addItemInInventory();
 		
@@ -160,7 +160,7 @@ public class TC_RequestService extends ApplicationKeyword{
 	public void TC_RequestService_002() 
 	{
 		testStarts("TC_RequestService_002", "Request Service > Verify that \"Create Service Po\" heading appears on top left side of the page ");
-		Loginpage.OpenBrowserAndLoginnew();
+	//	Loginpage.OpenBrowserAndLoginnew();
 		RequestServicepage.SelectVendor();
 		RequestServicepage.navigateToRequestpage();
 //		RequestServicepage.PageVerifyication();

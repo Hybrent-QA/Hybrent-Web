@@ -13,6 +13,7 @@ public class ApprovePO extends ApplicationKeyword{
 	
 	public static void NavigateApprovedPO()
 	{
+		waitUntilPageReady();
 		waitForElement(OR.ApprovePOLink, 30);
 		clickOn(OR.ApprovePOLink);
 	}

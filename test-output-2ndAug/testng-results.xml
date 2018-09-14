@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="example suite 1" duration-ms="76061" started-at="2018-08-03T03:24:57Z" finished-at="2018-08-03T03:26:13Z">
+    <groups>
+    </groups>
+    <test name="Alert" duration-ms="76061" started-at="2018-08-03T03:24:57Z" finished-at="2018-08-03T03:26:13Z">
+      <class name="testcases_functionality.TC_NewsEvent">
+        <test-method status="PASS" signature="startReport(java.lang.String, java.lang.String)[pri:0, instance:testcases_functionality.TC_NewsEvent@78e67e0a]" name="startReport" is-config="true" duration-ms="724" started-at="2018-08-03T08:54:57Z" finished-at="2018-08-03T08:54:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa-1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qa1.test.hybrent.com/b/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="setBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases_functionality.TC_NewsEvent@78e67e0a]" name="setBrowser" is-config="true" duration-ms="3117" started-at="2018-08-03T08:54:58Z" finished-at="2018-08-03T08:55:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[qa-1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method status="PASS" signature="TC_NewsEvent_001()[pri:0, instance:testcases_functionality.TC_NewsEvent@78e67e0a]" name="TC_NewsEvent_001" duration-ms="71557" started-at="2018-08-03T08:55:01Z" finished-at="2018-08-03T08:56:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_NewsEvent_001 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testcases_functionality.TC_NewsEvent@78e67e0a]" name="endReport" is-config="true" duration-ms="623" started-at="2018-08-03T08:56:12Z" finished-at="2018-08-03T08:56:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- testcases_functionality.TC_NewsEvent -->
+    </test> <!-- Alert -->
+  </suite> <!-- example suite 1 -->
+</testng-results>

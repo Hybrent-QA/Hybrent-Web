@@ -364,7 +364,7 @@ public class PreferenceCards extends ApplicationKeyword {
 		
 		String cardName = "cardName"+ApplicationKeyword.randomAlphaNumeric(2);
 		typeIn(OR.prefCard_CardName, cardName);
-		setProperty("PreferenceCards", cardName);
+	//	setProperty("PreferenceCards", cardName);
 		selectFromDropdown(OR.prefCard_PhysicianName, getProperty("firstPhysician"));
 		waitForElementToDisplayWithoutFail(OR.prefCard_saveButton, 10);
 		CopyStage();
@@ -467,9 +467,11 @@ public class PreferenceCards extends ApplicationKeyword {
 		waitForElement(OR.prefCard_copyStages);
 		clickOn(OR.prefCard_copyStages);
 		verifyElementText(OR.prefCard_copyCardPopUpText, "Copy Stages:-");
-		
-		selectFromDropdown(OR.prefCard_copyPredCardDrpDown, getProperty("PreferenceCards"));
-		selectFromDropdown(OR.prefCard_copyPredCardStageDroppDown, getProperty("Prefcard_StageName"));
+		String prefcard = getProperty("PreferenceCards");
+		String Stageprefcard = getProperty("Prefcard_StageName");
+		selectFromDropdown(OR.prefCard_copyPredCardDrpDown, prefcard);
+		System.out.println();
+		selectFromDropdown(OR.prefCard_copyPredCardStageDroppDown, Stageprefcard);
 		String stageName=getProperty("Prefcard_StageName");
 		System.out.println(stageName);
 		waitForElementToDisplay(OR.prefCard_ADDButtton, 20);

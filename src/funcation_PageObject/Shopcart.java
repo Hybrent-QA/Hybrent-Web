@@ -143,7 +143,7 @@ public class Shopcart extends ApplicationKeyword{
         		clickOn(OR.Shop_SHopfor_Search_Addtocart_First);
         	}
     	}
-    	
+    	waitUntilPageReady();
 		if(driver.findElements(By.xpath("//*[@class='modal-title']")).size()!=0)
 		{
 		String one = getTextchild("//*[@class='modal-title']") ;

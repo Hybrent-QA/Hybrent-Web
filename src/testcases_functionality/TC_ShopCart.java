@@ -358,6 +358,7 @@ verifyElement(OR.Order_Myorder_txt);
 clickOn(OR.Orders_Link);
 typeIn(OR.Receive_SearchTextBox, PoNumber);
 clickOn(OR.PrintBarcodes_searchButton);
+waitUntilPageReady();
 driver.findElement(By.xpath("//*[text()='"+PoNumber+"']")).click();
 typeIn(OR.MyCart_SpecialInstruction,"");
 clickOn(OR.MyCart_Save);

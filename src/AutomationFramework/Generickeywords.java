@@ -2555,11 +2555,10 @@ public class Generickeywords extends Common
 
 	public static String getScreenshot() throws Exception 
 	{
-
+		String folderPath = null;
 		try
 		{
-			String folderPath=OutputDirectory + "/screenshots/" + SITENAME;
-
+			 folderPath="/test-output/screenshots/" + SITENAME;
 			File directory = new File(folderPath);
 			if (! directory.exists()){
 				directory.mkdir();
@@ -2581,7 +2580,7 @@ public class Generickeywords extends Common
 		catch(Exception e)
 		{
 			System.out.println("---EXCEPTION1111---" + e.toString());
-			return System.getProperty("user.dir") + "/test-output/Automation20180313113543.png";
+			return System.getProperty(folderPath) + "/test-output/Automation20180313113543.png";
 		}
 	}
 

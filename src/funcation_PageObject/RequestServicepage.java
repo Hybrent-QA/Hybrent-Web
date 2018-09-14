@@ -16,6 +16,7 @@ public class RequestServicepage extends ApplicationKeyword{
 	public static void navigateToRequestpage()
 	{
 		waitForElement(OR.Request_MenuLink);
+		waitUntilPageReady();
 		clickOn(OR.Request_MenuLink);
 	}
 	

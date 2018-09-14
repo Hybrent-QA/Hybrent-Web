@@ -160,7 +160,6 @@ public class TC_Dashboard extends ApplicationKeyword{
 		clickOn(_OR.Dashboard_Submenu_Dashboard);
 		verifyElement(OR.MyCart);
 		getText(OR.MyCart_count);
-		getAttributeValue(OR.MyCart_count, "values");
 		verifyElement(_OR.user_top_Img);
 		Chat.VerifyChatPage();
 		clickOn(OR.Chat_close);
