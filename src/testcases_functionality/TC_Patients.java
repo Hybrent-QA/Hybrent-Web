@@ -19,32 +19,32 @@ import AutomationFramework.OR;
 
 public class TC_Patients extends ApplicationKeyword
 {
-	@Parameters({"siteName", "siteUrl"})
-	@BeforeTest
-	public void startReport(String siteName, String siteUrl) {
-		try {
-			Loginpage.URL=siteUrl + "#/login/";
-			Generickeywords.SITENAME=siteName;
-			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
-			String folderPath=OutputDirectory + "/" + siteName;
-
-			File directory = new File(folderPath);
-			if (! directory.exists()){
-				directory.mkdir();
-				// If you require it to make the entire directory path including parents,
-				// use directory.mkdirs(); here instead.
-			}
-
-			extent = new ExtentReports(folderPath+"/patients.html", true);
-			// extent.addSystemInfo("Environment","Environment Name")
-			extent.addSystemInfo("User Name", "QA");
-			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
-
-		} catch (Exception e) 
-		{
-			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
-		}
-	}
+//	@Parameters({"siteName", "siteUrl"})
+//	@BeforeTest
+//	public void startReport(String siteName, String siteUrl) {
+//		try {
+//			Loginpage.URL=siteUrl + "#/login/";
+//			Generickeywords.SITENAME=siteName;
+//			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
+//			String folderPath=OutputDirectory + "/" + siteName;
+//
+//			File directory = new File(folderPath);
+//			if (! directory.exists()){
+//				directory.mkdir();
+//				// If you require it to make the entire directory path including parents,
+//				// use directory.mkdirs(); here instead.
+//			}
+//
+//			extent = new ExtentReports(folderPath+"/patients.html", true);
+//			// extent.addSystemInfo("Environment","Environment Name")
+//			extent.addSystemInfo("User Name", "QA");
+//			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
+//
+//		} catch (Exception e) 
+//		{
+//			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
+//		}
+//	}
 	
 	@Test
 	public void Tc_Patients_01()

@@ -23,32 +23,32 @@ import AutomationFramework._OR;
 
 public class TC_Organization extends ApplicationKeyword
 {
-	@Parameters({"siteName", "siteUrl"})
-	@BeforeTest
-	public void startReport(String siteName, String siteUrl) {
-		try {
-			Loginpage.URL=siteUrl + "#/login/";
-			Generickeywords.SITENAME=siteName;
-			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
-			String folderPath=OutputDirectory + "/" + siteName;
-
-			File directory = new File(folderPath);
-			if (! directory.exists()){
-				directory.mkdir();
-				// If you require it to make the entire directory path including parents,
-				// use directory.mkdirs(); here instead.
-			}
-
-			extent = new ExtentReports(folderPath + "/organization.html", true);
-			// extent.addSystemInfo("Environment","Environment Name")
-			extent.addSystemInfo("User Name", "QA");
-			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
-
-		} catch (Exception e) {
-			System.out.println("--Start REPORT-Organization-Error---" + e.toString());
-			//testLogFail("unable to generate the pass report " + e.toString());
-		}
-	}
+//	@Parameters({"siteName", "siteUrl"})
+//	@BeforeTest
+//	public void startReport(String siteName, String siteUrl) {
+//		try {
+//			Loginpage.URL=siteUrl + "#/login/";
+//			Generickeywords.SITENAME=siteName;
+//			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
+//			String folderPath=OutputDirectory + "/" + siteName;
+//
+//			File directory = new File(folderPath);
+//			if (! directory.exists()){
+//				directory.mkdir();
+//				// If you require it to make the entire directory path including parents,
+//				// use directory.mkdirs(); here instead.
+//			}
+//
+//			extent = new ExtentReports(folderPath + "/organization.html", true);
+//			// extent.addSystemInfo("Environment","Environment Name")
+//			extent.addSystemInfo("User Name", "QA");
+//			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
+//
+//		} catch (Exception e) {
+//			System.out.println("--Start REPORT-Organization-Error---" + e.toString());
+//			//testLogFail("unable to generate the pass report " + e.toString());
+//		}
+//	}
 
 	@Test
 	public static void TC_Organization_001()

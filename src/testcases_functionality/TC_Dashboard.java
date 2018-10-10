@@ -28,29 +28,29 @@ import pageObject.SurveyPage;
 
 public class TC_Dashboard extends ApplicationKeyword{
 
-	@Parameters({"siteName", "siteUrl"})
-	@BeforeTest
-	public void startReport(String siteName, String siteUrl) {
-		try {
-			Loginpage.URL=siteUrl + "#/login/";
-			Generickeywords.SITENAME=siteName;
-			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
-			String folderPath=OutputDirectory + "/" + siteName;
-
-			File directory = new File(folderPath);
-			if (! directory.exists()){
-				directory.mkdir();
-			}
-
-			extent = new ExtentReports(folderPath+"/dashboard.html", true);
-			extent.addSystemInfo("User Name", "QA");
-			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
-
-		} catch (Exception e) 
-		{
-			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
-		}
-	}
+//	@Parameters({"siteName", "siteUrl"})
+//	@BeforeTest
+//	public void startReport(String siteName, String siteUrl) {
+//		try {
+//			Loginpage.URL=siteUrl + "#/login/";
+//			Generickeywords.SITENAME=siteName;
+//			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
+//			String folderPath=OutputDirectory + "/" + siteName;
+//
+//			File directory = new File(folderPath);
+//			if (! directory.exists()){
+//				directory.mkdir();
+//			}
+//
+//			extent = new ExtentReports(folderPath+"/dashboard.html", true);
+//			extent.addSystemInfo("User Name", "QA");
+//			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
+//
+//		} catch (Exception e) 
+//		{
+//			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
+//		}
+//	}
 
 
 	@Test

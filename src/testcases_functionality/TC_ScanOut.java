@@ -17,35 +17,31 @@ import pageObject.Alertpage;
 
 public class TC_ScanOut extends ApplicationKeyword{
 
-	@Parameters({"siteName", "siteUrl"})
-	@BeforeTest
-	public void startReport(String siteName, String siteUrl) {
-		try {
-			Loginpage.URL=siteUrl + "#/login/";
-			Generickeywords.SITENAME=siteName;
-			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
-			String folderPath=OutputDirectory + "/" + siteName;
+//	@Parameters({"siteName", "siteUrl"})
+//	@BeforeTest
+//	public void startReport(String siteName, String siteUrl) {
+//		try {
+//			Loginpage.URL=siteUrl + "#/login/";
+//			Generickeywords.SITENAME=siteName;
+//			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
+//			String folderPath=OutputDirectory + "/" + siteName;
+//
+//			File directory = new File(folderPath);
+//			if (! directory.exists()){
+//				directory.mkdir();
+//			}
+//
+//			extent = new ExtentReports(folderPath+"/ScanOut.html", true);
+//			extent.addSystemInfo("User Name", "QA");
+//			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
+//
+//		} catch (Exception e) 
+//		{
+//			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
+//		}
+//	}
 
-			File directory = new File(folderPath);
-			if (! directory.exists()){
-				directory.mkdir();
-			}
-
-			extent = new ExtentReports(folderPath+"/ScanOut.html", true);
-			extent.addSystemInfo("User Name", "QA");
-			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
-
-		} catch (Exception e) 
-		{
-			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
-		}
-	}
-
-	
-
-	
-	
-	
+		
 	@Test
 	public void TC_ScanOut_001() {
 		testStarts("TC_ScanOut_001", "Verify that \"Scan out Items\" button appear when user add items to cart.");

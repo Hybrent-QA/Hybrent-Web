@@ -15,29 +15,29 @@ import funcation_PageObject.*;
 
 public class TC_Login extends ApplicationKeyword{
 
-	@Parameters({"siteName", "siteUrl"})
-	@BeforeTest
-	public void startReport(String siteName, String siteUrl) {
-		try {
-			Loginpage.URL=siteUrl + "#/login/";
-			Generickeywords.SITENAME=siteName;
-			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
-			String folderPath=OutputDirectory + "/" + siteName;
-
-			File directory = new File(folderPath);
-			if (! directory.exists()){
-				directory.mkdir();
-			}
-
-			extent = new ExtentReports(folderPath+"/login.html", true);
-			extent.addSystemInfo("User Name", "QA");
-			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
-
-		} catch (Exception e) 
-		{
-			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
-		}
-	}
+//	@Parameters({"siteName", "siteUrl"})
+//	@BeforeTest
+//	public void startReport(String siteName, String siteUrl) {
+//		try {
+//			Loginpage.URL=siteUrl + "#/login/";
+//			Generickeywords.SITENAME=siteName;
+//			Generickeywords.DashBoardURL=siteUrl + "#/dashboard";
+//			String folderPath=OutputDirectory + "/" + siteName;
+//
+//			File directory = new File(folderPath);
+//			if (! directory.exists()){
+//				directory.mkdir();
+//			}
+//
+//			extent = new ExtentReports(folderPath+"/login.html", true);
+//			extent.addSystemInfo("User Name", "QA");
+//			extent.loadConfig(new File(System.getProperty("user.dir") + "/extent-config.xml"));
+//
+//		} catch (Exception e) 
+//		{
+//			System.out.println("--Start REPORT-Cases-Error---" + e.toString());
+//		}
+//	}
 
 
 //	@Test
@@ -56,6 +56,7 @@ public class TC_Login extends ApplicationKeyword{
 	
 	@Test
 	public void Tc_Login_001() {
+		
 		testStarts("Tc_Login_001", "Verify that Hybrent logo appears on page\r\n" + 
 				"Verify that \"Login with Hybrent\" hyperlink appear below the \"Login with ADFS\" on Login frame.\r\n" + 
 				"Verify that on clicking \"Login with Hybrent\" user get redirected to Hybrent login frame\r\n" + 

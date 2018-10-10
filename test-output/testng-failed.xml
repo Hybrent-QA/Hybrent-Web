@@ -5,18 +5,277 @@
   <parameter name="browser" value="chrome"/>
   <parameter name="siteName" value="qa-1"/>
   <parameter name="nodeUrl" value="http://localhost:4444/wd/hub"/>
+  <test name="Dashboard(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Dashboard">
+        <methods>
+          <include name="endReport"/>
+          <include name="Tc_Dashboard_003"/>
+          <include name="setBrowser"/>
+          <include name="Tc_Dashboard_004"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Dashboard -->
+    </classes>
+  </test> <!-- Dashboard(failed) -->
+  <test name="Itemcatalog(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Itemcatalog">
+        <methods>
+          <include name="Tc_Itemcatalog_002"/>
+          <include name="Tc_Itemcatalog_003"/>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Itemcatalog -->
+    </classes>
+  </test> <!-- Itemcatalog(failed) -->
+  <test name="PriceTire(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_PriceTire">
+        <methods>
+          <include name="Tc_PriceTire_004"/>
+          <include name="endReport"/>
+          <include name="setBrowser"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_PriceTire -->
+    </classes>
+  </test> <!-- PriceTire(failed) -->
+  <test name="Pattern(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Patterns">
+        <methods>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+          <include name="Tc_Pattern_002"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Patterns -->
+    </classes>
+  </test> <!-- Pattern(failed) -->
+  <test name="Gl(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_GL_Codes">
+        <methods>
+          <include name="endReport"/>
+          <include name="Tc_Gl_Code_001"/>
+          <include name="Tc_Gl_Code_002"/>
+          <include name="setBrowser"/>
+          <include name="Tc_Gl_Code_003"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_GL_Codes -->
+    </classes>
+  </test> <!-- Gl(failed) -->
+  <test name="Manufacture(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Manufacturers">
+        <methods>
+          <include name="endReport"/>
+          <include name="TC_Manufacturers_001"/>
+          <include name="setBrowser"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Manufacturers -->
+    </classes>
+  </test> <!-- Manufacture(failed) -->
+  <test name="aPPROVEfLOW(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_ApprovalFlow">
+        <methods>
+          <include name="endReport"/>
+          <include name="TC_ApprovalFlow_004"/>
+          <include name="TC_ApprovalFlow_005"/>
+          <include name="setBrowser"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_ApprovalFlow -->
+    </classes>
+  </test> <!-- aPPROVEfLOW(failed) -->
+  <test name="Shop(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Shop">
+        <methods>
+          <include name="Tc_Shop_003"/>
+          <include name="Tc_Shop_014"/>
+          <include name="Tc_Shop_010"/>
+          <include name="setBrowser"/>
+          <include name="Tc_Shop_005"/>
+          <include name="endReport"/>
+          <include name="Tc_Shop_015"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Shop -->
+    </classes>
+  </test> <!-- Shop(failed) -->
+  <test name="sHOPCART(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_ShopCart">
+        <methods>
+          <include name="TC_ShopCart_009"/>
+          <include name="TC_ShopCart_005"/>
+          <include name="setBrowser"/>
+          <include name="TC_ShopCart_001"/>
+          <include name="TC_ShopCart_004"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_ShopCart -->
+    </classes>
+  </test> <!-- sHOPCART(failed) -->
+  <test name="Order(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Order">
+        <methods>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+          <include name="TC_Order_001"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Order -->
+    </classes>
+  </test> <!-- Order(failed) -->
+  <test name="OrderDetails(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_OrderDetails">
+        <methods>
+          <include name="TC_OrderDetails_010"/>
+          <include name="TC_OrderDetails_006"/>
+          <include name="TC_OrderDetails_004"/>
+          <include name="endReport"/>
+          <include name="setBrowser"/>
+          <include name="TC_OrderDetails_011"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_OrderDetails -->
+    </classes>
+  </test> <!-- OrderDetails(failed) -->
+  <test name="Receive(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Receive">
+        <methods>
+          <include name="Tc_Receive_002"/>
+          <include name="endReport"/>
+          <include name="setBrowser"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Receive -->
+    </classes>
+  </test> <!-- Receive(failed) -->
+  <test name="ReceiveOrderDetails(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_ReceiveOrderDetails">
+        <methods>
+          <include name="Tc_ReceiveOrderDetails_008"/>
+          <include name="setBrowser"/>
+          <include name="Tc_ReceiveOrderDetails_004"/>
+          <include name="endReport"/>
+          <include name="Tc_ReceiveOrderDetails_001"/>
+          <include name="Tc_ReceiveOrderDetails_010"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_ReceiveOrderDetails -->
+    </classes>
+  </test> <!-- ReceiveOrderDetails(failed) -->
+  <test name="Template(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Template">
+        <methods>
+          <include name="Tc_Template_003"/>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Template -->
+    </classes>
+  </test> <!-- Template(failed) -->
+  <test name="ApprovedPo(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_ApprovedPo">
+        <methods>
+          <include name="endReport"/>
+          <include name="setBrowser"/>
+          <include name="Tc_ApprovedPo_002"/>
+          <include name="Tc_ApprovedPo_001"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_ApprovedPo -->
+    </classes>
+  </test> <!-- ApprovedPo(failed) -->
+  <test name="Invoice(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Invoice">
+        <methods>
+          <include name="Tc_Invoice_001"/>
+          <include name="setBrowser"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Invoice -->
+    </classes>
+  </test> <!-- Invoice(failed) -->
+  <test name="Scanout(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_ScanOut">
+        <methods>
+          <include name="endReport"/>
+          <include name="TC_ScanOut_001"/>
+          <include name="setBrowser"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_ScanOut -->
+    </classes>
+  </test> <!-- Scanout(failed) -->
   <test name="PreferenceCards(failed)">
     <classes>
       <class name="testcases_functionality.TC_PreferenceCards">
         <methods>
-          <include name="startReport"/>
-          <include name="Tc_PreferenceCards_002"/>
           <include name="Tc_PreferenceCards_001"/>
-          <include name="Tc_PreferenceCards_003"/>
           <include name="setBrowser"/>
           <include name="endReport"/>
+          <include name="startReport"/>
         </methods>
       </class> <!-- testcases_functionality.TC_PreferenceCards -->
     </classes>
   </test> <!-- PreferenceCards(failed) -->
+  <test name="OperationRoom(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_OperationRoom">
+        <methods>
+          <include name="setBrowser"/>
+          <include name="TC_OperationRoom_001"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_OperationRoom -->
+    </classes>
+  </test> <!-- OperationRoom(failed) -->
+  <test name="Paitent(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Patients">
+        <methods>
+          <include name="Tc_Patients_01"/>
+          <include name="setBrowser"/>
+          <include name="Tc_Patients_02"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Patients -->
+    </classes>
+  </test> <!-- Paitent(failed) -->
+  <test name="Organiation(failed)">
+    <classes>
+      <class name="testcases_functionality.TC_Organization">
+        <methods>
+          <include name="TC_Organization_003"/>
+          <include name="setBrowser"/>
+          <include name="TC_Organization_015"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- testcases_functionality.TC_Organization -->
+    </classes>
+  </test> <!-- Organiation(failed) -->
 </suite> <!-- Failed suite [example suite 1] -->
